@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - "6"
+
+before_script:
+  - npm start &
+  - sleep 5
+
+script:
+  - npm test
+
+after_success:
+  - echo "Yay! Your site runs fine."
+
+after_failure:
+  - echo "Uh-oh - something is wrong with your code!"
