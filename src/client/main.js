@@ -27,6 +27,43 @@ class MyApp extends Component {}
 let user = {};
 
 render(
-    <MyApp user={user}/>,
-    document.getElementById('mainDiv')
-);
+  <BrowserRouter>
+    <div>
+      <Route exact path="/" render={props => {
+        return  <div>
+                  <Header/>
+                  <Landing/>
+                </div>}}/>
+      <Route path="/login" render={props => {
+        return  <div>
+                    <Header/>
+                    <Login/>
+                </div>}}/>
+      <Route path="/register" render={props => {
+        return  <div>
+                    <Header/>
+                    <Register/>
+                </div>}}/>
+    <Route path="/profile" render={props => {
+      return  <div>
+                  <Header/>
+                  <Profile/>
+              </div>}}/>
+    <Route path="/results" render={props => {
+      return  <div>
+                <Header/>
+                <Results/>
+              </div>}}/>
+    <Route path="/start" render={props => {
+      return  <div>
+                <Header/>
+                <Start/>
+              </div>}}/>
+    <Route path="/game" render={props => {
+      return  <div>
+                <Header/>
+                <Game/>
+              </div>}}/>
+  </div>
+  </BrowserRouter>,
+  document.getElementById('mainDiv'));

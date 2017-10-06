@@ -17,6 +17,7 @@ function onLogin(event) {
         method: "post",
         data: data,
         success: function(data) {
+            document.cookie = `username=${data.username}`;
             window.location = `/profile.html?username=${data.username}`;
         },
         error: function(err) {

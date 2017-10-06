@@ -16,6 +16,27 @@ export function GravHash(email, size) {
     return `https://www.gravatar.com/avatar/${hash}?size=${size}`;
 }
 
-class Header extends Component {}
+class Header extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <div>
+      <nav className="navbar navbar-default navbar-static-top">
+          <div className="col-xs-8">
+              <h2>Grahams Solitare</h2>
+          </div>
+          <div className="col-xs-4 right-nav">
+              <a id="loginLink" href="/login.html">Log In</a>
+              <a id="regLink" href="/register.html">Register</a>
+          </div>
+      </nav>
+      </div>
+    )
+  }
+
+}
 
 export default withRouter(Header);

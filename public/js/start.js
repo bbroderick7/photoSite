@@ -10,6 +10,10 @@ function onLoad() {
         gameType = $("input[name='game']:checked").val();
         $('#draw').prop("disabled", gameType === 'hearts');
     });
+
+    if(getUserNameFromCookie(document.cookie) == null){
+      window.location = `/login.html`
+    }
 }
 
 function onStart(event) {
@@ -34,4 +38,16 @@ function onStart(event) {
             errorEl.innerHTML = `Error: ${err.responseJSON.error}`;
         }
     });
+}
+
+function getUserNameFromCookie(cookieString){
+  if(cookieString.search("username") == -1){
+    return null;
+  }
+  let usernameString = cookieString.substr(cookieString.search("username"));
+  if(usernameString.search(";") != -1){
+    return usernameString.substr(0, usernameString.search(";")).split("=")[1];
+  }else{
+    return usernameString.split("=")[1];
+  }
 }

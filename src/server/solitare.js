@@ -3,7 +3,25 @@
 
 
 let shuffleCards = (includeJokers = false) => {
-    return [{ "suit": "clubs", "value": 7 }, { "suit": "diamonds", "value": 12 }];
+    let cardArray = [];
+    let suites = ["spades", "diamonds", "clubs", "hearts"];
+    suites.forEach((suite) => {
+      for(let i = 2; i < 15 ; i++){
+        cardArray.push({"suite": suite, "value": i});
+      }
+    })
+    if(includeJokers){
+      cardArray.push({"suite": "black", "value": 15});
+      cardArray.push({"suite": "red", "value": 15});
+    }
+    let shuffler = (cardDeck) => {
+      for (let i = cardDeck.length; i; i--) {
+        let j = Math.floor(Math.random() * i);
+        [cardDeck[i - 1], cardDeck[j]] = [cardDeck[j], cardDeck[i - 1]];
+      }
+    }
+    shuffler(cardArray);
+    return cardArray;
 };
 
 let initialState = () => {
@@ -26,7 +44,28 @@ let initialState = () => {
     };
 
     /* Generate actual game initial state here */
-
+    let  freshCardDeck = shuffleCards();
+    let deckTracker = 0;
+    for(let i = 0; i < 7; i++){
+       state[`pile${i+1}`].push({"suite": freshCardDeck[deckTracker].suite,
+                                "value": freshCardDeck[deckTracker].value,
+                                "up": true});
+       deckTracker++;
+       let j = 0;
+       while(j < i){
+         state[`pile${i+1}`].push({"suite": freshCardDeck[deckTracker].suite,
+                                  "value": freshCardDeck[deckTracker].value,
+                                  "up": false});
+         deckTracker++;
+         j++;
+       }
+    }
+    while(deckTracker < freshCardDeck.length){
+      state["draw"].push({"suite": freshCardDeck[deckTracker].suite,
+                          "value": freshCardDeck[deckTracker].value,
+                          "up": false});
+      deckTracker++;
+    }
     return state;
 };
 
