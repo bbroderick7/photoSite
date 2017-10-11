@@ -41,6 +41,9 @@ class ProfileHeader extends Component {
   }
 
   displayEditProfile(){
+    console.log("MEEPP");
+    console.log(this.props.profileUsername);
+    console.log(this.props.loggedInUsername);
     if(this.props.profileUsername == this.props.loggedInUsername){
       return <div><h5><Link to="/edit">Edit Profile</Link></h5></div>
     }else{
@@ -212,7 +215,7 @@ class Profile extends Component {
       <div>
         <div className="row">
           <ErrorBox/>
-          <ProfileHeader profileUsername={this.pageUserName} loggedInUsername={this.props.username? this.props.username : ''} />
+          <ProfileHeader profileUsername={this.state.playerInformation==''? '' : this.state.playerInformation.username} loggedInUsername={this.props.username? this.props.username : ''} />
           <div className="col-xs-8">
             <div className="row">
               <ProfileImage imgSrc={this.state.playerInformation? GravHash(this.state.playerInformation.primary_email, 65) : ''}/>

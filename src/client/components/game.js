@@ -147,9 +147,13 @@ class Game extends Component {
     };
   }
 
+  getGameID(){
+    return window.location.href.slice(window.location.href.indexOf('game/')+5);
+  }
+
   componentDidMount() {
     $.ajax({
-      url: `/v1/cards/initial`,
+      url: `/v1/game/${this.getGameID()}`,
       method: 'GET',
     }).then((data) => { this.setState({ gameStatus: data })})
   }
