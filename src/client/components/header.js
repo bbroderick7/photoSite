@@ -19,6 +19,27 @@ export function GravHash(email, size) {
 class Header extends Component {
   constructor(props) {
     super(props);
+    this.loggedIn = this.props.username!=''? true : false;
+    this.logoutUser = this.logoutUser.bind(this);
+  }
+
+  logoutUser(){
+    this.props.logOutFunction();
+    console.log("Logout Success");
+  }
+
+  loggedInUserLinks(){
+    return <div className="col-xs-4 login-nav">
+              <Link to="/logout" id="logoutLink" onClick={this.logoutUser} >Log Out</Link>
+              <Link to= {`/profile/${this.props.username}`} id="gravatarID"><img src={GravHash('slickwilly@clinton.com', 65)}/></Link>
+          </div>
+  }
+
+  loggedOutUserLinks(){
+      return <div className="col-xs-4 right-nav">
+                <Link to="/login" id="loginLink">Log In</Link>
+                <Link to="/register" id="regLink">Register</Link>
+              </div>
   }
 
   render() {
@@ -28,10 +49,7 @@ class Header extends Component {
           <div className="col-xs-8">
               <h2>Grahams Solitare</h2>
           </div>
-          <div className="col-xs-4 right-nav">
-              <a id="loginLink" href="/login.html">Log In</a>
-              <a id="regLink" href="/register.html">Register</a>
-          </div>
+          {this.loggedIn? this.loggedInUserLinks(): this.loggedOutUserLinks()}
       </nav>
       </div>
     )

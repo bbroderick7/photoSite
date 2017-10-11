@@ -47,3 +47,39 @@ table#gameTable tbody tr:hover {
     border-radius: 5px;
     margin: 10px;
 }
+
+.cardImage{
+  width: 100%;
+}
+
+.pile-Card-Class{
+  margin-top: -105%;
+  padding: 0px;
+  margin-left: 0px;
+  width: 100%;
+
+}
+
+.card-stack{
+  opacity: 0.01;
+}
+
+.card-stack-border{
+  border: dashed 2px black;
+}
+
+.draw-card{
+  position: absolute;
+}
+
+.card-pile-outer{
+  padding: 5px;
+}
+
+.login-nav{
+  display: inline-block;
+}
+
+.top-card-row{
+  padding-bottom: 40px;
+}
