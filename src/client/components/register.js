@@ -28,13 +28,68 @@ class RegistrationField extends Component {
 class RegisterSubmitBtn extends Component {
   constructor(props){
     super(props);
+    this.onRegister = this.onRegister.bind(this);
+  }
+
+  validPassword(password) {
+      if (!password || password.length < 8) {
+          return { error: 'password length must be > 7' };
+      }
+      else if (!password.match(/[0-9]/i)) {
+          return { error: 'password must contain a number' };
+      }
+      else if (!password.match(/[a-z]/)) {
+          return { error: 'password a lowercase letter' };
+      }
+      else if (!password.match(/\@|\!|\#|\$|\%|\^/i)) {
+          return { error: 'password must contain @, !, #, $, % or ^' };
+      }
+      else if (!password.match(/[A-Z]/)) {
+          return { error: 'password an uppercase letter' };
+      }
+      return undefined;
+  }
+
+  onRegister(event) {
+      event.preventDefault();
+      const data = {
+          username:       document.getElementById('username').value,
+          first_name:     document.getElementById('first_name').value,
+          last_name:      document.getElementById('last_name').value,
+          city:           document.getElementById('city').value,
+          primary_email:  document.getElementById('primary_email').value,
+          password:       document.getElementById('password').value
+      };
+      let $error = $('#errorMsg');
+      let pwdInvalid = this.validPassword(data.password);
+      if (!data.username || data.username.length > 16 || data.username.length < 6 || !data.username.match(/^[a-z0-9]+$/i)) {
+          $error.html('Error: malformed username');
+      } else if (pwdInvalid) {
+          $error.html(`Error: ${pwdInvalid.error}`);
+      } else if (!data.primary_email.match(/\@/) || !data.primary_email.match(/\./)) {
+          $error.html(`Error: malformed email`);
+      } else
+          $.ajax({
+          url: "/v1/user",
+          method: "post",
+          data: data,
+          success: (data) => {
+              this.props.setGameAndUserState(data.username, data.primary_email);
+              window.location = `/profile/${data.username}`;
+          },
+          error:(err) => {
+              let errorEl = document.getElementById('errorMsg');
+              errorEl.innerHTML = `Error: ${err.responseJSON.error}`;
+          }
+      });
+      return false;
   }
 
   render(){
     return(
       <div className="form-group">
           <div className="col-sm-offset-2 col-sm-10">
-              <button id="submitBtn" className="btn btn-default">Register</button>
+              <button id="submitBtn" className="btn btn-default" onClick={this.onRegister}>Register</button>
           </div>
       </div>
     )
@@ -60,7 +115,7 @@ class RegisterForm extends Component {
     return(
       <form className="form-horizontal">
           {this.paintRegistrationFields()}
-          <RegisterSubmitBtn/>
+          <RegisterSubmitBtn setGameAndUserState={this.props.setGameAndUserState}/>
       </form>
     )
   }
@@ -80,8 +135,7 @@ class Register extends Component {
               <div className="center-block">
                   <p id="errorMsg" className="bg-danger"></p>
               </div>
-              <RegisterForm/>
-
+              <RegisterForm setGameAndUserState={this.props.setGameAndUserState}/>
           </div>
           <div className="col-xs-2"></div>
       </div>

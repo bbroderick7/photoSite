@@ -122,6 +122,39 @@ class GameTableHead extends Component {
   }
 }
 
+class GameTableBody extends Component {
+  constructor(props){
+    super(props)
+  }
+
+  paintGames(){
+    console.log("First Game");
+    console.log(this.props.gameInfo);
+    if(this.props.gameInfo == ''){
+      return '';
+    }else{
+      return this.props.gameInfo.map((game, index) => {
+        return (<tr key={index}>
+                  <td><a href={game.active? `/game/${game.id}` :`/results/${game.id}`}>{game.active? 'Active' : 'Complete'}</a></td>
+                  <td>{game.duration}</td>
+                  <td>{game.moves}</td>
+                  <td>{game.score}</td>
+                  <td >{game.game}</td>
+                </tr>)
+      })
+    }
+  }
+
+  render(){
+    console.log(this.props.gameInfo)
+    return(
+        <tbody id="games">
+          {this.paintGames()}
+        </tbody>
+    )
+  }
+}
+
 
 class GameTable extends Component{
   constructor(props) {
@@ -132,7 +165,7 @@ class GameTable extends Component{
     return(
       <table id="gameTable" className="col-xs-12 table">
         <GameTableHead/>
-        <tbody id="games"></tbody>
+        <GameTableBody gameInfo={this.props.gameInfo}/>
       </table>
     )
   }
@@ -145,9 +178,11 @@ class Profile extends Component {
     this.pageUserName = this.getUrlVars();
     this.loggedInUsername = this.props.username;
     console.log(this.props.username);
+
     this.state = {
       playerInformation: ''
     }
+    console.log(this.state);
   }
 
   getUrlVars() {
@@ -162,9 +197,6 @@ class Profile extends Component {
   }
 
   componentWillReceiveProps(nextProps){
-    console.log("Prop Comp");
-    console.log(nextProps.username);
-    //console.log(this.pageUserName);
     $.ajax({
         url: `/v1/user/${nextProps.username}`,
         method: "get",
@@ -172,6 +204,10 @@ class Profile extends Component {
   }
 
   render() {
+    console.log(this.state);
+    if(this.state.playerInformation != ''){
+      console.log(this.state.playerInformation.games)
+    }
     return(
       <div>
         <div className="row">
@@ -190,7 +226,7 @@ class Profile extends Component {
                 <GameTally numGames={this.state.playerInformation? this.state.playerInformation.games.length : 1}/>
                 <StartNewGameLink loggedin={this.props.username==''? false : true}/>
               </div>
-              <GameTable/>
+              <GameTable gameInfo={this.state.playerInformation==''? '' : this.state.playerInformation.games}/>
             </div>
           </div>
         </div>

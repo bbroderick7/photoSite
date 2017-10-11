@@ -80,35 +80,35 @@ class MyApp extends Component {
                     </div>}}/>
           <Route path="/login" render={props => {
             return  <div>
-                        <Header username={this.state.user.name} logOutFunction={this.logoutUser}/>
-                        <Login setGameAndUserState = {this.setGameAndUserState} username={this.state.user.name}/>
+                      <Header username={this.state.user.name} logOutFunction={this.logoutUser}/>
+                      <Login setGameAndUserState = {this.setGameAndUserState} username={this.state.user.name}/>
                     </div>}}/>
           <Route path="/register" render={props => {
             return  <div>
-                        <Header username={this.state.user.name} logOutFunction={this.logoutUser}/>
-                        <Register/>
+                      <Header username={this.state.user.name} logOutFunction={this.logoutUser}/>
+                      <Register setGameAndUserState = {this.setGameAndUserState} username={this.state.user.name}/>
                     </div>}}/>
-        <Route path="/profile/:id" render={props => {
-          return  <div>
+          <Route path="/profile/:id" render={props => {
+            return  <div>
                       <Header username={this.state.user.name} logOutFunction={this.logoutUser}/>
                       <Profile username={this.state.user.name} email={this.state.user.email}/>
-                  </div>}}/>
-        <Route path="/results" render={props => {
-          return  <div>
-                    <Header username={this.state.user.name} logOutFunction={this.logoutUser}/>
-                    <Results/>
-                  </div>}}/>
-        <Route path="/start" render={props => {
-          return  <div>
-                    <Header username={this.state.user.name} logOutFunction={this.logoutUser}/>
-                    <Start username={this.state.user.name}/>
-                  </div>}}/>
-        <Route path="/game" render={props => {
-          return  <div>
-                    <Header username={this.state.user.name} logOutFunction={this.logoutUser}/>
-                    <Game/>
-                  </div>}}/>
-      </div>
+                    </div>}}/>
+          <Route path="/results" render={props => {
+            return  <div>
+                      <Header username={this.state.user.name} logOutFunction={this.logoutUser}/>
+                      <Results/>
+                    </div>}}/>
+          <Route path="/start" render={props => {
+            return  <div>
+                      <Header username={this.state.user.name} logOutFunction={this.logoutUser}/>
+                      <Start username={this.state.user.name}/>
+                    </div>}}/>
+          <Route path="/game" render={props => {
+            return  <div>
+                      <Header username={this.state.user.name} logOutFunction={this.logoutUser}/>
+                      <Game/>
+                    </div>}}/>
+        </div>
       </BrowserRouter>
     )
   }
