@@ -22,11 +22,11 @@ class GameInformation extends Component {
   render(){
     return(
       <div className="col-xs-6">
-        <p id="duration">{this.props.information.time}</p>
-        <p id="moves">{this.props.information.moves}</p>
+        <p id="duration">{this.props.information.startTime}</p>
+        <p id="moves">{this.props.information == ''? 0 : this.props.information.moves.length}</p>
         <p id="points">{this.props.information.score}</p>
-        <p id="remaining">{this.props.information.cards}</p>
-        <p id="active">{this.props.information.active}</p>
+        <p id="remaining">{this.props.information.cards_remaining}</p>
+        <p id="active">{this.props.information.active? "Active" : "Complete3"}</p>
       </div>
     )
   }
@@ -68,16 +68,20 @@ class Results extends Component {
     this.state = {
       gameInformation: ''
     }
+    console.log("TEST");
+    console.log(this.state.gameInformation);
   }
 
   getGameID(){
-        return window.location.href.slice(window.location.href.indexOf('game/')+5);
+        return window.location.href.slice(window.location.href.indexOf('results/')+8);
   }
 
   componentDidMount(){
+    console.log("TEST Component");
+    console.log(this.getGameID());
     $.ajax({
-        url: `/v1/game/${this.gameID}`,
-        method: "get",
+        url: `/v1/game/${this.getGameID()}`,
+        method: "GET",
     }).then(data => {this.setState({gameInformation: data})});
   }
 
