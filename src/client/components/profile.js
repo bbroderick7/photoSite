@@ -8,23 +8,13 @@ import { GravHash }                     from './header';
 
 /*************************************************************************/
 
-class ProfileInformation extends Component {
-  constructor(props){
-    super(props);
-  }
-
-  render(){
-    return(
-      <div className="col-xs-6">
-        <p id="username">{this.props.playerInfo.username}</p>
-        <p id="first_name">{this.props.playerInfo.first_name}</p>
-        <p id="last_name">{this.props.playerInfo.last_name}</p>
-        <p id="city">{this.props.playerInfo.city}</p>
-        <p id="primary_email">{this.props.playerInfo.primary_email}</p>
-      </div>
-    )
-  }
-}
+const ProfileInformation = (props) => <div className="col-xs-6">
+        <p id="username">{props.playerInfo.username}</p>
+        <p id="first_name">{props.playerInfo.first_name}</p>
+        <p id="last_name">{props.playerInfo.last_name}</p>
+        <p id="city">{props.playerInfo.city}</p>
+        <p id="primary_email">{props.playerInfo.primary_email}</p>
+      </div> ;
 
 const ProfileLabels = () => <div className="col-xs-6 text-right">
             <p><b>Username:</b></p>
@@ -34,32 +24,19 @@ const ProfileLabels = () => <div className="col-xs-6 text-right">
             <p><b>Email Address:</b></p>
           </div>;
 
-class ProfileHeader extends Component {
-  constructor(props){
-    super(props);
-    this.displayEditProfile = this.displayEditProfile.bind(this);
-  }
-
-  displayEditProfile(){
-    console.log("MEEPP");
-    console.log(this.props.profileUsername);
-    console.log(this.props.loggedInUsername);
-    if(this.props.profileUsername == this.props.loggedInUsername){
-      return <div><h5><Link to="/edit">Edit Profile</Link></h5></div>
+const ProfileHeader = (props) => {
+  let displayEditProfile = () => {
+    if(props.profileUsername == props.loggedInUsername){
+      return <div><h5><Link to="/edit">Edit Profile</Link></h5></div>;
     }else{
-      return null
+      return null;
     }
   }
 
-  render(){
-    return(
-      <div className="col-xs-2" id="profile-header">
-        <h4>Player Profile</h4>
-        {this.displayEditProfile()}
-      </div>
-    )
-  }
-
+  return <div className="col-xs-2" id="profile-header">
+      <h4>Player Profile</h4>
+      {displayEditProfile()}
+    </div> ;
 }
 
 const StartNewGameLink = (loggedin) => {
@@ -70,73 +47,31 @@ const StartNewGameLink = (loggedin) => {
   }
 }
 
-class GameTally extends Component {
-  constructor(props){
-    super(props);
-  }
+const GameTally = (props) => <h4 id="games_count">Games Played ({props.numGames}):</h4> ;
 
-  render(){
-    return(
-      <h4 id="games_count">Games Played ({this.props.numGames}):</h4>
-    )
-  }
-}
-
-class ProfileImage extends Component {
-  constructor(props){
-    super(props)
-  }
-
-  render(){
-    return(
-      <div className="col-xs-1">
-        <img src={this.props.imgSrc}/>
-      </div>
-    )
-  }
-}
+const ProfileImage = (props) => <div className="col-xs-1"><img src={props.imgSrc}/></div>;
 
 const ErrorBox = () => <div className="center-block">
       <p id="errorMsg" className="bg-danger"></p>
     </div>;
 
 
-class GameTableHead extends Component {
-  constructor(props){
-    super(props)
-    this.makeHeaders = this.makeHeaders.bind(this);
-  }
-
-  makeHeaders(){
-    let headers = ["Status", "Start Date", "# of moves", "Score", "Game Type"]
+const GameTableHead = (props) => {
+  let makeHeaders = () => {
+    let headers = ["Status", "Start Date", "# of moves", "Score", "Game Type"];
     return headers.map((header, index) => {
         return <th key={index}>{header}</th>
       })
   }
-
-  render(){
-    return(
-      <thead>
-        <tr>
-          {this.makeHeaders()}
-        </tr>
-      </thead>
-    )
-  }
+  return <thead><tr>{makeHeaders()}</tr></thead>;
 }
 
-class GameTableBody extends Component {
-  constructor(props){
-    super(props)
-  }
-
-  paintGames(){
-    console.log("First Game");
-    console.log(this.props.gameInfo);
-    if(this.props.gameInfo == ''){
+const GameTableBody = (props) => {
+  let paintGames = () => {
+    if(props.gameInfo == ''){
       return '';
     }else{
-      return this.props.gameInfo.map((game, index) => {
+      return props.gameInfo.map((game, index) => {
         return (<tr key={index}>
                   <td><a href={game.active? `/game/${game.id}` :`/results/${game.id}`}>{game.active? 'Active' : 'Complete'}</a></td>
                   <td>{game.duration}</td>
@@ -147,31 +82,14 @@ class GameTableBody extends Component {
       })
     }
   }
-
-  render(){
-    console.log(this.props.gameInfo)
-    return(
-        <tbody id="games">
-          {this.paintGames()}
-        </tbody>
-    )
-  }
+  return <tbody id="games">{paintGames()}</tbody> ;
 }
 
-
-class GameTable extends Component{
-  constructor(props) {
-    super(props)
-  }
-
-  render(){
-    return(
-      <table id="gameTable" className="col-xs-12 table">
+const GameTable = (props) => {
+    return <table id="gameTable" className="col-xs-12 table">
         <GameTableHead/>
-        <GameTableBody gameInfo={this.props.gameInfo}/>
-      </table>
-    )
-  }
+        <GameTableBody gameInfo={props.gameInfo}/>
+      </table>;
 }
 
 
@@ -180,12 +98,9 @@ class Profile extends Component {
     super(props);
     this.pageUserName = this.getUrlVars();
     this.loggedInUsername = this.props.username;
-    console.log(this.props.username);
-
     this.state = {
       playerInformation: ''
     }
-    console.log(this.state);
   }
 
   getUrlVars() {
@@ -207,10 +122,6 @@ class Profile extends Component {
   }
 
   render() {
-    console.log(this.state);
-    if(this.state.playerInformation != ''){
-      console.log(this.state.playerInformation.games)
-    }
     return(
       <div>
         <div className="row">

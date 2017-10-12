@@ -7,22 +7,14 @@ import { withRouter }           from 'react-router';
 
 /*************************************************************************/
 
-class RegistrationField extends Component {
-  constructor(props){
-    super(props);
-    this.fieldID = (this.props.fieldName.toLowerCase()).replace(' ', '_');
-  }
-
-  render(){
-    return(
-      <div className="form-group">
-          <label className="col-sm-2 control-label" htmlFor={this.fieldID}>{this.props.fieldName}:</label>
+const RegistrationField = (props) => {
+  let fieldID = (props.fieldName.toLowerCase()).replace(' ', '_');
+  return <div className="form-group">
+          <label className="col-sm-2 control-label" htmlFor={fieldID}>{props.fieldName}:</label>
           <div className="col-sm-10">
-              <input className="form-control" id={this.fieldID} name={this.fieldID} type={(this.fieldID=="password")? "password": "text"} placeholder={this.props.fieldName}/>
+              <input className="form-control" id={fieldID} name={fieldID} type={(fieldID=="password")? "password": "text"} placeholder={props.fieldName}/>
           </div>
-      </div>
-    )
-  }
+      </div>;
 }
 
 class RegisterSubmitBtn extends Component {
@@ -128,7 +120,6 @@ class Register extends Component {
 
   render(){
     return(
-      <div>
       <div className="row">
           <div className="col-xs-2"></div>
           <div className="col-xs-8">
@@ -138,7 +129,6 @@ class Register extends Component {
               <RegisterForm setGameAndUserState={this.props.setGameAndUserState}/>
           </div>
           <div className="col-xs-2"></div>
-      </div>
       </div>
     )
   }

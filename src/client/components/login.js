@@ -7,22 +7,14 @@ import { withRouter }           from 'react-router-dom';
 
 /*************************************************************************/
 
-class LoginFormField extends Component {
-  constructor(props) {
-    super(props);
-    this.fieldID = this.props.fieldName.toLowerCase();
-  }
-
-  render() {
-    return(
-      <div className="form-group">
-          <label className="col-sm-2 control-label" htmlFor={this.fieldID}>{this.props.fieldName}:</label>
+const LoginFormField = (props) => {
+    let fieldID = props.fieldName.toLowerCase();
+    return( <div className="form-group">
+          <label className="col-sm-2 control-label" htmlFor={fieldID}>{props.fieldName}:</label>
           <div className="col-sm-10">
-              <input className="form-control" id={this.fieldID} name={this.fieldID} type={(this.fieldID=="password")? "password": "text"} placeholder={this.props.fieldName}/>
+              <input className="form-control" id={fieldID} name={fieldID} type={(fieldID=="password")? "password": "text"} placeholder={props.fieldName}/>
           </div>
-      </div>
-    )
-  }
+      </div>)
 }
 
 class LoginSubmitBtn extends Component {
@@ -70,7 +62,6 @@ class LoginForm extends Component {
   }
 
   render() {
-    console.log(this.props.setGameAndUserState)
     return (
       <form className="form-horizontal">
           <LoginFormField fieldName="Username"/>

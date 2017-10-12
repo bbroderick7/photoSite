@@ -66,7 +66,7 @@ class MyApp extends Component {
   logoutUser(){
     this.deleteLeftOverCookies();
     this.setState({user: {username: '', email: ''}});
-    window.location.href = "/login";
+    //window.location.href = "/login";
   }
 
   render(){

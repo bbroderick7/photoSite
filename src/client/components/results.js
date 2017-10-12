@@ -14,22 +14,14 @@ const GameInfoLables = (labels) => {
   return <div className="col-xs-3 text-right"> {labelMap} </div>
 }
 
-class GameInformation extends Component {
-  constructor(props){
-    super(props);
-  }
-
-  render(){
-    return(
-      <div className="col-xs-6">
-        <p id="duration">{this.props.information.startTime}</p>
-        <p id="moves">{this.props.information == ''? 0 : this.props.information.moves.length}</p>
-        <p id="points">{this.props.information.score}</p>
-        <p id="remaining">{this.props.information.cards_remaining}</p>
-        <p id="active">{this.props.information.active? "Active" : "Complete3"}</p>
-      </div>
-    )
-  }
+const GameInformation = (props) => {
+    return <div className="col-xs-6">
+        <p id="duration">{props.information.startTime}</p>
+        <p id="moves">{props.information == ''? 0 : props.information.moves.length}</p>
+        <p id="points">{props.information.score}</p>
+        <p id="remaining">{props.information.cards_remaining}</p>
+        <p id="active">{props.information.active? "Active" : "Complete"}</p>
+      </div>;
 }
 
 const ResultsTableHead = (headers) => {
@@ -39,19 +31,11 @@ const ResultsTableHead = (headers) => {
   return <thead><tr>{headerLabels}</tr></thead>
 }
 
-class ResultsTable extends Component {
-  constructor(props){
-    super(props)
-  }
-
-  render() {
-    return(
-      <table id="gameTable" className="col-xs-12 table">
+const ResultsTable = (props) => {
+    return <table id="gameTable" className="col-xs-12 table">
         <ResultsTableHead headers={["Id", "Duration", "Player", "Move Details"]}/>
         <tbody></tbody>
-      </table>
-    )
-  }
+      </table>;
 }
 
 const ErrorMsg = () => <div className="center-block">
@@ -105,6 +89,5 @@ class Results extends Component {
     )
   }
 }
-//component did mount
 
 export default withRouter(Results);

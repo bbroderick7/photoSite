@@ -10,116 +10,62 @@ import { withRouter }           from 'react-router';
 
 const ErrorMsg = () => <div className="center-block">
                         <p id="errorMsg" className="bg-danger"></p>
-                      </div>
+                      </div>;
 
-const NewGameHeader = () => <h4>Create New Game</h4>
+const NewGameHeader = () => <h4>Create New Game</h4>;
 
-class GameOption extends Component {
-  constructor(props) {
-    super(props);
-    this.optionID = this.props.gameOption.toLowerCase();
-    this.defaultOption = this.defaultOption.bind(this);
-  }
-
-  defaultOption(){
-    if(this.optionID == 'klondyke'){
-      return (<input type="radio" name="game" id={this.optionID} value={this.optionID} defaultChecked/>)
+const GameOption = (props) => {
+  let optionID = props.gameOption.toLowerCase();
+  let defaultOption = () => {
+    if(optionID == 'klondyke'){
+      return (<input type="radio" name="game" id={optionID} value={optionID} defaultChecked/>)
     }else{
-      return (<input type="radio" name="game" id={this.optionID} value={this.optionID}/>)
+      return (<input type="radio" name="game" id={optionID} value={optionID}/>)
     }
   }
-
-  render(){
-    return(
-      <div className="radio">
+  return <div className="radio">
         <label>
-          {this.defaultOption()}
-          {this.props.gameOption}
+          {defaultOption()}
+          {props.gameOption}
         </label>
-      </div>
-    )
-  }
+      </div>;
 }
 
-class GamePicker extends Component {
-  constructor(props) {
-    super(props)
+const GamePicker = () => {
+  let options = ["Klondyke", "Pyramid", "Canfield", "Golf", "Yukon", "Hearts"];
+  let paintGameTypes = () => {
+    return (options.map((option, index) => <GameOption key={index} gameOption={option}/>))
   }
-
-  paintGameTypes(){
-    let options = ["Klondyke", "Pyramid", "Canfield", "Golf", "Yukon", "Hearts"];
-    return(
-      options.map((option, index) => {
-        return <GameOption key={index} gameOption={option}/>
-    }))
-  }
-
-  render(){
-    return(
-      <div className="form-group col-xs-4">
-        {this.paintGameTypes()}
-      </div>
-    )
-  }
+  return <div className="form-group col-xs-4">{paintGameTypes()}</div>;
 }
 
-class CardDrawOptions extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render(){
-    return(
-      <div className="col-xs-12">
+const CardDrawOptions = () => <div className="col-xs-12">
         <label className="control-label" htmlFor="draw">Draw:</label>
         <select id="draw" name="draw" className="form-control">
           <option>Draw 1</option>
           <option>Draw 3</option>
         </select>
-      </div>
-    )
-  }
-}
+      </div> ;
 
-class CardColorOptions extends Component {
-  constructor(props) {
-    super(props)
+const CardColorOptions = (props) => {
+  let paintOptions = () => {
+    return props.options.map((opt, index) => <option key={index}>{opt}</option>)
   }
 
-  paintOptions(){
-    return this.props.options.map((opt, index) => {
-      return <option key={index}>{opt}</option>
-    })
-  }
-
-  render(){
-    return(
-      <div className="col-xs-12">
+  return <div className="col-xs-12">
         <label className="control-label" htmlFor="color">Card Color:</label>
         <select id="color" name="color" className="form-control">
-          {this.paintOptions()}
+          {paintOptions()}
         </select>
-      </div>
-    )
-  }
+      </div>;
 }
 
-class GameOptions extends Component {
-  constructor(props) {
-    super(props)
-  }
-
-  render() {
-    return(
-      <div className="form-group col-xs-8">
+const GameOptions = () => <div className="form-group col-xs-8">
         <div className="row">
           <CardDrawOptions/>
           <CardColorOptions options={["Red", "Green", "Blue", "Magical"]}/>
         </div>
-      </div>
-    )
-  }
-}
+      </div>;
 
 class GameForm extends Component {
   constructor(props) {
