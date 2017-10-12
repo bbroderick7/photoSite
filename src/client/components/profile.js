@@ -32,7 +32,6 @@ const ProfileHeader = (props) => {
       return null;
     }
   }
-
   return <div className="col-xs-2" id="profile-header">
       <h4>Player Profile</h4>
       {displayEditProfile()}
@@ -59,9 +58,7 @@ const ErrorBox = () => <div className="center-block">
 const GameTableHead = (props) => {
   let makeHeaders = () => {
     let headers = ["Status", "Start Date", "# of moves", "Score", "Game Type"];
-    return headers.map((header, index) => {
-        return <th key={index}>{header}</th>
-      })
+    return headers.map((header, index) => <th key={index}>{header}</th>)
   }
   return <thead><tr>{makeHeaders()}</tr></thead>;
 }
@@ -85,12 +82,10 @@ const GameTableBody = (props) => {
   return <tbody id="games">{paintGames()}</tbody> ;
 }
 
-const GameTable = (props) => {
-    return <table id="gameTable" className="col-xs-12 table">
+const GameTable = (props) => <table id="gameTable" className="col-xs-12 table">
         <GameTableHead/>
         <GameTableBody gameInfo={props.gameInfo}/>
       </table>;
-}
 
 
 class Profile extends Component {
@@ -123,7 +118,6 @@ class Profile extends Component {
 
   render() {
     return(
-      <div>
         <div className="row">
           <ErrorBox/>
           <ProfileHeader profileUsername={this.state.playerInformation==''? '' : this.state.playerInformation.username} loggedInUsername={this.props.username? this.props.username : ''} />
@@ -144,7 +138,6 @@ class Profile extends Component {
             </div>
           </div>
         </div>
-      </div>
     )
   }
 }

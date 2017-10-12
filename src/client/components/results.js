@@ -14,15 +14,13 @@ const GameInfoLables = (labels) => {
   return <div className="col-xs-3 text-right"> {labelMap} </div>
 }
 
-const GameInformation = (props) => {
-    return <div className="col-xs-6">
+const GameInformation = (props) => <div className="col-xs-6">
         <p id="duration">{props.information.startTime}</p>
         <p id="moves">{props.information == ''? 0 : props.information.moves.length}</p>
         <p id="points">{props.information.score}</p>
         <p id="remaining">{props.information.cards_remaining}</p>
         <p id="active">{props.information.active? "Active" : "Complete"}</p>
       </div>;
-}
 
 const ResultsTableHead = (headers) => {
   let headerLabels = headers.headers.map((header, index) => {
@@ -31,18 +29,16 @@ const ResultsTableHead = (headers) => {
   return <thead><tr>{headerLabels}</tr></thead>
 }
 
-const ResultsTable = (props) => {
-    return <table id="gameTable" className="col-xs-12 table">
+const ResultsTable = (props) => <table id="gameTable" className="col-xs-12 table">
         <ResultsTableHead headers={["Id", "Duration", "Player", "Move Details"]}/>
         <tbody></tbody>
       </table>;
-}
 
 const ErrorMsg = () => <div className="center-block">
                         <p id="errorMsg" className="bg-danger"></p>
-                      </div>
+                      </div>;
 
-const GameHeader = () => <div className="col-xs-2"><h4>Game Detail</h4></div>
+const GameHeader = () => <div className="col-xs-2"><h4>Game Detail</h4></div>;
 
 
 class Results extends Component {
@@ -52,8 +48,6 @@ class Results extends Component {
     this.state = {
       gameInformation: ''
     }
-    console.log("TEST");
-    console.log(this.state.gameInformation);
   }
 
   getGameID(){
@@ -61,8 +55,6 @@ class Results extends Component {
   }
 
   componentDidMount(){
-    console.log("TEST Component");
-    console.log(this.getGameID());
     $.ajax({
         url: `/v1/game/${this.getGameID()}`,
         method: "GET",
@@ -71,7 +63,6 @@ class Results extends Component {
 
   render() {
     return(
-      <div>
         <div className="row">
           <ErrorMsg/>
           <GameHeader/>
@@ -85,7 +76,6 @@ class Results extends Component {
             </div>
           </div>
         </div>
-      </div>
     )
   }
 }

@@ -35,6 +35,7 @@ class LoginSubmitBtn extends Component {
           data: data,
           success: (data) => {
               this.props.setGameAndUserState(data.username, data.primary_email);
+              console.log(data.username);
               window.location = `/profile/${data.username}`;
           },
           error: function(err) {

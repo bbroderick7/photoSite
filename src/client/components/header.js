@@ -19,8 +19,8 @@ export function GravHash(email, size) {
 const HeaderTitle = () => <div className="col-xs-8"><h2>Grahams Solitare</h2></div>;
 
 const LoggedInUserLinks = (props) => <div className="col-xs-4 login-nav">
-            <Link to="/logout" id="logoutLink" onClick={props.logoutFunc} >Log Out</Link>
-            <Link to= {`/profile/${props.username}`} id="gravatarID"><img src={GravHash('slickwilly@clinton.com', 65)}/></Link>
+            <Link to="/login" id="logoutLink" onClick={props.logoutFunc} >Log Out</Link>
+            <Link to= {`/profile/${props.user.username}`} id="gravatarID"><img src={GravHash(`${props.user.email}`, 65)}/></Link>
         </div>;
 
 
@@ -29,30 +29,30 @@ const LoggedOutUserLinks = () => <div className="col-xs-4 right-nav">
               <Link to="/register" id="regLink">Register</Link>
             </div>;
 
+const Links = (props) => {
+  if(props.loggedIn){
+    return <LoggedInUserLinks logoutFunc={props.logoutFunc} user={props.user}/>
+  }else{
+    return <LoggedOutUserLinks/>
+  }
+}
+
 
 class Header extends Component {
   constructor(props) {
     super(props);
-    this.loggedIn = this.props.username!=''? true : false;
-    this.logoutUser = this.logoutUser.bind(this);
+    this.loggedIn = this.props.user.username!=''? true : false;
     this.state = {
-      username: this.props.username
+      username: this.props.user.username
     }
-  }
-
-  logoutUser(){
-    this.props.logOutFunction();
-    console.log("Logout Success");
   }
 
   render() {
     return (
-      <div>
       <nav className="navbar navbar-default navbar-static-top">
           <HeaderTitle/>
-          {this.loggedIn? <LoggedInUserLinks logoutFunc={this.logoutUser} username={this.props.username}/>: <LoggedOutUserLinks/>}
+          <Links loggedIn={this.loggedIn} logoutFunc={this.props.logOutFunction} user= {this.props.user}/>
       </nav>
-      </div>
     )
   }
 }
