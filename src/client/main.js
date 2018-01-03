@@ -1,24 +1,33 @@
-/* Copyright G. Hemingway, 2017 - All rights reserved */
 "use strict";
 
-// Necessary modules
 import React, { Component }     from 'react';
 import { render }               from 'react-dom';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 import Header                   from './components/header';
 import Landing                  from './components/landing';
-import Login                    from './components/login';
+import Projects                 from './components/projects';
 import Logout                   from './components/logout';
-import Register                 from './components/register';
-import Profile                  from './components/profile';
-import Start                    from './components/start';
-import Results                  from './components/results';
+import Peru                     from './components/peru';
+import Stills                   from './components/stills';
+import About                    from './components/about';
+import Deloache                 from './components/deloache';
+import Experiment               from './components/experiment';
+import Jackson                  from './components/jackson';
+import Nashville                from './components/nashville';
+import Bolivia                  from './components/bolivia';
+import Colorado                 from './components/colorado';
+import Moab                     from './components/moab';
+import Concertify               from './components/concertify';
+import BlackStar                from './components/blackstar';
+import FacePay                  from './components/facePay';
+import Solitaire                from './components/solitaire';
+import Vmil                     from './components/vmil';
+import Vutensils                from './components/vutensils';
 import Game                     from './components/game';
 
 // Bring app CSS into the picture
 require('./app.css');
-
 /*************************************************************************/
 
 class MyApp extends Component {
@@ -74,33 +83,92 @@ class MyApp extends Component {
         <div>
           <Route exact path="/" render={props => {
             return  <div>
-                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
                       <Landing/>
                     </div>}}/>
-          <Route path="/login" render={props => {
+          <Route exact path="/about" render={props => {
             return  <div>
                       <Header user={this.state.user} logOutFunction={this.logoutUser}/>
-                      <Login setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
+                      <About setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
                     </div>}}/>
-          <Route path="/register" render={props => {
+          <Route exact path="/projects" render={props => {
             return  <div>
                       <Header user={this.state.user} logOutFunction={this.logoutUser}/>
-                      <Register setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
+                      <Projects setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
                     </div>}}/>
-          <Route path="/profile/:id" render={props => {
+          <Route exact path="/projects/concertify" render={props => {
             return  <div>
                       <Header user={this.state.user} logOutFunction={this.logoutUser}/>
-                      <Profile username={this.state.user.username} email={this.state.user.email}/>
+                      <Concertify setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
                     </div>}}/>
-          <Route path="/results" render={props => {
+          <Route exact path="/projects/blackstar" render={props => {
             return  <div>
                       <Header user={this.state.user} logOutFunction={this.logoutUser}/>
-                      <Results/>
+                      <BlackStar setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
                     </div>}}/>
-          <Route path="/start" render={props => {
+          <Route exact path="/projects/facePay" render={props => {
             return  <div>
                       <Header user={this.state.user} logOutFunction={this.logoutUser}/>
-                      <Start username={this.state.user.username}/>
+                      <FacePay setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
+                    </div>}}/>
+          <Route exact path="/projects/solitaire" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <Solitaire setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
+                    </div>}}/>
+          <Route exact path="/projects/vmil" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <Vmil setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
+                    </div>}}/>
+          <Route exact path="/projects/vutensils" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <Vutensils setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
+                    </div>}}/>
+          <Route path="/stills/deloache" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <Deloache setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
+                    </div>}}/>
+          <Route path="/stills/moab" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <Moab setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
+                    </div>}}/>
+          <Route path="/stills/bolivia" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <Bolivia setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
+                    </div>}}/>
+          <Route path="/stills/experiment" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <Experiment setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
+                    </div>}}/>
+          <Route exact path="/stills/peru" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <Peru/>
+                    </div>}}/>
+          <Route exact path="/stills/jackson" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <Jackson/>
+                    </div>}}/>
+          <Route exact path="/stills/nashville" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <Nashville/>
+                    </div>}}/>
+          <Route exact path="/stills/colorado" render={props => {
+            return  <div>
+                        <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                        <Colorado/>
+                    </div>}}/>
+          <Route exact path="/stills" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <Stills/>
                     </div>}}/>
           <Route path="/game" render={props => {
             return  <div>

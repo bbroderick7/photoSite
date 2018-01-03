@@ -1,0 +1,28 @@
+Brendan Broderick
+
+
+1.
+
+  const Mapview = (props) => <div> Hello {props.name} </div>;
+  export default Mapview;
+
+2.
+
+    1: The Express Pipeline - enables easy to understand and clear workflows
+        for processing data and interacting with databases
+
+    2: The Express Built in Router - makes defining, building, deleting and
+        changing routes very simple.
+
+    3: Easy request and response generation - allows for very simple built
+          in syntax for HTTP verbs and string Parsing
+
+    4: Easy Templating with jade - express makes using and including template engines
+          very straightforward and syntactically clean.
+
+
+    Bonus 5th: Express also has a lot of built in features for error handling
+          that work to ensure that when an error is thrown on the server,
+          it is handled instead of crashing the server
+
+    *I included 5 because "greatest may be kind of arbitrary depending on the program you are developing"

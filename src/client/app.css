@@ -83,3 +83,833 @@ table#gameTable tbody tr:hover {
 .top-card-row{
   padding-bottom: 40px;
 }
+
+
+
+
+body{
+  background: black;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+}
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter-container {
+}
+
+.typewriter h1 {
+  color: #fff;
+  font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: white }
+}
+
+.landing-subheader{
+      transition: 0.3s;
+}
+
+.landing-subheader a{
+      color: inherit;
+      text-decoration: none;
+}
+
+.landing-subheader h3:hover{
+  color: white;
+  cursor: pointer;
+}
+
+.landing-divs{
+  height: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fillerArea{
+  height: 400px;
+  background-image: url("https://farm5.staticflickr.com/4634/39337192481_38d07294b1_b.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.spanNav {
+  font-size:30px;
+  cursor:pointer;
+  color: white;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+.outerDiv {
+
+}
+
+.headerDiv {
+  z-index: 1000;
+  height: 100%;
+  border-right: solid 2px white;
+  padding: 10px;
+  width: 50px;
+  position: fixed;
+}
+
+.vertical-text {
+  color: white;
+  width: 300px;
+  margin-top: 250px;
+	transform: rotate(-90deg);
+	transform-origin: left top 0;
+}
+
+.b-logo{
+  color: white;
+  padding-bottom: 100px;
+  padding-top: 50px;
+}
+
+.b-logo a{
+  text-decoration: none;
+  color: white;
+}
+
+.b-logo a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.contentDiv{
+  padding-left: 64px;
+}
+
+#portfolio {
+  background-image: url("https://farm5.staticflickr.com/4633/27556726429_12c9e11327_c.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#portfolio:hover{
+  cursor: pointer;
+}
+
+#portfolio h4{
+  display: none;
+}
+
+#portfolio:hover h4{
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+#projects {
+  background-image: url("https://farm5.staticflickr.com/4598/24471598817_d4786b4b21_c.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#projects:hover{
+  cursor: pointer;
+}
+
+#projects h4{
+  display: none;
+}
+
+#projects:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#about {
+  background-image: url("https://farm5.staticflickr.com/4739/27557171039_ea34b5339d_c.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#about:hover{
+  cursor: pointer;
+}
+
+#about h4{
+  display: none;
+}
+
+#about:hover h4{
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.vertical-heading {
+  color: white;
+  width: 300px;
+  margin-top: 200px;
+	transform: rotate(-90deg);
+	transform-origin: left top 0;
+}
+
+.inner-head {
+  margin-left: 15px;
+}
+
+#selected-subheader{
+  color: white;
+}
+
+
+
+
+#colorado{
+  background-image: url("https://farm4.staticflickr.com/3783/32596289134_a8170a0599_b.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#colorado:hover{
+  cursor: pointer;
+}
+
+#colorado h4{
+  display: none;
+}
+
+#colorado:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#moab {
+  background-image: url("https://farm4.staticflickr.com/3682/33282346992_f5a617c0fa_b.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#moab:hover {
+  cursor: pointer;
+}
+
+#moab h4 {
+  display: none;
+}
+
+#moab:hover h4 {
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#bolivia {
+  background-image: url("https://farm4.staticflickr.com/3927/33346407706_6e14df7860_k.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#bolivia:hover{
+  cursor: pointer;
+}
+
+#bolivia h4{
+  display: none;
+}
+
+#bolivia:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#peru {
+  background-image: url("https://farm4.staticflickr.com/3891/33425599956_2cea2b9cf5_k.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#peru:hover {
+  cursor: pointer;
+}
+
+#peru h4 {
+  display: none;
+}
+
+#peru:hover h4 {
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#jackson {
+  background-image: url("https://farm5.staticflickr.com/4593/27564430749_1bb7a6ba6b_k.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#jackson:hover{
+  cursor: pointer;
+}
+
+#jackson h4{
+  display: none;
+}
+
+#jackson:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#exp {
+  background-image: url("https://farm4.staticflickr.com/3776/33309988071_ee97912bd1_k.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#exp:hover{
+  cursor: pointer;
+}
+
+#exp h4{
+  display: none;
+}
+
+#exp:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#nashville {
+  background-image: url("https://farm5.staticflickr.com/4633/27556726429_12c9e11327_c.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#nashville:hover{
+  cursor: pointer;
+}
+
+#nashville h4{
+  display: none;
+}
+
+#nashville:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#deloache {
+  background-image: url("https://farm5.staticflickr.com/4641/25503804958_23eeaf2d9d_k.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#deloache:hover{
+  cursor: pointer;
+}
+
+#deloache h4{
+  display: none;
+}
+
+#deloache:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+.title-modal {
+    position: absolute;
+    height: 0;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.7);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.title-modal-content {
+    width: 100%;
+}
+
+.title-modal a {
+
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.title-modal a:hover, .title-modal a:focus {
+    color: #f1f1f1;
+}
+
+.title-modal .closebtn {
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .title-modal a {font-size: 20px}
+  .title-modal .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.spanNav {
+  font-size:30px;
+  cursor:pointer;
+  color: white;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+
+
+#concertify{
+  background-image: url("https://farm5.staticflickr.com/4598/24471598817_d4786b4b21_c.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#concertify:hover{
+  cursor: pointer;
+}
+
+#concertify h4{
+  display: none;
+}
+
+#concertify:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#solitaire {
+  background-image: url("https://farm5.staticflickr.com/4646/24489394737_14f40a5186_b.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#solitaire:hover{
+  cursor: pointer;
+}
+
+#solitaire h4{
+  display: none;
+}
+
+#solitaire:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#blackstar {
+  background-image: url("https://farm5.staticflickr.com/4597/38655689454_4dc1a6b3ef_b.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#blackstar:hover{
+  cursor: pointer;
+}
+
+#blackstar h4{
+  display: none;
+}
+
+#blackstar:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#vUtensils {
+  background-image: url("https://farm5.staticflickr.com/4589/39353275271_b1747b3cb8_b.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#vUtensils:hover{
+  cursor: pointer;
+}
+
+#vUtensils h4{
+  display: none;
+}
+
+#vUtensils:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#facePay {
+  background-image: url("https://farm5.staticflickr.com/4639/39353381641_415788f103_b.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#facePay:hover{
+  cursor: pointer;
+}
+
+#facePay h4{
+  display: none;
+}
+
+#facePay:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#vmil {
+  background-image: url("https://farm5.staticflickr.com/4693/39325003812_a1f92042aa_h.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#vmil:hover{
+  cursor: pointer;
+}
+
+#vmil h4{
+  display: none;
+}
+
+#vmil:hover h4{
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+
+.photo-container{
+  width: 100%;
+}
+
+.subheader-nav{
+  height: 75%;
+  padding-left: 50px;
+}
+
+.gallery-container{
+  padding-top: 20px;
+  height: 450px;
+  overflow-y: scroll;
+}
+
+.project-container{
+  padding-top: 20px;
+  height: 480px;
+  overflow-y: scroll;
+}
+
+.subheader-nav a{
+  color: inherit;
+  text-decoration: none;
+}
+
+.subheader-nav a:hover{
+  color: white;
+  text-decoration: none;
+}
+
+.deloache-gallery-img{
+  width: 100%;
+  height: auto;
+}
+
+.box-gallery-img{
+  height: 130%;
+  object-fit: cover;
+  object-fit: contain;
+  padding: 15px;
+}
+
+.box-image-container{
+  height: 200px;
+  overflow: hidden;
+}
+
+.concertify-banner{
+
+}
+
+.banner-img{
+  width: 100%;
+  height: auto;
+}
+
+.project-information{
+  color: white;
+}
+
+.photo-cover-cont{
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.photo-cover-cont h4{
+  display: none;
+  color: white;
+  margin-top: 100px;
+}
+
+.photo-cover-cont:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.photo-cover-cont:hover h4{
+  display: block;
+}
+
+.photo-cover-cont:hover img{
+  display: inline-block;
+  width: 20%;
+  transition: 0.2s;
+}
+
+.photo-cover-cont:hover img:hover{
+  opacity: .5;
+}
+
+.photo-cover-cont img{
+  display: none;
+  width: 20%;
+  margin-top: 100px;
+  margin-left: 30px;
+}
+
+
+
+
+.project-cover-cont{
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 101%;
+  background: black;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.project-cover-cont h4{
+  display: none;
+  color: white;
+  margin-top: 100px;
+}
+
+.project-cover-cont:hover{
+  opacity: 0.8;
+}
+
+.project-cover-cont:hover h4{
+  display: block;
+}
+
+.project-cover-cont:hover img{
+  display: inline-block;
+  width: 20%;
+  transition: 0.2s;
+}
+
+.project-cover-cont:hover img:hover{
+  opacity: .5;
+  cursor: pointer;
+}
+
+.project-cover-cont img{
+  display: none;
+  width: 20%;
+  margin-top: 100px;
+  margin-left: 30px;
+}
+
+.photo-showcase-container{
+  position: fixed;
+  width: 100%;
+  height:100vh;
+  background: black;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+
+
+
+.gallery-overlay {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.gallery-overlay-content {
+    position: relative;
+    top: 10%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.gallery-overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.gallery-overlay a:hover, .gallery-overlay a:focus {
+    color: #f1f1f1;
+}
+
+.gallery-overlay .gallery-closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .gallery-overlay a {font-size: 20px}
+  .gallery-overlay .gallery-closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+#personal-photo{
+  background-image: url("https://farm5.staticflickr.com/4691/39452499851_d49c859f44_b.jpg");
+  background-size: contain;
+  background-size: cover;
+  height: 400px;
+}
