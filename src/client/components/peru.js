@@ -4,11 +4,28 @@ import { withRouter }           from 'react-router-dom';
 import { TitleBanner }          from './titleBanner';
 import { NavBar }               from './navBar';
 import { SubheaderNav }         from './subheaderNav';
+import { Gallery }              from './gallery';
 /*************************************************************************/
 
 class Peru extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      photoArray: []
+    }
+  }
+
+  componentDidMount(){
+    $.ajax({
+      url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157668110748089&user_id=148642232%40N07&format=json&nojsoncallback=1"
+    }).then(data => {
+      let photoArray = data.photoset.photo;
+      let photoUrls = photoArray.map(photo => {
+        return `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg`
+      })
+      let photoTitles = photoArray.map(photo => { return photo.title })
+      this.setState({ photoArray: data.photoset.photo })
+    })
   }
 
   render() {
@@ -17,6 +34,7 @@ class Peru extends Component {
         <NavBar selector={"stills-navbar"}/>
         <div className="row photo-container">
           <SubheaderNav selected={'peru'} subheadings={["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"]}/>
+          <Gallery photoArray={ this.state.photoArray }/>
         </div>
       </div>
     )

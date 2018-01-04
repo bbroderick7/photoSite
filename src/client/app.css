@@ -908,7 +908,7 @@ body{
 }
 
 #personal-photo{
-  background-image: url("https://farm5.staticflickr.com/4691/39452499851_d49c859f44_b.jpg");
+  background-image: url("https://farm5.staticflickr.com/4684/39454969772_5d9f14e410_z.jpg");
   background-size: contain;
   background-size: cover;
   height: 400px;
@@ -921,6 +921,8 @@ body{
 
 .my-mobile-navbar-container{
   text-align: center;
+  margin-left:-10px;
+  padding: 0px;
 }
 
 

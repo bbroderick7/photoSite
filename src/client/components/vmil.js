@@ -24,7 +24,7 @@ class Vmil extends Component {
           link = {"https://anchorlink.vanderbilt.edu/organization/medicalinnovationlab"}
           projectBannerImage = {"https://farm5.staticflickr.com/4730/24528195987_e6fe7c7804_b.jpg"}
           properName = {"Vanderbilt Medical Innovation Laboratory"}
-          description = {"Lorem Ipsum"}
+          description = {"A joint orgainzation the consists of member of the Vanderbilt engineering school, Vanderbilt A&S, Vanderbilt Medical School Vanderbilt Law School and the Owen Graduate School of Business. Currently working on ways to imrpove the patient experience in clinical settings through streamlining wait times"}
         />
       </div>
     )

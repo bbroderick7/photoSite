@@ -24,7 +24,8 @@ class Solitaire extends Component {
             link = {"https://mighty-plateau-52681.herokuapp.com/"}
             projectBannerImage = {"https://farm5.staticflickr.com/4681/38674111074_ba6eb9e131_b.jpg"}
             properName = {"Solitaire"}
-            description = {"Lorem Ipsum"}
+            description = {"A single player klondike solitaire game that allows 1 and 3 card draw. All games moves are recorded and results can be viewed through a player created profile. Uses github OAuth for player signin and includes a game solver"}
+            tech = {"Mongo, Mongoose, Redis, Node, Express, React, Bootstrap, Passport.js"}
             />
       </div>
     )

@@ -17,7 +17,7 @@ class Moab extends Component {
 
   componentDidMount(){
     $.ajax({
-      url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157667919986069&user_id=148642232%40N07&format=json&nojsoncallback=1"
+      url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157689047067132&user_id=148642232%40N07&format=json&nojsoncallback=1"
     }).then(data => { this.setState({photoArray: data.photoset.photo }) })
     .fail(err => console.log(err))
   }
@@ -28,7 +28,7 @@ class Moab extends Component {
         <NavBar selector={"stills-navbar"}/>
           <div className="row photo-container">
             <SubheaderNav selected={'moab'} subheadings={["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"]}/>
-
+            <Gallery photoArray={ this.state.photoArray }/>
           </div>
       </div>
     )

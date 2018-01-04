@@ -18,7 +18,7 @@ class ProjectContent extends Component {
 
   render(){
     return(
-      <div className="col-xs-9 project-container">
+      <div className="col-xs-12 col-lg-9 project-container">
         <div className="col-xs-12">
           <div className='project-cover-cont'>
             <a href={this.props.github} target="_blank"><img src="http://computermentors.org/wp-content/uploads/2017/07/GitHub_Logo_White.png"/></a>
@@ -28,9 +28,10 @@ class ProjectContent extends Component {
         </div>
         <div className="col-xs-12 project-information">
           <h4><strong>Project:</strong> {this.props.properName}</h4>
-          <h4><strong>Github:</strong><a href={this.props.github} target="_blank"> {this.props.github}</a></h4>
-          <h4><strong>Link: </strong><a href={this.props.github} target="_blank"> {this.props.link}</a></h4>
+          <h4 className="col-md-2 col-xs-12"><a href={this.props.github} target="_blank"><button className="btn btn-light"> <strong>Github</strong></button></a></h4>
+          <h4 className="col-md-10 col-xs-12"><a href={this.props.link} target="_blank"><button className="btn btn-light"> <strong>Project Link </strong></button></a></h4>
           <h4><strong>Description:</strong> {this.props.description}</h4>
+          <h4><strong>Technologies:</strong> {this.props.tech}</h4>
         </div>
       </div>
     )
@@ -53,6 +54,7 @@ export class ProjectBody extends Component {
           projectBannerImage = {this.props.projectBannerImage}
           properName = {this.props.properName}
           description = {this.props.description}
+          tech = {this.props.tech}
           />
       </div>
     )

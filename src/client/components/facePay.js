@@ -14,7 +14,7 @@ class FacePay extends Component {
       galleryPhotos: []
     }
   }
-  
+
   render() {
     return(
       <div className="outerDiv contentDiv col-xs-12">
@@ -25,7 +25,8 @@ class FacePay extends Component {
             link = {"https://mighty-plateau-52681.herokuapp.com/"}
             projectBannerImage = {"https://farm5.staticflickr.com/4729/38706264574_a87215a1fa_b.jpg"}
             properName = {"FacePay"}
-            description = {"Lorem Ipsum"}
+            description = {"A facial recognition mbile app that enables a user to upload bank account information and photos of themselves so that transactions between users and vendors can be made via facial recognition"}
+            tech = {"Mongo, Mongoose, Node, Express, Swift, React Native, Kairos Facial Recognition, Capital One Nessie API, AWS S3 Buckets"}
             />
       </div>
     )
