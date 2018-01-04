@@ -28,14 +28,14 @@ class Deloache extends Component {
 
   render() {
     let gallery = this.state.galleryPhotos.map((photo, index) => {
-      return(<div key={index} className="col-xs-4"><img className="deloache-gallery-img" src={ photo } /></div>)
+      return(<div key={index} className="col-xs-12 col-md-6 col-lg-4"><img className="deloache-gallery-img" src={ photo } /></div>)
     })
     return(
       <div className="outerDiv contentDiv col-xs-12">
             <NavBar selector={"stills-navbar"}/>
             <div className="row photo-container">
               <SubheaderNav selected={'deloache'} subheadings={["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"]}/>
-              <div className="col-xs-9">
+              <div className="col-xs-12 col-lg-10">
                 {gallery}
               </div>
             </div>

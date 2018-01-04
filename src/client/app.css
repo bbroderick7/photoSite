@@ -913,3 +913,148 @@ body{
   background-size: cover;
   height: 400px;
 }
+
+#mobile-selection-header{
+  color: white;
+  border-bottom: solid 1px white;
+}
+
+.my-mobile-navbar-container{
+  text-align: center;
+}
+
+
+.my-mobile-navbar-overlay {
+    margin-top: 35px;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.my-mobile-navbar-overlay-content {
+    position: relative;
+    top: 1%;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    border: solid 1px white;
+}
+
+.my-mobile-navbar-overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.my-mobile-navbar-overlay a:hover, .my-mobile-navbar-overlay a:focus {
+    color: #f1f1f1;
+}
+
+.my-mobile-navbar-overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .my-mobile-navbar-overlay a {font-size: 20px}
+  .my-mobile-navbar-overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.downTriangle {
+  font-size:20px;
+  cursor:pointer;
+  color: white;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}
+
+
+
+
+
+
+
+#subheader-mobile-selection-header{
+  color: white;
+  border-bottom: solid 1px white;
+}
+
+.my-mobile-subheader-container{
+  text-align: center;
+}
+
+
+.my-mobile-subheader-overlay {
+    margin-top: 35px;
+    height: 0;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.my-mobile-subheader-overlay-content {
+    position: relative;
+    top: 1%;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.my-mobile-subheader-overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.my-mobile-subheader-overlay a:hover, .my-mobile-subheader-overlay a:focus {
+    color: #f1f1f1;
+}
+
+.my-mobile-subheader-overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .my-mobile-subheader-overlay a {font-size: 20px}
+  .my-mobile-subheader-overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+.downTriangle {
+  font-size:20px;
+  cursor:pointer;
+  color: white;
+  padding-top: 100px;
+  margin-bottom: 100px;
+}

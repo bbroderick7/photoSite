@@ -39,7 +39,7 @@ export class Gallery extends Component {
     let photoTitles = photoArray.map(photo => { return photo.title })
     let gallery = photoUrls.map((photo, index) => {
       return(
-        <div key={index} className="col-xs-3 box-image-container">
+        <div key={index} className="col-xs-12 col-md-6 col-lg-3 box-image-container">
           <div onClick={this.enlargePhoto} className='photo-cover-cont'><h4>{photoTitles[index]}</h4></div>
           <img className="box-gallery-img" src={ photo } />
         </div>
@@ -53,7 +53,7 @@ export class Gallery extends Component {
             <img src="#" id="galleryBlowup"/>
             </div>
         </div>
-        <div className="col-xs-9 gallery-container">
+        <div className="col-xs-12 col-md-10 gallery-container">
           { gallery }
         </div>
       </div>
