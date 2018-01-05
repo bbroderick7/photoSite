@@ -1,3 +1,11 @@
+
+@media only screen and (max-width: 600px)  {
+  .container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+}
+
 .navbar-static-top {
     margin-left: -14px;
     margin-right: -24px;
@@ -254,6 +262,7 @@ body{
 
 .contentDiv{
   padding-left: 64px;
+  padding-right: 0px !important;
 }
 
 #portfolio {
@@ -709,12 +718,41 @@ body{
   padding-top: 20px;
   height: 450px;
   overflow-y: scroll;
+  padding-right: 0px;
 }
 
 .project-container{
   padding-top: 20px;
   height: 480px;
   overflow-y: scroll;
+}
+
+@media only screen and (max-width: 600px)  {
+  .container-fluid {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+  }
+
+  .gallery-container{
+    padding-top: 20px;
+    height: 670px;
+    overflow-y: scroll;
+    padding-right: 0px;
+    padding-left: 0px !important;
+  }
+
+  .project-container{
+    padding-top: 20px;
+    height: 680px;
+    overflow-y: scroll;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    width: 104%;
+  }
+
+  .inner-proj-container{
+    padding: 0px !important;
+  }
 }
 
 .subheader-nav a{
@@ -733,15 +771,16 @@ body{
 }
 
 .box-gallery-img{
-  height: 130%;
   object-fit: cover;
   object-fit: contain;
-  padding: 15px;
+  padding: 0px;
+  overflow: hidden;
 }
 
 .box-image-container{
   height: 200px;
   overflow: hidden;
+  margin-bottom: 15px
 }
 
 .concertify-banner{

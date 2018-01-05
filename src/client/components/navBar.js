@@ -77,11 +77,12 @@ export class NavBar extends Component {
   render(){
     let mobileSelector = this.props.selector.slice(0, this.props.selector.indexOf('-'));
     let contextualSubheading = screen.width < 600 ? <NavBarMobile selector={mobileSelector}/> : <NavBarDesktopHeadings/>;
+    let nameHeading = screen.width < 600 ? <h3>brendan broderick.</h3> : <h1>brendan broderick.</h1>
     return(
       <div>
         <div className="row typewriter-container">
           <div className="col-lg-6 col-xs-12">
-            <h1>brendan broderick.</h1>
+            {nameHeading}
           </div>
         </div>
         { contextualSubheading }
