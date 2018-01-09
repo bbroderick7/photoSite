@@ -18,7 +18,8 @@ class Bolivia extends Component {
   componentDidMount(){
     $.ajax({
       url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157690236053501&user_id=148642232%40N07&format=json&nojsoncallback=1"
-    }).then(data => { this.setState({photoArray: data.photoset.photo }) })
+    })
+    .then(data => { this.setState({photoArray: data.photoset.photo }) })
     .fail(err => console.log(err))
   }
 

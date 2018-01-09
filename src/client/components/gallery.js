@@ -80,7 +80,7 @@ export class Gallery extends Component {
     }else if(ev.code == 'ArrowRight'){
       this.getNextPhoto('right');
     }else if (ev.code == 'Escape'){
-      this.closeGalleryNav()
+      this.closeGalleryNav(ev)
     }
   }
 
@@ -93,10 +93,18 @@ export class Gallery extends Component {
     document.getElementById("my-gallery-modal").style.zIndex = "100000";
   }
 
-  closeGalleryNav(){
-    console.log('hit')
-    document.getElementById("my-gallery-modal").style.opacity = "0";
-    document.getElementById("my-gallery-modal").style.zIndex = "-10";
+  closeGalleryNav(ev){
+    console.log('hittt')
+    console.log(ev.target.tagName)
+    if(ev.target != undefined){
+      if(ev.target.tagName != 'IMG' && ev.target.className != 'gallery-arrow-cont' && ev.target.tagName != 'h1' && ev.target.className != "gallery-arrow"){
+        document.getElementById("my-gallery-modal").style.opacity = "0";
+        document.getElementById("my-gallery-modal").style.zIndex = "-10";
+      }
+    }else{
+      document.getElementById("my-gallery-modal").style.opacity = "0";
+      document.getElementById("my-gallery-modal").style.zIndex = "-10";
+    }
   }
 
   render(){

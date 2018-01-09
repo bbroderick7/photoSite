@@ -3748,7 +3748,7 @@ var Gallery = exports.Gallery = function (_Component) {
       } else if (ev.code == 'ArrowRight') {
         this.getNextPhoto('right');
       } else if (ev.code == 'Escape') {
-        this.closeGalleryNav();
+        this.closeGalleryNav(ev);
       }
     }
   }, {
@@ -3763,10 +3763,18 @@ var Gallery = exports.Gallery = function (_Component) {
     }
   }, {
     key: 'closeGalleryNav',
-    value: function closeGalleryNav() {
-      console.log('hit');
-      document.getElementById("my-gallery-modal").style.opacity = "0";
-      document.getElementById("my-gallery-modal").style.zIndex = "-10";
+    value: function closeGalleryNav(ev) {
+      console.log('hittt');
+      console.log(ev.target.tagName);
+      if (ev.target != undefined) {
+        if (ev.target.tagName != 'IMG' && ev.target.className != 'gallery-arrow-cont' && ev.target.tagName != 'h1' && ev.target.className != "gallery-arrow") {
+          document.getElementById("my-gallery-modal").style.opacity = "0";
+          document.getElementById("my-gallery-modal").style.zIndex = "-10";
+        }
+      } else {
+        document.getElementById("my-gallery-modal").style.opacity = "0";
+        document.getElementById("my-gallery-modal").style.zIndex = "-10";
+      }
     }
   }, {
     key: 'render',
