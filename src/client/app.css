@@ -792,6 +792,22 @@ body{
   height: auto;
 }
 
+.banner-img-link{
+  width: 100%;
+  height: auto;
+  border: solid 2px black;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.banner-img-link-2{
+  width: 100%;
+  height: auto;
+  border: solid 2px black;
+  top: 55%;
+  transform: translateY(-25%);
+}
+
 .project-information{
   color: white;
 }
@@ -915,6 +931,43 @@ body{
     width: 100%;
     text-align: center;
     margin-top: 30px;
+}
+
+.gallery-arrow-cont{
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  align: center;
+  text-align: center;
+}
+
+.gallery-arrow{
+  font-size: 90px;
+  position: absolute;
+  color: white;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#left-arrow{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+
+}
+
+#left-arrow:hover{
+  opacity: 0.5;
+}
+
+#left-arrow:hover h1:hover{
+  opacity: 0.5;
+}
+
+#right-arrow{
+    right: 0;
+    top: 0px;
+    position: absolute;
 }
 
 .gallery-overlay a {
@@ -1098,4 +1151,23 @@ body{
   color: white;
   padding-top: 100px;
   margin-bottom: 100px;
+}
+
+.box-gallery-img-mobile{
+  width: 100%;
+}
+
+.box-image-container-mobile{
+
+}
+
+.mobile-photo-breaker{
+  color: black;
+  border-bottom: solid 1px white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#my-gallery-container{
+  visibility: hidden;
 }

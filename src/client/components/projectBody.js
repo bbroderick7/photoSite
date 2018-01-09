@@ -21,8 +21,8 @@ class ProjectContent extends Component {
       <div className="col-xs-12 col-lg-9 project-container">
         <div className="col-xs-12 inner-proj-container">
           <div className='project-cover-cont'>
-            <a href={this.props.github} target="_blank"><img src="http://computermentors.org/wp-content/uploads/2017/07/GitHub_Logo_White.png"/></a>
-            <a href={this.props.link} target="_blank"><img className="banner-img" src="https://cdnjs.cat.net/ajax/libs/uswds/0.10.0/img/external-link.svg" /></a>
+            <a href={this.props.github} target="_blank"><img className="banner-img-link"  src="http://computermentors.org/wp-content/uploads/2017/07/GitHub_Logo_White.png"/></a>
+            <a href={this.props.link} target="_blank"><img className="banner-img-link-2" src="https://cdnjs.cat.net/ajax/libs/uswds/0.10.0/img/external-link.svg" /></a>
           </div>
           <img className="banner-img" src={this.props.projectBannerImage} />
         </div>
