@@ -11,7 +11,8 @@ export class Gallery extends Component {
     this.getNextPhoto = this.getNextPhoto.bind(this)
     this.state = {
       photoUrls: [],
-      photoTitles: []
+      photoTitles: [],
+      currentTitle: ""
     }
   }
 
@@ -61,10 +62,12 @@ export class Gallery extends Component {
       let new_selected_index = selected_index == 0 ? this.state.photoUrls.length - 1 : selected_index - 1;
       let new_photo_url = this.state.photoUrls[new_selected_index];
       document.getElementById("galleryBlowup").src = new_photo_url;
+      this.setState({currentTitle: this.state.photoTitles[new_selected_index]})
     }else{
       let new_selected_index = selected_index == this.state.photoUrls.length - 1 ? 0  : selected_index + 1;
       let new_photo_url = this.state.photoUrls[new_selected_index];
       document.getElementById("galleryBlowup").src = new_photo_url;
+      this.setState({currentTitle: this.state.photoTitles[new_selected_index]})
     }
   }
 
@@ -85,10 +88,12 @@ export class Gallery extends Component {
   }
 
   enlargePhoto(ev){
+    console.log(ev.target)
     let photoUrl = ev.target.nodeName == 'H4' ? ev.target.parentNode.nextSibling.src : ev.target.nextSibling.src
     let imgElement = document.getElementById("galleryBlowup");
     imgElement.src = photoUrl;
     imgElement.style.border= "solid 15px white";
+    document.getElementById("blowup-title").innerHTML = ev.target.nodeName == 'H4' ? ev.target.innerHTML : ev.target.children[0].innerHTML
     document.getElementById("my-gallery-modal").style.opacity = "1";
     document.getElementById("my-gallery-modal").style.zIndex = "100000";
   }
@@ -139,6 +144,7 @@ export class Gallery extends Component {
         <div onClick={this.closeGalleryNav} id="my-gallery-modal" className="gallery-overlay">
           <div className="gallery-overlay-content">
             <img src="#" id="galleryBlowup"/>
+            <h2 id="blowup-title">{this.state.currentTitle}</h2>
           </div>
           <div onClick={this.clickNextPhoto} className= "gallery-arrow-cont" id="left-arrow">
             	<h1 className="gallery-arrow">&#9001;</h1>

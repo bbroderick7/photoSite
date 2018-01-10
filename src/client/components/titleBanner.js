@@ -20,7 +20,7 @@ export class TitleBanner extends Component {
   render() {
     let subHeads = "";
     if(this.props.subheaders != undefined){
-      subHeads = this.props.subheaders.map(subhead => <a href="stills/peru"><h4 className="col-xs-offset-1">{subhead}</h4></a> );
+      subHeads = this.props.subheaders.map(subhead => <a href={`${this.props.id}/${subhead}`}><h4 className="col-xs-offset-1">{subhead}</h4></a> );
     }
     let headerDescription = "";
     if(this.props.description != undefined){
