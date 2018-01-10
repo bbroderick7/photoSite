@@ -718,6 +718,7 @@ body{
   padding-top: 20px;
   height: 450px;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   padding-right: 0px;
 }
 
@@ -725,6 +726,7 @@ body{
   padding-top: 20px;
   height: 480px;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media only screen and (max-width: 600px)  {
@@ -737,6 +739,7 @@ body{
     padding-top: 20px;
     height: 670px;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     padding-right: 0px;
     padding-left: 0px !important;
   }
@@ -745,6 +748,7 @@ body{
     padding-top: 20px;
     height: 680px;
     overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     padding-left: 0px !important;
     padding-right: 0px !important;
     width: 104%;
