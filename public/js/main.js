@@ -4234,7 +4234,9 @@ var TitleBanner = exports.TitleBanner = function (_Component) {
   _createClass(TitleBanner, [{
     key: "openNav",
     value: function openNav() {
-      document.getElementById(this.props.nameAlt).style.height = "100%";
+      if (screen.width > 800) {
+        document.getElementById(this.props.nameAlt).style.height = "100%";
+      }
     }
   }, {
     key: "closeNav",

@@ -8,7 +8,9 @@ export class TitleBanner extends Component {
   }
 
   openNav() {
-    document.getElementById(this.props.nameAlt).style.height = "100%";
+    if(screen.width > 800){
+      document.getElementById(this.props.nameAlt).style.height = "100%";
+    }
   }
 
   closeNav() {
