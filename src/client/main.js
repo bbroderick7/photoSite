@@ -24,6 +24,7 @@ import FacePay                  from './components/facePay';
 import Solitaire                from './components/solitaire';
 import Vmil                     from './components/vmil';
 import Vutensils                from './components/vutensils';
+import GalleryPage              from './components/galleryPage';
 import Game                     from './components/game';
 
 // Bring app CSS into the picture
@@ -33,6 +34,36 @@ require('./app.css');
 class MyApp extends Component {
   constructor(props){
     super(props)
+    this.galleries = {
+      bolivia: {
+        name: "bolivia",
+        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157690236053501&user_id=148642232%40N07&format=json&nojsoncallback=1"
+      },
+      peru: {
+        name: "peru",
+        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157668110748089&user_id=148642232%40N07&format=json&nojsoncallback=1"
+      },
+      moab: {
+        name: "moab",
+        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157689047067132&user_id=148642232%40N07&format=json&nojsoncallback=1"
+      },
+      jackson: {
+        name: "jackson",
+        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157688849867972&user_id=148642232%40N07&format=json&nojsoncallback=1"
+      },
+      colorado: {
+        name: "colorado",
+        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157667919986069&user_id=148642232%40N07&format=json&nojsoncallback=1"
+      },
+      nashville: {
+        name: "nashville",
+        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157691652131015&user_id=148642232%40N07&format=json&nojsoncallback=1"
+      },
+      experiment: {
+        name: "experiment",
+        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157677942277644&user_id=148642232%40N07&format=json&nojsoncallback=1"
+      }
+    }
     this.state={
         user: {
           username: this.getCookieVal(document.cookie, "username"),
@@ -139,6 +170,11 @@ class MyApp extends Component {
             return  <div>
                       <Header user={this.state.user} logOutFunction={this.logoutUser}/>
                       <Bolivia setGameAndUserState = {this.setGameAndUserState} username={this.state.user.username}/>
+                    </div>}}/>
+          <Route path="/stills/trial" render={props => {
+            return  <div>
+                      <Header user={this.state.user} logOutFunction={this.logoutUser}/>
+                      <GalleryPage galleryName={this.galleries.bolivia.name} galleryUrl={this.galleries.bolivia.url}/>
                     </div>}}/>
           <Route path="/stills/experiment" render={props => {
             return  <div>
