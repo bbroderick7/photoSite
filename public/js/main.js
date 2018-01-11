@@ -79,9 +79,7 @@ var NavBarMobile = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (NavBarMobile.__proto__ || Object.getPrototypeOf(NavBarMobile)).call(this, props));
 
-    _this.state = {
-      open: false
-    };
+    _this.state = { open: false };
     _this.toggleNav = _this.toggleNav.bind(_this);
     return _this;
   }
@@ -128,7 +126,9 @@ var NavBarMobile = function (_Component) {
         _react2.default.createElement(
           "div",
           { onClick: this.toggleNav, className: "my-mobile-navbar-container" },
-          mytitle
+          " ",
+          mytitle,
+          " "
         ),
         _react2.default.createElement(
           "div",
@@ -180,9 +180,7 @@ var NavBar = exports.NavBar = function (_Component2) {
 
     var _this2 = _possibleConstructorReturn(this, (NavBar.__proto__ || Object.getPrototypeOf(NavBar)).call(this, props));
 
-    _this2.state = {
-      screenWidth: 0
-    };
+    _this2.state = { screenWidth: 0 };
     _this2.getSize = _this2.getSize.bind(_this2);
     return _this2;
   }
@@ -199,7 +197,6 @@ var NavBar = exports.NavBar = function (_Component2) {
   }, {
     key: "getSize",
     value: function getSize() {
-      console.log(screen.width);
       this.setState({ screenWidth: screen.width });
     }
   }, {
@@ -225,7 +222,9 @@ var NavBar = exports.NavBar = function (_Component2) {
           _react2.default.createElement(
             "div",
             { className: "col-lg-6 col-xs-12" },
-            nameHeading
+            " ",
+            nameHeading,
+            " "
           )
         ),
         contextualSubheading
@@ -339,15 +338,19 @@ var DesktopHeader = function (_Component2) {
           _react2.default.createElement(
             'div',
             { className: 'b-logo' },
+            ' ',
             _react2.default.createElement(
               'a',
               { href: '/' },
+              ' ',
               _react2.default.createElement(
                 'h2',
                 null,
                 'b'
-              )
-            )
+              ),
+              ' '
+            ),
+            ' '
           ),
           _react2.default.createElement(
             'span',
@@ -357,11 +360,13 @@ var DesktopHeader = function (_Component2) {
           _react2.default.createElement(
             'div',
             { className: 'vertical-text' },
+            ' ',
             _react2.default.createElement(
               'h4',
               null,
               'brendan broderick'
-            )
+            ),
+            ' '
           )
         )
       );
@@ -480,6 +485,10 @@ var _galleryPage = __webpack_require__(265);
 
 var _galleryPage2 = _interopRequireDefault(_galleryPage);
 
+var _gallery = __webpack_require__(266);
+
+var _gallery2 = _interopRequireDefault(_gallery);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -496,40 +505,11 @@ var MyApp = function (_Component) {
   _inherits(MyApp, _Component);
 
   function MyApp(props) {
+    var _this;
+
     _classCallCheck(this, MyApp);
 
-    var _this = _possibleConstructorReturn(this, (MyApp.__proto__ || Object.getPrototypeOf(MyApp)).call(this, props));
-
-    _this.galleries = {
-      bolivia: {
-        name: "bolivia",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157690236053501&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      peru: {
-        name: "peru",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157668110748089&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      moab: {
-        name: "moab",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157689047067132&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      jackson: {
-        name: "jackson",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157688849867972&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      colorado: {
-        name: "colorado",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157667919986069&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      nashville: {
-        name: "nashville",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157691652131015&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      experiment: {
-        name: "experiment",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157677942277644&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      }
-    };
+    (_this = _possibleConstructorReturn(this, (MyApp.__proto__ || Object.getPrototypeOf(MyApp)).call(this, props)), _this), _this.galleries = _gallery2.default.galleries, _this.galleryNames = _gallery2.default.galleryNames;
     return _this;
   }
 
@@ -628,7 +608,7 @@ var MyApp = function (_Component) {
                 'div',
                 null,
                 _react2.default.createElement(_header2.default, null),
-                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.moab.name, galleryUrl: _this2.galleries.moab.url })
+                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.moab.name, galleryUrl: _this2.galleries.moab.url, galleryList: _this2.galleryNames })
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/stills/bolivia', render: function render(props) {
@@ -636,7 +616,7 @@ var MyApp = function (_Component) {
                 'div',
                 null,
                 _react2.default.createElement(_header2.default, null),
-                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.bolivia.name, galleryUrl: _this2.galleries.bolivia.url })
+                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.bolivia.name, galleryUrl: _this2.galleries.bolivia.url, galleryList: _this2.galleryNames })
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/stills/experiment', render: function render(props) {
@@ -644,7 +624,7 @@ var MyApp = function (_Component) {
                 'div',
                 null,
                 _react2.default.createElement(_header2.default, null),
-                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.experiment.name, galleryUrl: _this2.galleries.experiment.url })
+                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.experiment.name, galleryUrl: _this2.galleries.experiment.url, galleryList: _this2.galleryNames })
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/stills/peru', render: function render(props) {
@@ -652,7 +632,7 @@ var MyApp = function (_Component) {
                 'div',
                 null,
                 _react2.default.createElement(_header2.default, null),
-                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.peru.name, galleryUrl: _this2.galleries.peru.url })
+                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.peru.name, galleryUrl: _this2.galleries.peru.url, galleryList: _this2.galleryNames })
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/stills/jackson', render: function render(props) {
@@ -668,7 +648,7 @@ var MyApp = function (_Component) {
                 'div',
                 null,
                 _react2.default.createElement(_header2.default, null),
-                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.nashville.name, galleryUrl: _this2.galleries.nashville.url })
+                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.nashville.name, galleryUrl: _this2.galleries.nashville.url, galleryList: _this2.galleryNames })
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/stills/colorado', render: function render(props) {
@@ -676,7 +656,7 @@ var MyApp = function (_Component) {
                 'div',
                 null,
                 _react2.default.createElement(_header2.default, null),
-                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.colorado.name, galleryUrl: _this2.galleries.colorado.url })
+                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.colorado.name, galleryUrl: _this2.galleries.colorado.url, galleryList: _this2.galleryNames })
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/stills', render: function render(props) {
@@ -694,14 +674,6 @@ var MyApp = function (_Component) {
 
   return MyApp;
 }(_react.Component);
-
-/* Think about storing some client-side state here */
-
-
-var user = {
-  username: '',
-  email: ''
-};
 
 (0, _reactDom.render)(_react2.default.createElement(MyApp, null), document.getElementById('mainDiv'));
 
@@ -740,9 +712,7 @@ var SubheaderMobileNav = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (SubheaderMobileNav.__proto__ || Object.getPrototypeOf(SubheaderMobileNav)).call(this, props));
 
-    _this.state = {
-      open: false
-    };
+    _this.state = { open: false };
     _this.toggleNav = _this.toggleNav.bind(_this);
     return _this;
   }
@@ -799,7 +769,9 @@ var SubheaderMobileNav = function (_Component) {
         _react2.default.createElement(
           "div",
           { onClick: this.toggleNav, className: "my-mobile-subheader-container" },
-          mytitle
+          " ",
+          mytitle,
+          " "
         ),
         _react2.default.createElement(
           "div",
@@ -807,8 +779,9 @@ var SubheaderMobileNav = function (_Component) {
           _react2.default.createElement(
             "div",
             { className: "my-mobile-subheader-overlay-content" },
+            " ",
             displayHeadings,
-            ";"
+            " "
           )
         )
       );
@@ -826,9 +799,7 @@ var SubheaderNav = exports.SubheaderNav = function (_Component2) {
 
     var _this2 = _possibleConstructorReturn(this, (SubheaderNav.__proto__ || Object.getPrototypeOf(SubheaderNav)).call(this, props));
 
-    _this2.state = {
-      screenWidth: 0
-    };
+    _this2.state = { screenWidth: 0 };
     _this2.getSize = _this2.getSize.bind(_this2);
     return _this2;
   }
@@ -845,7 +816,6 @@ var SubheaderNav = exports.SubheaderNav = function (_Component2) {
   }, {
     key: "getSize",
     value: function getSize() {
-      console.log(screen.width);
       this.setState({ screenWidth: screen.width });
     }
   }, {
@@ -1467,11 +1437,13 @@ var About = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'col-xs-8' },
+            ' ',
             _react2.default.createElement(
               'h1',
               null,
               'hey my name is brendan broderick'
-            )
+            ),
+            ' '
           )
         )
       );
@@ -1780,13 +1752,9 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(6);
 
-var _titleBanner = __webpack_require__(8);
-
 var _projectBody = __webpack_require__(31);
 
 var _navBar = __webpack_require__(10);
-
-var _subheaderNav = __webpack_require__(12);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1806,9 +1774,7 @@ var BlackStar = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (BlackStar.__proto__ || Object.getPrototypeOf(BlackStar)).call(this, props));
 
-    _this.state = {
-      galleryPhotos: []
-    };
+    _this.state = { galleryPhotos: [] };
     return _this;
   }
 
@@ -2750,8 +2716,6 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouterDom = __webpack_require__(6);
 
-var _titleBanner = __webpack_require__(8);
-
 var _navBar = __webpack_require__(10);
 
 var _subheaderNav = __webpack_require__(12);
@@ -2776,9 +2740,7 @@ var GalleryPage = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (GalleryPage.__proto__ || Object.getPrototypeOf(GalleryPage)).call(this, props));
 
-    _this.state = {
-      photoArray: []
-    };
+    _this.state = { photoArray: [] };
     return _this;
   }
 
@@ -2787,9 +2749,7 @@ var GalleryPage = function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      $.ajax({
-        url: this.props.galleryUrl
-      }).then(function (data) {
+      $.ajax({ url: this.props.galleryUrl }).then(function (data) {
         _this2.setState({ photoArray: data.photoset.photo });
       }).fail(function (err) {
         return console.log(err);
@@ -2805,7 +2765,7 @@ var GalleryPage = function (_Component) {
         _react2.default.createElement(
           'div',
           { className: 'row photo-container' },
-          _react2.default.createElement(_subheaderNav.SubheaderNav, { selected: this.props.galleryName, subheadings: ["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"] }),
+          _react2.default.createElement(_subheaderNav.SubheaderNav, { selected: this.props.galleryName, subheadings: this.props.galleryList }),
           _react2.default.createElement(_gallery.Gallery, { photoArray: this.state.photoArray })
         )
       );
@@ -2817,6 +2777,48 @@ var GalleryPage = function (_Component) {
 
 exports.default = (0, _reactRouterDom.withRouter)(GalleryPage);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
+
+/***/ }),
+
+/***/ 266:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+  galleries: {
+    bolivia: {
+      name: "bolivia",
+      url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157690236053501&user_id=148642232%40N07&format=json&nojsoncallback=1"
+    },
+    peru: {
+      name: "peru",
+      url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157668110748089&user_id=148642232%40N07&format=json&nojsoncallback=1"
+    },
+    moab: {
+      name: "moab",
+      url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157689047067132&user_id=148642232%40N07&format=json&nojsoncallback=1"
+    },
+    jackson: {
+      name: "jackson",
+      url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157688849867972&user_id=148642232%40N07&format=json&nojsoncallback=1"
+    },
+    colorado: {
+      name: "colorado",
+      url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157667919986069&user_id=148642232%40N07&format=json&nojsoncallback=1"
+    },
+    nashville: {
+      name: "nashville",
+      url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157691652131015&user_id=148642232%40N07&format=json&nojsoncallback=1"
+    },
+    experiment: {
+      name: "experiment",
+      url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157677942277644&user_id=148642232%40N07&format=json&nojsoncallback=1"
+    }
+  },
+  galleryNames: ["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"]
+};
 
 /***/ }),
 

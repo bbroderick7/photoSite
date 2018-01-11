@@ -1,18 +1,14 @@
 'use strict';
 import React, { Component }     from 'react';
 import { withRouter }           from 'react-router-dom';
-import { TitleBanner }          from './titleBanner';
 import { ProjectBody }          from './projectBody';
 import { NavBar }               from './navBar';
-import { SubheaderNav }         from './subheaderNav';
 /*************************************************************************/
 
 class BlackStar extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      galleryPhotos: []
-    }
+    this.state = { galleryPhotos: [] }
   }
   render() {
     return(

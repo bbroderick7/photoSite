@@ -3,19 +3,17 @@ import React, { Component }     from 'react';
 class SubheaderMobileNav extends Component {
   constructor(props){
     super(props)
-    this.state = {
-      open: false
-    }
+    this.state = { open: false }
     this.toggleNav = this.toggleNav.bind(this)
   }
 
   toggleNav() {
     if(this.state.open == false){
       document.getElementById("subheaderNav").style.height = "170px";
-      this.setState({open: true})
+      this.setState({ open: true })
     }else{
       document.getElementById("subheaderNav").style.height = "0px";
-      this.setState({open: false})
+      this.setState({ open: false })
     }
   }
 
@@ -24,13 +22,9 @@ class SubheaderMobileNav extends Component {
     let displayHeadings = this.props.displayHeadings.map(subheading => <a href= {subheading} ><h4 id={`${subheading}pics`}>{subheading}</h4></a>)
     return(
       <div className="col-xs-6">
-        <div onClick={this.toggleNav} className="my-mobile-subheader-container">
-            {mytitle}
-        </div>
+        <div onClick={this.toggleNav} className="my-mobile-subheader-container"> {mytitle} </div>
         <div id="subheaderNav" className="my-mobile-subheader-overlay">
-          <div className="my-mobile-subheader-overlay-content">
-            {displayHeadings};
-          </div>
+          <div className="my-mobile-subheader-overlay-content"> {displayHeadings} </div>
         </div>
       </div>
     )
@@ -40,9 +34,7 @@ class SubheaderMobileNav extends Component {
 export class SubheaderNav extends Component {
   constructor(props) {
     super(props)
-    this.state= {
-      screenWidth: 0
-    }
+    this.state= { screenWidth: 0 }
     this.getSize = this.getSize.bind(this)
   }
 
@@ -54,10 +46,7 @@ export class SubheaderNav extends Component {
     }
   }
 
-  getSize(){
-    console.log(screen.width);
-    this.setState({screenWidth: screen.width})
-  }
+  getSize(){ this.setState({screenWidth: screen.width}) }
 
   render(){
     let subheaders = this.props.subheadings.map(subheading => <a href= {subheading} ><h3 id={`${subheading}pics`}>{subheading}</h3></a>);

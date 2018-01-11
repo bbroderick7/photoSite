@@ -19,6 +19,7 @@ import Solitaire                from './components/solitaire';
 import Vmil                     from './components/vmil';
 import Vutensils                from './components/vutensils';
 import GalleryPage              from './components/galleryPage';
+import GalleryInformation       from './data/gallery';
 
 // Bring app CSS into the picture
 require('./app.css');
@@ -26,37 +27,9 @@ require('./app.css');
 
 class MyApp extends Component {
   constructor(props){
-    super(props)
-    this.galleries = {
-      bolivia: {
-        name: "bolivia",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157690236053501&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      peru: {
-        name: "peru",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157668110748089&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      moab: {
-        name: "moab",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157689047067132&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      jackson: {
-        name: "jackson",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157688849867972&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      colorado: {
-        name: "colorado",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157667919986069&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      nashville: {
-        name: "nashville",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157691652131015&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      },
-      experiment: {
-        name: "experiment",
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157677942277644&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      }
-    }
+    super(props),
+    this.galleries = GalleryInformation.galleries,
+    this.galleryNames = GalleryInformation.galleryNames
   }
 
   render(){
@@ -115,22 +88,22 @@ class MyApp extends Component {
           <Route path="/stills/moab" render={props => {
             return  <div>
                       <Header/>
-                      <GalleryPage galleryName={this.galleries.moab.name} galleryUrl={this.galleries.moab.url}/>
+                      <GalleryPage galleryName={this.galleries.moab.name} galleryUrl={this.galleries.moab.url} galleryList={ this.galleryNames }/>
                     </div>}}/>
           <Route path="/stills/bolivia" render={props => {
             return  <div>
                       <Header/>
-                      <GalleryPage galleryName={this.galleries.bolivia.name} galleryUrl={this.galleries.bolivia.url}/>
+                      <GalleryPage galleryName={this.galleries.bolivia.name} galleryUrl={this.galleries.bolivia.url} galleryList={ this.galleryNames }/>
                     </div>}}/>
           <Route path="/stills/experiment" render={props => {
             return  <div>
                       <Header/>
-                      <GalleryPage galleryName={this.galleries.experiment.name} galleryUrl={this.galleries.experiment.url}/>
+                      <GalleryPage galleryName={this.galleries.experiment.name} galleryUrl={this.galleries.experiment.url} galleryList={ this.galleryNames }/>
                     </div>}}/>
           <Route exact path="/stills/peru" render={props => {
             return  <div>
                       <Header/>
-                      <GalleryPage galleryName={this.galleries.peru.name} galleryUrl={this.galleries.peru.url}/>
+                      <GalleryPage galleryName={this.galleries.peru.name} galleryUrl={this.galleries.peru.url} galleryList={ this.galleryNames }/>
                     </div>}}/>
           <Route exact path="/stills/jackson" render={props => {
             return  <div>
@@ -140,12 +113,12 @@ class MyApp extends Component {
           <Route exact path="/stills/nashville" render={props => {
             return  <div>
                       <Header/>
-                      <GalleryPage galleryName={this.galleries.nashville.name} galleryUrl={this.galleries.nashville.url}/>
+                      <GalleryPage galleryName={this.galleries.nashville.name} galleryUrl={this.galleries.nashville.url} galleryList={ this.galleryNames }/>
                     </div>}}/>
           <Route exact path="/stills/colorado" render={props => {
             return  <div>
                         <Header/>
-                        <GalleryPage galleryName={this.galleries.colorado.name} galleryUrl={this.galleries.colorado.url}/>
+                        <GalleryPage galleryName={this.galleries.colorado.name} galleryUrl={this.galleries.colorado.url} galleryList={ this.galleryNames }/>
                     </div>}}/>
           <Route exact path="/stills" render={props => {
             return  <div>
@@ -157,11 +130,5 @@ class MyApp extends Component {
     )
   }
 }
-
-/* Think about storing some client-side state here */
-let user = {
-  username: '',
-  email: '',
-};
 
 render(<MyApp/> ,document.getElementById('mainDiv'));

@@ -6,9 +6,7 @@ import { TitleBanner }          from './titleBanner';
 import { NavBar }               from './navBar';
 /*************************************************************************/
 class BannerSelection extends Component {
-  constructor(props){
-    super(props);
-  }
+  constructor(props){ super(props) }
 
   componentDidMount(){
 	  let elem = ReactDOM.findDOMNode(this);
@@ -34,9 +32,7 @@ class BannerSelection extends Component {
 }
 
 class Projects extends Component {
-  constructor(props) {
-    super(props);
-  }
+  constructor(props) { super(props) }
 
   render() {
     return(

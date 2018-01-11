@@ -15,9 +15,7 @@ let NavBarDesktopHeadings = () => <div className="row">
 class NavBarMobile extends Component {
   constructor(props){
     super(props)
-    this.state = {
-      open: false
-    }
+    this.state = { open: false }
     this.toggleNav = this.toggleNav.bind(this)
   }
 
@@ -36,11 +34,8 @@ class NavBarMobile extends Component {
     let mytitle = this.state.open ? <h5 id="mobile-selection-header">{selectedname} <span className="downTriangle">&#9652;</span></h5> : <h5 id="mobile-selection-header">{selectedname} <span className="downTriangle">&#9662;</span></h5> ;
     return(
       <div className="col-xs-5">
-        <div onClick={this.toggleNav} className="my-mobile-navbar-container">
-            {mytitle}
-        </div>
+        <div onClick={this.toggleNav} className="my-mobile-navbar-container"> {mytitle} </div>
         <div id="mobileNav" className="my-mobile-navbar-overlay">
-
           <div className="my-mobile-navbar-overlay-content">
             <a href="/stills"><h4>Stills</h4></a>
             <a href="/projects"><h4>Projects</h4></a>
@@ -55,9 +50,7 @@ class NavBarMobile extends Component {
 export class NavBar extends Component {
   constructor(props) {
     super(props)
-    this.state= {
-      screenWidth: 0
-    }
+    this.state= { screenWidth: 0 }
     this.getSize = this.getSize.bind(this)
   }
 
@@ -69,10 +62,7 @@ export class NavBar extends Component {
     }
   }
 
-  getSize(){
-    console.log(screen.width);
-    this.setState({screenWidth: screen.width})
-  }
+  getSize(){ this.setState({screenWidth: screen.width}) }
 
   render(){
     let mobileSelector = this.props.selector.slice(0, this.props.selector.indexOf('-'));
@@ -81,9 +71,7 @@ export class NavBar extends Component {
     return(
       <div>
         <div className="row typewriter-container">
-          <div className="col-lg-6 col-xs-12">
-            {nameHeading}
-          </div>
+          <div className="col-lg-6 col-xs-12"> {nameHeading} </div>
         </div>
         { contextualSubheading }
       </div>

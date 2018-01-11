@@ -3,9 +3,7 @@ import ReactDOM                 from 'react-dom';
 import { SubheaderNav }         from './subheaderNav';
 
 class ProjectContent extends Component {
-  constructor(props){
-    super(props);
-  }
+  constructor(props){ super(props) }
 
   componentDidMount(){
 	  let elem = ReactDOM.findDOMNode(this);
@@ -39,9 +37,7 @@ class ProjectContent extends Component {
 }
 
 export class ProjectBody extends Component {
-  constructor(props) {
-    super(props);
-  }
+  constructor(props) { super(props) }
 
   render() {
     return(

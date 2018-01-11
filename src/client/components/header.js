@@ -4,9 +4,7 @@ import React, { Component }     from 'react';
 import { Link, withRouter }  from 'react-router-dom';
 /*************************************************************************/
 class SideBarExpand extends Component{
-  constructor(props){
-    super(props)
-  }
+  constructor(props){ super(props) }
 
   render(){
     return(
@@ -24,22 +22,16 @@ class SideBarExpand extends Component{
 }
 
 class DesktopHeader extends Component {
-  constructor(props) {
-    super(props);
-  }
+  constructor(props) { super(props) }
 
   render() {
     return (
       <div className="outerDiv headerDiv">
         <SideBarExpand closeNav = {this.props.closeNav}/>
         <div onClick={this.props.openNav}>
-          <div className="b-logo"><a href="/">
-            <h2>b</h2>
-          </a></div>
+          <div className="b-logo"> <a href="/"> <h2>b</h2> </a> </div>
           <span className="spanNav">&#9776;</span>
-          <div className="vertical-text">
-            <h4>brendan broderick</h4>
-          </div>
+          <div className="vertical-text"> <h4>brendan broderick</h4> </div>
         </div>
       </div>
     )

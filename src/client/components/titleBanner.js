@@ -13,9 +13,7 @@ export class TitleBanner extends Component {
     }
   }
 
-  closeNav() {
-    document.getElementById(this.props.nameAlt).style.height = "0%";
-  }
+  closeNav() { document.getElementById(this.props.nameAlt).style.height = "0%" }
 
   render() {
     let subHeads = "";
