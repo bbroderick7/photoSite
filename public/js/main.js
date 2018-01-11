@@ -436,10 +436,6 @@ var _logout = __webpack_require__(241);
 
 var _logout2 = _interopRequireDefault(_logout);
 
-var _peru = __webpack_require__(242);
-
-var _peru2 = _interopRequireDefault(_peru);
-
 var _stills = __webpack_require__(243);
 
 var _stills2 = _interopRequireDefault(_stills);
@@ -452,29 +448,9 @@ var _deloache = __webpack_require__(245);
 
 var _deloache2 = _interopRequireDefault(_deloache);
 
-var _experiment = __webpack_require__(246);
-
-var _experiment2 = _interopRequireDefault(_experiment);
-
 var _jackson = __webpack_require__(247);
 
 var _jackson2 = _interopRequireDefault(_jackson);
-
-var _nashville = __webpack_require__(248);
-
-var _nashville2 = _interopRequireDefault(_nashville);
-
-var _bolivia = __webpack_require__(249);
-
-var _bolivia2 = _interopRequireDefault(_bolivia);
-
-var _colorado = __webpack_require__(250);
-
-var _colorado2 = _interopRequireDefault(_colorado);
-
-var _moab = __webpack_require__(251);
-
-var _moab2 = _interopRequireDefault(_moab);
 
 var _concertify = __webpack_require__(252);
 
@@ -503,10 +479,6 @@ var _vutensils2 = _interopRequireDefault(_vutensils);
 var _galleryPage = __webpack_require__(265);
 
 var _galleryPage2 = _interopRequireDefault(_galleryPage);
-
-var _game = __webpack_require__(258);
-
-var _game2 = _interopRequireDefault(_game);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -558,56 +530,10 @@ var MyApp = function (_Component) {
         url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157677942277644&user_id=148642232%40N07&format=json&nojsoncallback=1"
       }
     };
-    _this.state = {
-      user: {
-        username: _this.getCookieVal(document.cookie, "username"),
-        email: _this.getCookieVal(document.cookie, "email")
-      }
-    };
-    _this.setGameAndUserState = _this.setGameAndUserState.bind(_this);
-    _this.logoutUser = _this.logoutUser.bind(_this);
     return _this;
   }
 
   _createClass(MyApp, [{
-    key: 'getCookieVal',
-    value: function getCookieVal(cookieString, cookieKey) {
-      if (cookieString.search(cookieKey) == -1) {
-        return '';
-      }
-      var nameString = cookieString.substr(cookieString.search(cookieKey));
-      if (nameString.search(";") != -1) {
-        return nameString.substr(0, nameString.search(";")).split("=")[1];
-      } else {
-        return nameString.split("=")[1];
-      }
-    }
-  }, {
-    key: 'deleteLeftOverCookies',
-    value: function deleteLeftOverCookies() {
-      var cookies = document.cookie.split(";");
-      for (var i = 0; i < cookies.length; i++) {
-        var cookie = cookies[i];
-        var cookieAct = cookie.indexOf("=");
-        var name = cookieAct > -1 ? cookie.substr(0, cookieAct) : cookie;
-        document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-      }
-    }
-  }, {
-    key: 'setGameAndUserState',
-    value: function setGameAndUserState(username, email) {
-      this.deleteLeftOverCookies();
-      this.setState({ user: { username: username, email: email } });
-      document.cookie = 'username=' + username;
-      document.cookie = 'email=' + email;
-    }
-  }, {
-    key: 'logoutUser',
-    value: function logoutUser() {
-      this.deleteLeftOverCookies();
-      this.setState({ user: { username: '', email: '' } });
-    }
-  }, {
     key: 'render',
     value: function render() {
       var _this2 = this;
@@ -629,95 +555,87 @@ var MyApp = function (_Component) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_about2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_about2.default, null)
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_projects2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_projects2.default, null)
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects/concertify', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_concertify2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_concertify2.default, null)
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects/blackstar', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_blackstar2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_blackstar2.default, null)
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects/facePay', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_facePay2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_facePay2.default, null)
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects/solitaire', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_solitaire2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_solitaire2.default, null)
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects/vmil', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_vmil2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_vmil2.default, null)
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects/vutensils', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_vutensils2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_vutensils2.default, null)
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/stills/deloache', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_deloache2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_deloache2.default, null)
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/stills/moab', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_moab2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.moab.name, galleryUrl: _this2.galleries.moab.url })
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { path: '/stills/bolivia', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_bolivia2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
-              );
-            } }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/stills/trial', render: function render(props) {
-              return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
+                _react2.default.createElement(_header2.default, null),
                 _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.bolivia.name, galleryUrl: _this2.galleries.bolivia.url })
               );
             } }),
@@ -725,23 +643,23 @@ var MyApp = function (_Component) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_experiment2.default, { setGameAndUserState: _this2.setGameAndUserState, username: _this2.state.user.username })
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.experiment.name, galleryUrl: _this2.galleries.experiment.url })
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/stills/peru', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_peru2.default, null)
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.peru.name, galleryUrl: _this2.galleries.peru.url })
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/stills/jackson', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
+                _react2.default.createElement(_header2.default, null),
                 _react2.default.createElement(_jackson2.default, null)
               );
             } }),
@@ -749,32 +667,24 @@ var MyApp = function (_Component) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_nashville2.default, null)
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.nashville.name, galleryUrl: _this2.galleries.nashville.url })
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/stills/colorado', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_colorado2.default, null)
+                _react2.default.createElement(_header2.default, null),
+                _react2.default.createElement(_galleryPage2.default, { galleryName: _this2.galleries.colorado.name, galleryUrl: _this2.galleries.colorado.url })
               );
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/stills', render: function render(props) {
               return _react2.default.createElement(
                 'div',
                 null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
+                _react2.default.createElement(_header2.default, null),
                 _react2.default.createElement(_stills2.default, null)
-              );
-            } }),
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/game', render: function render(props) {
-              return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_header2.default, { user: _this2.state.user, logOutFunction: _this2.logoutUser }),
-                _react2.default.createElement(_game2.default, null)
               );
             } })
         )
@@ -1392,99 +1302,6 @@ exports.default = (0, _reactRouterDom.withRouter)(Logout);
 
 /***/ }),
 
-/***/ 242:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function($) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(6);
-
-var _titleBanner = __webpack_require__(8);
-
-var _navBar = __webpack_require__(10);
-
-var _subheaderNav = __webpack_require__(12);
-
-var _gallery = __webpack_require__(30);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/*************************************************************************/
-
-var Peru = function (_Component) {
-  _inherits(Peru, _Component);
-
-  function Peru(props) {
-    _classCallCheck(this, Peru);
-
-    var _this = _possibleConstructorReturn(this, (Peru.__proto__ || Object.getPrototypeOf(Peru)).call(this, props));
-
-    _this.state = {
-      photoArray: []
-    };
-    return _this;
-  }
-
-  _createClass(Peru, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      $.ajax({
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157668110748089&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      }).then(function (data) {
-        var photoArray = data.photoset.photo;
-        var photoUrls = photoArray.map(function (photo) {
-          return 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '.jpg';
-        });
-        var photoTitles = photoArray.map(function (photo) {
-          return photo.title;
-        });
-        _this2.setState({ photoArray: data.photoset.photo });
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'outerDiv contentDiv col-xs-12' },
-        _react2.default.createElement(_navBar.NavBar, { selector: "stills-navbar" }),
-        _react2.default.createElement(
-          'div',
-          { className: 'row photo-container' },
-          _react2.default.createElement(_subheaderNav.SubheaderNav, { selected: 'peru', subheadings: ["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"] }),
-          _react2.default.createElement(_gallery.Gallery, { photoArray: this.state.photoArray })
-        )
-      );
-    }
-  }]);
-
-  return Peru;
-}(_react.Component);
-
-exports.default = (0, _reactRouterDom.withRouter)(Peru);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
-
-/***/ }),
-
 /***/ 243:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1767,92 +1584,6 @@ exports.default = (0, _reactRouterDom.withRouter)(Deloache);
 
 /***/ }),
 
-/***/ 246:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function($) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(6);
-
-var _titleBanner = __webpack_require__(8);
-
-var _navBar = __webpack_require__(10);
-
-var _subheaderNav = __webpack_require__(12);
-
-var _gallery = __webpack_require__(30);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/*************************************************************************/
-
-var Experiment = function (_Component) {
-  _inherits(Experiment, _Component);
-
-  function Experiment(props) {
-    _classCallCheck(this, Experiment);
-
-    var _this = _possibleConstructorReturn(this, (Experiment.__proto__ || Object.getPrototypeOf(Experiment)).call(this, props));
-
-    _this.state = {
-      photoArray: []
-    };
-    return _this;
-  }
-
-  _createClass(Experiment, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      $.ajax({
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157677942277644&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      }).then(function (data) {
-        _this2.setState({ photoArray: data.photoset.photo });
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'outerDiv contentDiv col-xs-12' },
-        _react2.default.createElement(_navBar.NavBar, { selector: "stills-navbar" }),
-        _react2.default.createElement(
-          'div',
-          { className: 'row photo-container' },
-          _react2.default.createElement(_subheaderNav.SubheaderNav, { selected: 'experiment', subheadings: ["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"] }),
-          _react2.default.createElement(_gallery.Gallery, { photoArray: this.state.photoArray })
-        )
-      );
-    }
-  }]);
-
-  return Experiment;
-}(_react.Component);
-
-exports.default = (0, _reactRouterDom.withRouter)(Experiment);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
-
-/***/ }),
-
 /***/ 247:
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1950,367 +1681,6 @@ var Jackson = function (_Component) {
 }(_react.Component);
 
 exports.default = (0, _reactRouterDom.withRouter)(Jackson);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
-
-/***/ }),
-
-/***/ 248:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function($) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(21);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _reactRouterDom = __webpack_require__(6);
-
-var _titleBanner = __webpack_require__(8);
-
-var _navBar = __webpack_require__(10);
-
-var _subheaderNav = __webpack_require__(12);
-
-var _gallery = __webpack_require__(30);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/*************************************************************************/
-
-var Nashville = function (_Component) {
-  _inherits(Nashville, _Component);
-
-  function Nashville(props) {
-    _classCallCheck(this, Nashville);
-
-    var _this = _possibleConstructorReturn(this, (Nashville.__proto__ || Object.getPrototypeOf(Nashville)).call(this, props));
-
-    _this.state = {
-      photoArray: []
-    };
-    return _this;
-  }
-
-  _createClass(Nashville, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      $.ajax({
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157691652131015&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      }).then(function (data) {
-        var photoArray = data.photoset.photo;
-        var photoUrls = photoArray.map(function (photo) {
-          return 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '.jpg';
-        });
-        var photoTitles = photoArray.map(function (photo) {
-          return photo.title;
-        });
-        _this2.setState({ photoArray: data.photoset.photo });
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'outerDiv contentDiv col-xs-12' },
-        _react2.default.createElement(_navBar.NavBar, { selector: "stills-navbar" }),
-        _react2.default.createElement(
-          'div',
-          { onClick: this.fadeOut, className: 'row photo-container' },
-          _react2.default.createElement(_subheaderNav.SubheaderNav, { selected: 'nashville', subheadings: ["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"] }),
-          _react2.default.createElement(_gallery.Gallery, { photoArray: this.state.photoArray })
-        )
-      );
-    }
-  }]);
-
-  return Nashville;
-}(_react.Component);
-
-exports.default = (0, _reactRouterDom.withRouter)(Nashville);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
-
-/***/ }),
-
-/***/ 249:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function($) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(6);
-
-var _titleBanner = __webpack_require__(8);
-
-var _navBar = __webpack_require__(10);
-
-var _subheaderNav = __webpack_require__(12);
-
-var _gallery = __webpack_require__(30);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/*************************************************************************/
-
-var Bolivia = function (_Component) {
-  _inherits(Bolivia, _Component);
-
-  function Bolivia(props) {
-    _classCallCheck(this, Bolivia);
-
-    var _this = _possibleConstructorReturn(this, (Bolivia.__proto__ || Object.getPrototypeOf(Bolivia)).call(this, props));
-
-    _this.state = {
-      photoArray: []
-    };
-    return _this;
-  }
-
-  _createClass(Bolivia, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      $.ajax({
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157690236053501&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      }).then(function (data) {
-        _this2.setState({ photoArray: data.photoset.photo });
-      }).fail(function (err) {
-        return console.log(err);
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'outerDiv contentDiv col-xs-12' },
-        _react2.default.createElement(_navBar.NavBar, { selector: "stills-navbar" }),
-        _react2.default.createElement(
-          'div',
-          { className: 'row photo-container' },
-          _react2.default.createElement(_subheaderNav.SubheaderNav, { selected: 'bolivia', subheadings: ["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"] }),
-          _react2.default.createElement(_gallery.Gallery, { photoArray: this.state.photoArray })
-        )
-      );
-    }
-  }]);
-
-  return Bolivia;
-}(_react.Component);
-
-exports.default = (0, _reactRouterDom.withRouter)(Bolivia);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
-
-/***/ }),
-
-/***/ 250:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function($) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(6);
-
-var _titleBanner = __webpack_require__(8);
-
-var _navBar = __webpack_require__(10);
-
-var _subheaderNav = __webpack_require__(12);
-
-var _gallery = __webpack_require__(30);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/*************************************************************************/
-
-var Colorado = function (_Component) {
-  _inherits(Colorado, _Component);
-
-  function Colorado(props) {
-    _classCallCheck(this, Colorado);
-
-    var _this = _possibleConstructorReturn(this, (Colorado.__proto__ || Object.getPrototypeOf(Colorado)).call(this, props));
-
-    _this.state = {
-      photoArray: []
-    };
-    return _this;
-  }
-
-  _createClass(Colorado, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      $.ajax({
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157667919986069&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      }).then(function (data) {
-        _this2.setState({ photoArray: data.photoset.photo });
-      }).fail(function (err) {
-        return console.log(err);
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'outerDiv contentDiv col-xs-12' },
-        _react2.default.createElement(_navBar.NavBar, { selector: "stills-navbar" }),
-        _react2.default.createElement(
-          'div',
-          { className: 'row photo-container' },
-          _react2.default.createElement(_subheaderNav.SubheaderNav, { selected: 'colorado', subheadings: ["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"] }),
-          _react2.default.createElement(_gallery.Gallery, { photoArray: this.state.photoArray })
-        )
-      );
-    }
-  }]);
-
-  return Colorado;
-}(_react.Component);
-
-exports.default = (0, _reactRouterDom.withRouter)(Colorado);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
-
-/***/ }),
-
-/***/ 251:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function($) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouterDom = __webpack_require__(6);
-
-var _titleBanner = __webpack_require__(8);
-
-var _navBar = __webpack_require__(10);
-
-var _subheaderNav = __webpack_require__(12);
-
-var _gallery = __webpack_require__(30);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/*************************************************************************/
-
-var Moab = function (_Component) {
-  _inherits(Moab, _Component);
-
-  function Moab(props) {
-    _classCallCheck(this, Moab);
-
-    var _this = _possibleConstructorReturn(this, (Moab.__proto__ || Object.getPrototypeOf(Moab)).call(this, props));
-
-    _this.state = {
-      photoArray: []
-    };
-    return _this;
-  }
-
-  _createClass(Moab, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this2 = this;
-
-      $.ajax({
-        url: "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=72157689047067132&user_id=148642232%40N07&format=json&nojsoncallback=1"
-      }).then(function (data) {
-        _this2.setState({ photoArray: data.photoset.photo });
-      }).fail(function (err) {
-        return console.log(err);
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'outerDiv contentDiv col-xs-12' },
-        _react2.default.createElement(_navBar.NavBar, { selector: "stills-navbar" }),
-        _react2.default.createElement(
-          'div',
-          { className: 'row photo-container' },
-          _react2.default.createElement(_subheaderNav.SubheaderNav, { selected: 'moab', subheadings: ["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"] }),
-          _react2.default.createElement(_gallery.Gallery, { photoArray: this.state.photoArray })
-        )
-      );
-    }
-  }]);
-
-  return Moab;
-}(_react.Component);
-
-exports.default = (0, _reactRouterDom.withRouter)(Moab);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
 
 /***/ }),
@@ -2773,311 +2143,6 @@ var Vutensils = function (_Component) {
 }(_react.Component);
 
 exports.default = (0, _reactRouterDom.withRouter)(Vutensils);
-
-/***/ }),
-
-/***/ 258:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function($) {/* Copyright G. Hemingway, 2017 - All rights reserved */
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(2);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = __webpack_require__(117);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/*************************************************************************/
-
-var Card = function (_Component) {
-  _inherits(Card, _Component);
-
-  function Card(props) {
-    _classCallCheck(this, Card);
-
-    var _this = _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).call(this, props));
-
-    _this.getCardFile = _this.getCardFile.bind(_this);
-    return _this;
-  }
-
-  _createClass(Card, [{
-    key: 'getCardFile',
-    value: function getCardFile() {
-      var cardVal = '';
-      if (this.props.up === false) {
-        return '/images/backOfCard.png';
-      }
-      if (this.props.value > 10) {
-        var royals = ['jack', 'queen', 'king', 'ace', 'joker'];
-        cardVal = royals[this.props.value - 11];
-      } else {
-        cardVal = this.props.value;
-      }
-      return '/images/' + cardVal + '_of_' + this.props.suite + '.png';
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var cardFile = this.getCardFile();
-      return _react2.default.createElement(
-        'div',
-        { className: this.props.className },
-        _react2.default.createElement('img', { className: 'cardImage', src: cardFile })
-      );
-    }
-  }]);
-
-  return Card;
-}(_react.Component);
-
-var Pile = function (_Component2) {
-  _inherits(Pile, _Component2);
-
-  function Pile(props) {
-    _classCallCheck(this, Pile);
-
-    var _this2 = _possibleConstructorReturn(this, (Pile.__proto__ || Object.getPrototypeOf(Pile)).call(this, props));
-
-    _this2.cardList = _this2.cardList.bind(_this2);
-    return _this2;
-  }
-
-  _createClass(Pile, [{
-    key: 'cardList',
-    value: function cardList() {
-      var pileCardClass = "pile-Card-Class";
-      this.props.pile.reverse();
-      return this.props.pile.map(function (cardCur, index) {
-        if (index == 0) {
-          pileCardClass = '';
-        } else {
-          pileCardClass = "pile-Card-Class";
-        }
-        return _react2.default.createElement(Card, { key: index, value: cardCur.value, suite: cardCur.suite, up: cardCur.up, className: pileCardClass });
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'card-pile-outer' },
-        this.cardList()
-      );
-    }
-  }]);
-
-  return Pile;
-}(_react.Component);
-
-var PileLayout = function (_Component3) {
-  _inherits(PileLayout, _Component3);
-
-  function PileLayout(props) {
-    _classCallCheck(this, PileLayout);
-
-    return _possibleConstructorReturn(this, (PileLayout.__proto__ || Object.getPrototypeOf(PileLayout)).call(this, props));
-  }
-
-  _createClass(PileLayout, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'row' },
-        _react2.default.createElement(
-          'div',
-          { className: 'col-xs-1 card-pile-outer' },
-          _react2.default.createElement(Pile, { pile: this.props.myPiles.pile1 })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-xs-1 card-pile-outer' },
-          _react2.default.createElement(Pile, { pile: this.props.myPiles.pile2 })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-xs-1 card-pile-outer' },
-          _react2.default.createElement(Pile, { pile: this.props.myPiles.pile3 })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-xs-1 card-pile-outer' },
-          _react2.default.createElement(Pile, { pile: this.props.myPiles.pile4 })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-xs-1 card-pile-outer' },
-          _react2.default.createElement(Pile, { pile: this.props.myPiles.pile5 })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-xs-1 card-pile-outer' },
-          _react2.default.createElement(Pile, { pile: this.props.myPiles.pile6 })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'col-xs-1 card-pile-outer' },
-          _react2.default.createElement(Pile, { pile: this.props.myPiles.pile7 })
-        )
-      );
-    }
-  }]);
-
-  return PileLayout;
-}(_react.Component);
-
-var CardStack = function (_Component4) {
-  _inherits(CardStack, _Component4);
-
-  function CardStack(props) {
-    _classCallCheck(this, CardStack);
-
-    return _possibleConstructorReturn(this, (CardStack.__proto__ || Object.getPrototypeOf(CardStack)).call(this, props));
-  }
-
-  _createClass(CardStack, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'col-xs-1' },
-        _react2.default.createElement(
-          'div',
-          { className: 'card-stack-border' },
-          _react2.default.createElement(Card, { className: 'card-stack', up: false })
-        )
-      );
-    }
-  }]);
-
-  return CardStack;
-}(_react.Component);
-
-var DrawStack = function (_Component5) {
-  _inherits(DrawStack, _Component5);
-
-  function DrawStack(props) {
-    _classCallCheck(this, DrawStack);
-
-    var _this5 = _possibleConstructorReturn(this, (DrawStack.__proto__ || Object.getPrototypeOf(DrawStack)).call(this, props));
-
-    _this5.makeDrawCards = _this5.makeDrawCards.bind(_this5);
-    return _this5;
-  }
-
-  _createClass(DrawStack, [{
-    key: 'makeDrawCards',
-    value: function makeDrawCards() {
-      var dCard = 'draw-card';
-      return this.props.draw.map(function (drawCard, index) {
-        return _react2.default.createElement(Card, { key: index, value: drawCard.value, suite: drawCard.suite, up: false, className: dCard });
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'col-xs-1' },
-        this.makeDrawCards()
-      );
-    }
-  }]);
-
-  return DrawStack;
-}(_react.Component);
-
-var Game = function (_Component6) {
-  _inherits(Game, _Component6);
-
-  function Game(props) {
-    _classCallCheck(this, Game);
-
-    var _this6 = _possibleConstructorReturn(this, (Game.__proto__ || Object.getPrototypeOf(Game)).call(this, props));
-
-    _this6.state = {
-      gameStatus: ''
-    };
-    return _this6;
-  }
-
-  _createClass(Game, [{
-    key: 'getGameID',
-    value: function getGameID() {
-      return window.location.href.slice(window.location.href.indexOf('game/') + 5);
-    }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var _this7 = this;
-
-      $.ajax({
-        url: '/v1/game/' + this.getGameID(),
-        method: 'GET'
-      }).then(function (data) {
-        _this7.setState({ gameStatus: data });
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var myPi = this.state.gameStatus;
-      if (myPi != '') {
-        return _react2.default.createElement(
-          'div',
-          null,
-          _react2.default.createElement(
-            'div',
-            { className: 'row top-card-row' },
-            _react2.default.createElement('div', { className: 'col-xs-1' }),
-            _react2.default.createElement(DrawStack, { draw: this.state.gameStatus.draw }),
-            _react2.default.createElement(CardStack, null),
-            _react2.default.createElement('div', { className: 'col-xs-4' }),
-            _react2.default.createElement(CardStack, null),
-            _react2.default.createElement(CardStack, null),
-            _react2.default.createElement(CardStack, null),
-            _react2.default.createElement(CardStack, null)
-          ),
-          _react2.default.createElement(
-            'div',
-            { className: 'row' },
-            _react2.default.createElement('div', { className: 'col-xs-4' }),
-            _react2.default.createElement(PileLayout, { myPiles: this.state.gameStatus })
-          )
-        );
-      } else {
-        return _react2.default.createElement(
-          'h1',
-          null,
-          'Please Wait'
-        );
-      }
-    }
-  }]);
-
-  return Game;
-}(_react.Component);
-
-exports.default = (0, _reactRouter.withRouter)(Game);
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(20)))
 
 /***/ }),
 
