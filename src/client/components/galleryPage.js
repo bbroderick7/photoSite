@@ -14,7 +14,7 @@ class GalleryPage extends Component {
   }
 
   componentDidMount(){
-    $.ajax({ url: this.props.galleryUrl })
+    $.ajax({ url: this.props.galleryInfo.url})
     .then(data => { this.setState({photoArray: data.photoset.photo }) })
     .fail(err => console.log(err))
   }
@@ -24,7 +24,7 @@ class GalleryPage extends Component {
       <div className="outerDiv contentDiv col-xs-12">
         <NavBar selector={"stills-navbar"}/>
           <div className="row photo-container">
-            <SubheaderNav selected={this.props.galleryName} subheadings={this.props.galleryList}/>
+            <SubheaderNav selected={this.props.galleryInfo.name} subheadings={this.props.galleryList}/>
             <Gallery photoArray={ this.state.photoArray }/>
           </div>
       </div>

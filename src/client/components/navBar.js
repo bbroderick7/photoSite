@@ -12,6 +12,12 @@ let NavBarDesktopHeadings = () => <div className="row">
         </div>
       </div>;
 
+let NavLinks = () => <div className="my-mobile-navbar-overlay-content">
+  <a href="/stills"><h4>Stills</h4></a>
+  <a href="/projects"><h4>Projects</h4></a>
+  <a href="/about"><h4>About</h4></a>
+</div>
+
 class NavBarMobile extends Component {
   constructor(props){
     super(props)
@@ -35,13 +41,7 @@ class NavBarMobile extends Component {
     return(
       <div className="col-xs-5">
         <div onClick={this.toggleNav} className="my-mobile-navbar-container"> {mytitle} </div>
-        <div id="mobileNav" className="my-mobile-navbar-overlay">
-          <div className="my-mobile-navbar-overlay-content">
-            <a href="/stills"><h4>Stills</h4></a>
-            <a href="/projects"><h4>Projects</h4></a>
-            <a href="/about"><h4>About</h4></a>
-          </div>
-        </div>
+        <div id="mobileNav" className="my-mobile-navbar-overlay"><NavLinks/></div>
       </div>
     )
   }
