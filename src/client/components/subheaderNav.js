@@ -46,7 +46,7 @@ export class SubheaderNav extends Component {
     }
   }
 
-  getSize(){ this.setState({screenWidth: screen.width}) }
+  getSize(){ this.setState({ screenWidth: screen.width }) }
 
   render(){
     let subheaders = this.props.subheadings.map(subheading => <a href= {subheading} ><h3 id={`${subheading}pics`}>{subheading}</h3></a>);

@@ -452,21 +452,21 @@ body{
   cursor: pointer;
 }
 
-#exp {
+#experiment {
   background-image: url("https://farm4.staticflickr.com/3776/33309988071_ee97912bd1_k.jpg");
   background-size: contain;
   background-size: cover;
 }
 
-#exp:hover{
+#experiment:hover{
   cursor: pointer;
 }
 
-#exp h4{
+#experiment h4{
   display: none;
 }
 
-#exp:hover h4{
+#experiment:hover h4{
   display: block;
   text-decoration: none;
   color: white;

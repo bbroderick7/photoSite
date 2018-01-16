@@ -31,13 +31,13 @@ class MyApp extends Component {
 
   render(){
     let currentProjects = this.projectNames.map(proj =>
-      <Route exact path={`/projects/${proj}`} render={ () => <div>
+      <Route exact path={ `/projects/${proj}` } render={ () => <div>
         <Header/>
-        <ProjectPage project={this.projects[proj]}/>
+        <ProjectPage project={ this.projects[proj] }/>
       </div>}/>)
 
     let currentGalleries = this.galleryNames.map(gall =>
-      <Route path={`/stills/${gall}`} render={ () => <div>
+      <Route path={ `/stills/${gall}` } render={ () => <div>
           <Header/>
           <GalleryPage galleryInfo={this.galleries[gall]} galleryList={ this.galleryNames }/>
         </div>}/>)
@@ -58,8 +58,11 @@ class MyApp extends Component {
               <Header/>
               <Stills/>
             </div>}/>
-          {currentProjects}
-          {currentGalleries}
+
+          { currentProjects }
+
+          { currentGalleries }
+
           <Route path="/stills/deloache" render={ () => <div>
               <Header/>
               <Deloache/>
