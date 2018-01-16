@@ -60,17 +60,9 @@ class MyApp extends Component {
             </div>}/>
 
           { currentProjects }
-
+          
           { currentGalleries }
 
-          <Route path="/stills/deloache" render={ () => <div>
-              <Header/>
-              <Deloache/>
-            </div>}/>
-          <Route exact path="/stills/jackson" render={ () => <div>
-              <Header/>
-              <Jackson/>
-            </div>}/>
         </div>
       </BrowserRouter>
     )

@@ -6,7 +6,7 @@ import { NavBar }               from './navBar';
 import { SubheaderNav }         from './subheaderNav';
 /*************************************************************************/
 
-class Deloache extends Component {
+export class Deloache extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -34,14 +34,10 @@ class Deloache extends Component {
       <div className="outerDiv contentDiv col-xs-12">
             <NavBar selector={"stills-navbar"}/>
             <div className="row photo-container">
-              <SubheaderNav selected={'deloache'} subheadings={["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"]}/>
-              <div className="col-xs-12 col-lg-10">
-                {gallery}
-              </div>
+              <SubheaderNav selected={'deloache'} subheadings={ ["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"] }/>
+              <div className="col-xs-12 col-lg-10"> { gallery } </div>
             </div>
           </div>
     )
   }
 }
-
-export default withRouter(Deloache);

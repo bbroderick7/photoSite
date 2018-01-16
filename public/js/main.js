@@ -322,23 +322,7 @@ var MyApp = function (_Component) {
               );
             } }),
           currentProjects,
-          currentGalleries,
-          _react2.default.createElement(_reactRouterDom.Route, { path: '/stills/deloache', render: function render() {
-              return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_header2.default, null),
-                _react2.default.createElement(_deloache2.default, null)
-              );
-            } }),
-          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/stills/jackson', render: function render() {
-              return _react2.default.createElement(
-                'div',
-                null,
-                _react2.default.createElement(_header2.default, null),
-                _react2.default.createElement(_jackson2.default, null)
-              );
-            } })
+          currentGalleries
         )
       );
     }
@@ -1545,6 +1529,7 @@ exports.default = (0, _reactRouterDom.withRouter)(About);
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.Deloache = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -1570,7 +1555,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 /*************************************************************************/
 
-var Deloache = function (_Component) {
+var Deloache = exports.Deloache = function (_Component) {
   _inherits(Deloache, _Component);
 
   function Deloache(props) {
@@ -1620,7 +1605,9 @@ var Deloache = function (_Component) {
           _react2.default.createElement(
             'div',
             { className: 'col-xs-12 col-lg-10' },
-            gallery
+            ' ',
+            gallery,
+            ' '
           )
         )
       );
@@ -1629,8 +1616,6 @@ var Deloache = function (_Component) {
 
   return Deloache;
 }(_react.Component);
-
-exports.default = (0, _reactRouterDom.withRouter)(Deloache);
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(46)))
 
 /***/ }),
@@ -1760,6 +1745,8 @@ var _subheaderNav = __webpack_require__(34);
 
 var _gallery = __webpack_require__(245);
 
+var _deloache = __webpack_require__(242);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1796,7 +1783,9 @@ var GalleryPage = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log(this.props.galleryInfo.name);
+      if (this.props.galleryInfo.name == 'deloache') {
+        return _react2.default.createElement(_deloache.Deloache, null);
+      }
       return _react2.default.createElement(
         'div',
         { className: 'outerDiv contentDiv col-xs-12' },
@@ -1859,7 +1848,9 @@ var DesktopDisplay = function DesktopDisplay(props) {
         _react2.default.createElement(
           'h4',
           null,
-          props.photoTitles[index]
+          ' ',
+          props.photoTitles[index],
+          ' '
         )
       ),
       _react2.default.createElement('img', { className: 'box-gallery-img', src: photo })
@@ -1889,7 +1880,7 @@ var MobileDisplay = function MobileDisplay(props) {
         )
       ),
       _react2.default.createElement('img', { className: 'box-gallery-img-mobile', src: photo }),
-      _react2.default.createElement('div', { className: 'col-xs-1 col-xs-offset-5  mobile-photo-breaker' })
+      _react2.default.createElement('div', { className: 'col-xs-1 col-xs-offset-5 mobile-photo-breaker' })
     );
   });
   return _react2.default.createElement(

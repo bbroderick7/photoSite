@@ -1,23 +1,25 @@
 import React, { Component }     from 'react';
 import ReactDOM                 from 'react-dom';
 
+
+
 let DesktopDisplay = (props) => {
-  let content = props.photoUrls.map((photo, index) => <div key={ index } className="col-xs-12 col-md-6 col-lg-3 box-image-container">
-        <div onClick={props.enlargePhoto} className='photo-cover-cont'><h4>{props.photoTitles[index]}</h4></div>
-        <img className="box-gallery-img" src={ photo } />
+  let content = props.photoUrls.map((photo, index) => <div key= { index } className="col-xs-12 col-md-6 col-lg-3 box-image-container">
+        <div onClick= { props.enlargePhoto } className='photo-cover-cont'><h4> { props.photoTitles[index] } </h4></div>
+        <img className="box-gallery-img" src= { photo } />
       </div>
   )
-  return(<div> {content} </div>)
+  return(<div> { content } </div>)
 }
 
 let MobileDisplay = (props) => {
   let content = props.photoUrls.map((photo, index) => <div key={index} className="col-xs-12 col-md-6 col-lg-3 box-image-container-mobile">
         <div className='photo-cover-cont'><h4>{props.photoTitles[index]}</h4></div>
         <img className="box-gallery-img-mobile" src={ photo } />
-        <div className="col-xs-1 col-xs-offset-5  mobile-photo-breaker"></div>
+        <div className="col-xs-1 col-xs-offset-5 mobile-photo-breaker"></div>
       </div>
   )
-  return( <div> {content} </div> )
+  return( <div> { content } </div> )
 }
 
 let ImageBlowup = (props) => <div onClick={ props.closeGalleryNav } id="my-gallery-modal" className="gallery-overlay">
@@ -33,6 +35,7 @@ let ImageBlowup = (props) => <div onClick={ props.closeGalleryNav } id="my-galle
           </div>
           <a href="javascript:void(0)" className="gallery-closebtn" onClick={ props.closeGalleryNav }>&times;</a>
         </div>
+
 
 export class Gallery extends Component {
   constructor(props) {
@@ -130,9 +133,9 @@ export class Gallery extends Component {
     let photoTitles = this.props.photoArray.map(photo => photo.title);
     let gallery = (screen.width > 700) ? <DesktopDisplay photoUrls    = { this.state.photoUrls }
                                                          photoTitles  = { photoTitles }
-                                                         enlargePhoto = { this.enlargePhoto }/>
+                                                         enlargePhoto = { this.enlargePhoto } />
                                        : <MobileDisplay  photoUrls    = { this.state.photoUrls }
-                                                         photoTitles  = { photoTitles }/>;
+                                                         photoTitles  = { photoTitles } />;
     return(
       <div id ="my-gallery-container">
         <ImageBlowup closeGalleryNav = { this.closeGalleryNav }

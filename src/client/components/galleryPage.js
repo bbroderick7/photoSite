@@ -5,6 +5,7 @@ import { withRouter }           from 'react-router-dom';
 import { NavBar }               from './navBar';
 import { SubheaderNav }         from './subheaderNav';
 import { Gallery }              from './gallery';
+import { Deloache }              from './deloache';
 /*************************************************************************/
 
 class GalleryPage extends Component {
@@ -20,7 +21,7 @@ class GalleryPage extends Component {
   }
 
   render() {
-    console.log(this.props.galleryInfo.name)
+    if(this.props.galleryInfo.name == 'deloache'){ return <Deloache/> }
     return(
       <div className="outerDiv contentDiv col-xs-12">
         <NavBar selector={"stills-navbar"}/>
