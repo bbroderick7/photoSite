@@ -12,12 +12,10 @@ class BannerSelection extends Component {
   componentDidMount(){
 	  let elem = ReactDOM.findDOMNode(this);
 	  elem.style.opacity = 0;
-    setTimeout(() => {
-      window.requestAnimationFrame(() => {
+    setTimeout(() => { window.requestAnimationFrame(() => {
   		    elem.style.transition = "opacity 1000ms";
-  		     elem.style.opacity = 1;
-  	  });
-    }, 0);
+  		    elem.style.opacity = 1;
+  	  }) }, 0);
   }
 
   render(){

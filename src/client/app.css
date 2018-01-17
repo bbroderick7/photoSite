@@ -160,7 +160,7 @@ body{
 
 .fillerArea{
   height: 400px;
-  background-image: url("https://farm5.staticflickr.com/4634/39337192481_38d07294b1_b.jpg");
+  background-image: url("https://farm5.staticflickr.com/4748/39735111191_1f23caad65_k.jpg");
   background-size: contain;
   background-size: cover;
 }
@@ -819,6 +819,7 @@ body{
 .photo-cover-cont{
   text-align: center;
   position: absolute;
+  left: 0;
   width: 100%;
   height: 100%;
   background: black;

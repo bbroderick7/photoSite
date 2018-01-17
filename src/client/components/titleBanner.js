@@ -33,8 +33,8 @@ export class TitleBanner extends Component {
             <div id={this.props.nameAlt} className="title-modal">
               <div className="title-modal-content">
                 <h2 className="vertical-heading inner-head">{this.props.name}</h2>
-                {subHeads}
-                <h4>{headerDescription}</h4>
+                { subHeads }
+                <h4> { headerDescription } </h4>
               </div>
             </div>
           </div>

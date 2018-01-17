@@ -34,7 +34,7 @@ class MyApp extends Component {
       <Route exact path={ `/projects/${proj}` } render={ () => <div>
         <Header/>
         <ProjectPage project={ this.projects[proj] }/>
-      </div>}/>)
+      </div> }/>)
 
     let currentGalleries = this.galleryNames.map(gall =>
       <Route path={ `/stills/${gall}` } render={ () => <div>
@@ -45,7 +45,7 @@ class MyApp extends Component {
     return(
       <BrowserRouter>
         <div>
-          <Route exact path="/" render={ () => <div> <Landing/> </div> }/>
+          <Route exact path="/" render={ () => <Landing/> }/>
           <Route exact path="/about" render={ () => <div>
               <Header/>
               <About/>
@@ -60,7 +60,7 @@ class MyApp extends Component {
             </div>}/>
 
           { currentProjects }
-          
+
           { currentGalleries }
 
         </div>

@@ -3,13 +3,8 @@
 import React, { Component }     from 'react';
 import { Link, withRouter }  from 'react-router-dom';
 /*************************************************************************/
-class SideBarExpand extends Component{
-  constructor(props){ super(props) }
-
-  render(){
-    return(
-      <div id="myNav" className="overlay">
-        <a href="javascript:void(0)" className="closebtn" onClick={this.props.closeNav}>&times;</a>
+let SideBarExpand = (props) => <div id="myNav" className="overlay">
+        <a href="javascript:void(0)" className="closebtn" onClick={ props.closeNav }>&times;</a>
         <div className="overlay-content">
           <a href="/">Home</a>
           <a href="/stills">Stills</a>
@@ -17,45 +12,24 @@ class SideBarExpand extends Component{
           <a href="/about">About</a>
         </div>
       </div>
-    )
-  }
-}
 
-class DesktopHeader extends Component {
-  constructor(props) { super(props) }
-
-  render() {
-    return (
-      <div className="outerDiv headerDiv">
-        <SideBarExpand closeNav = {this.props.closeNav}/>
-        <div onClick={this.props.openNav}>
+let DesktopHeader = (props) => <div className="outerDiv headerDiv">
+        <SideBarExpand closeNav = { props.closeNav }/>
+        <div onClick={ props.openNav }>
           <div className="b-logo"> <a href="/"> <h2>b</h2> </a> </div>
           <span className="spanNav">&#9776;</span>
           <div className="vertical-text"> <h4>brendan broderick</h4> </div>
         </div>
       </div>
-    )
-  }
-}
 
 class Header extends Component {
-  constructor(props) {
-    super(props);
-  }
+  constructor(props) { super(props) }
 
-  openNav() {
-    document.getElementById("myNav").style.width = "100%";
-  }
+  openNav() { document.getElementById("myNav").style.width = "100%" }
 
-  closeNav() {
-    document.getElementById("myNav").style.width = "0%";
-  }
+  closeNav() { document.getElementById("myNav").style.width = "0%" }
 
-  render() {
-    return (
-      <DesktopHeader openNav={this.openNav} closeNav={this.closeNav}/>
-    )
-  }
+  render() { return <DesktopHeader openNav={ this.openNav } closeNav={ this.closeNav }/> }
 }
 
 export default withRouter(Header);
