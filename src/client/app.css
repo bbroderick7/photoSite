@@ -98,6 +98,9 @@ table#gameTable tbody tr:hover {
 body{
   background: black;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  position:relative;
+min-height: 100%;
+overflow-x: hidden;
 }
 
 /* DEMO-SPECIFIC STYLES */
@@ -234,6 +237,25 @@ body{
   padding: 10px;
   width: 50px;
   position: fixed;
+  top: 0;
+  left:0;
+}
+
+.headerDiv-mobile {
+  z-index: 1000;
+  height: 70px;
+  border: solid 2px white;
+  width: 96%;
+  position: fixed;
+  background-color: black;
+  overflow: hidden;
+  margin-top: 0px;
+}
+
+.shadowDiv-mobile {
+  z-index: -5;
+  height: 30px;
+  width: 95%;
 }
 
 .vertical-text {
@@ -260,9 +282,33 @@ body{
   color: white;
 }
 
+
+.b-logo-mobile{
+  color: white;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.b-logo-mobile a{
+  text-decoration: none;
+  color: white;
+}
+
+.b-logo-mobile a:hover{
+  text-decoration: none;
+  color: white;
+}
+
 .contentDiv{
   padding-left: 64px;
   padding-right: 0px !important;
+}
+
+@media screen and (max-width: 800px) {
+  .contentDiv{
+    padding-left: 0px;
+    padding-right: 0px !important;
+  }
 }
 
 #portfolio {
@@ -572,6 +618,13 @@ body{
   margin-bottom: 100px;
 }
 
+.spanNav-mobile {
+  font-size:40px;
+  cursor:pointer;
+  color: white;
+  margin-top: 20px;
+}
+
 
 
 
@@ -819,7 +872,6 @@ body{
 .photo-cover-cont{
   text-align: center;
   position: absolute;
-  left: 0;
   width: 100%;
   height: 100%;
   background: black;
@@ -1087,7 +1139,9 @@ body{
 
 
 
-
+.header-mobile-cont{
+  overflow: hidden;
+}
 
 
 #subheader-mobile-selection-header{

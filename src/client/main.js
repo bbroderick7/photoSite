@@ -47,7 +47,7 @@ class MyApp extends Component {
         <div>
           <Route exact path="/" render={ () => <Landing/> }/>
           <Route exact path="/about" render={ () => <div>
-              <Header/>
+              
               <About/>
             </div> }/>
           <Route exact path="/projects" render={ () => <div>

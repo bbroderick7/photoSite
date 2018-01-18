@@ -22,6 +22,18 @@ let DesktopHeader = (props) => <div className="outerDiv headerDiv">
         </div>
       </div>
 
+let MobileHeader = (props) => <div>
+      <div className="headerDiv-mobile" scrolling="no">
+        <SideBarExpand closeNav = { props.closeNav }/>
+        <div className = "header-mobile-cont">
+          <div className="b-logo-mobile col-xs-10"> <a href="/"> <h4>brendan broderick.</h4> </a> </div>
+
+          <span className="col-xs-2" onClick={ props.openNav } className="spanNav-mobile ">&#9776;</span>
+        </div>
+      </div>
+      <div className="shadowDiv-mobile"></div>
+    </div>
+
 class Header extends Component {
   constructor(props) { super(props) }
 
@@ -29,7 +41,15 @@ class Header extends Component {
 
   closeNav() { document.getElementById("myNav").style.width = "0%" }
 
-  render() { return <DesktopHeader openNav={ this.openNav } closeNav={ this.closeNav }/> }
+  render() {
+    console.log(window.location.href.length-1)
+    console.log(window.location.origin.length)
+    if(screen.width > 800 || window.location.href.length-1 == window.location.origin.length){
+      return <DesktopHeader openNav={ this.openNav } closeNav={ this.closeNav }/>
+    } else {
+      return <MobileHeader openNav={ this.openNav } closeNav={ this.closeNav }/>
+    }
+  }
 }
 
 export default withRouter(Header);
