@@ -1061,6 +1061,7 @@ overflow-x: hidden;
   background-size: contain;
   background-size: cover;
   height: 400px;
+  border-radius: 95%;
 }
 
 #mobile-selection-header{
@@ -1245,4 +1246,29 @@ overflow-x: hidden;
 
 #blowup-title{
   color: white
+}
+
+.icon-units{
+  height: 120px;
+  text-align: center;
+}
+
+#about-github-icon img{
+  width: 50%;
+}
+
+#about-github-icon{
+  height: 100px
+}
+
+#about-linkedin-icon img {
+  height: 80%;
+}
+
+#about-instagram-icon img {
+  height: 80%;
+}
+
+#about-facebook-icon img {
+  height: 100%;
 }
