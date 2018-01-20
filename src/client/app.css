@@ -116,7 +116,7 @@ overflow-x: hidden;
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .15em; /* Adjust as needed */
   animation:
-    typing 3.5s steps(30, end),
+    typing 2.7s steps(30, end),
     blink-caret .5s step-end infinite;
 }
 
@@ -1258,7 +1258,12 @@ overflow-x: hidden;
 }
 
 #about-github-icon{
-  height: 100px
+  height: 65px
+}
+
+#about-facebook-icon{
+  margin-top: -20px;
+  height: 140px
 }
 
 #about-linkedin-icon img {
@@ -1271,4 +1276,45 @@ overflow-x: hidden;
 
 #about-facebook-icon img {
   height: 100%;
+}
+
+#about-facebook-icon:hover{
+  transition: 0.5s;
+}
+
+#about-github-icon:hover{
+  transition: 0.5s;
+}
+
+#about-linkedin-icon:hover{
+  transition: 0.5s;
+}
+
+#about-instagram-icon:hover{
+  transition: 0.5s;
+}
+
+#about-github-icon:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#about-facebook-icon:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#about-linkedin-icon:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+#about-instagram-icon:hover{
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.about-info{
+  padding-top: 20px;
+  color: white;
 }
