@@ -16,7 +16,7 @@ class HomeHeader extends Component {
     setTimeout(() => { window.requestAnimationFrame(() => {
   		  elem.style.transition = "opacity 5000ms";
   		  elem.style.opacity = 1;
-  	  }) }, 3000)
+  	  }) }, 2600)
   }
 
   render(){ return <Header/> }
@@ -33,7 +33,7 @@ class NavBarSubheadings extends Component {
     setTimeout(() => { window.requestAnimationFrame(() => {
   		  elem.style.transition = "opacity 5000ms";
   		  elem.style.opacity = 1;
-  	  }) }, 3000)
+  	  }) }, 2600)
   }
 
   render(){
@@ -73,7 +73,7 @@ class LandingBanner extends Component {
     setTimeout(() => { window.requestAnimationFrame(() => {
   		  elem.style.transition = "opacity 5000ms";
   		  elem.style.opacity = 1;
-  	  }) }, 3000)
+  	  }) }, 2600)
   }
   render(){ return( <div className="col-xs-12 fillerArea"></div> ) }
 }
@@ -89,7 +89,7 @@ class TitleBannerContainer extends Component {
     setTimeout(() => { window.requestAnimationFrame(() => {
   		  elem.style.transition = "opacity 5000ms";
   		  elem.style.opacity = 1;
-  	  }) }, 3000)
+  	  }) }, 2600)
   }
 
   render(){

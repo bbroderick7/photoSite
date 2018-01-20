@@ -768,7 +768,7 @@ var HomeHeader = function (_Component) {
           elem.style.transition = "opacity 5000ms";
           elem.style.opacity = 1;
         });
-      }, 3000);
+      }, 2600);
     }
   }, {
     key: 'render',
@@ -801,7 +801,7 @@ var NavBarSubheadings = function (_Component2) {
           elem.style.transition = "opacity 5000ms";
           elem.style.opacity = 1;
         });
-      }, 3000);
+      }, 2600);
     }
   }, {
     key: 'render',
@@ -899,7 +899,7 @@ var LandingBanner = function (_Component3) {
           elem.style.transition = "opacity 5000ms";
           elem.style.opacity = 1;
         });
-      }, 3000);
+      }, 2600);
     }
   }, {
     key: 'render',
@@ -932,7 +932,7 @@ var TitleBannerContainer = function (_Component4) {
           elem.style.transition = "opacity 5000ms";
           elem.style.opacity = 1;
         });
-      }, 3000);
+      }, 2600);
     }
   }, {
     key: 'render',
