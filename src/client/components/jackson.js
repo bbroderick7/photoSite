@@ -31,7 +31,7 @@ class Jackson extends Component {
       return(<div key={index} className="col-xs-12"><img className="box-gallery-img" src={ photo } /></div>)
     })
     return(
-      <div className="outerDiv contentDiv col-xs-12">
+      <div className="outerDiv contentDiv-secondary col-xs-12">
         <NavBar selector={"stills-navbar"}/>
         <div className="row photo-container">
           <SubheaderNav selected={'jackson'} subheadings={["peru", "bolivia", "moab", "jackson", "colorado", "nashville", "experiment", "deloache"]}/>

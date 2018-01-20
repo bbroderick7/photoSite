@@ -304,6 +304,11 @@ overflow-x: hidden;
   padding-right: 0px !important;
 }
 
+.contentDiv-secondary{
+  padding-left: 50px;
+  padding-right: 0px !important;
+}
+
 @media screen and (max-width: 800px) {
   .contentDiv{
     padding-left: 0px;
@@ -1316,5 +1321,6 @@ overflow-x: hidden;
 
 .about-info{
   padding-top: 20px;
+  padding-left: 30px;
   color: white;
 }

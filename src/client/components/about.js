@@ -9,9 +9,18 @@ import { NavBar }               from './navBar';
 class About extends Component {
   constructor(props) { super(props) }
 
+  componentDidMount(){
+	  let elem = ReactDOM.findDOMNode(this);
+	  elem.style.opacity = 0;
+    setTimeout(() => { window.requestAnimationFrame(() => {
+  		    elem.style.transition = "opacity 1000ms";
+  		    elem.style.opacity = 1;
+  	  }) }, 0);
+  }
+
   render() {
     return(
-      <div className="outerDiv contentDiv col-xs-12">
+      <div className="outerDiv contentDiv-secondary col-xs-12">
         <NavBar selector={"about-navbar"}/>
         <div className="row">
           <div className="col-md-5 about-info">
@@ -28,10 +37,10 @@ class About extends Component {
             <a href="https://github.com/bbroderick7" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-github-icon">
               <img src="http://computermentors.org/wp-content/uploads/2017/07/GitHub_Logo_White.png"/>
             </div></a>
-            <a href="https://github.com/bbroderick7" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-linkedin-icon">
+            <a href="https://www.linkedin.com/in/brendan-broderick-5885a284/" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-linkedin-icon">
               <img src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"/>
             </div></a>
-            <a href="https://github.com/bbroderick7" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-instagram-icon">
+            <a href="https://www.instagram.com/bbroderick95/" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-instagram-icon">
               <img src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png"/>
             </div></a>
             <a href="https://github.com/bbroderick7" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-facebook-icon">

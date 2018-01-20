@@ -36,7 +36,7 @@ class Projects extends Component {
 
   render() {
     return(
-      <div className="outerDiv contentDiv col-xs-12">
+      <div className="outerDiv contentDiv-secondary col-xs-12">
         <NavBar selector={"projects-navbar"}/>
         <BannerSelection/>
       </div>

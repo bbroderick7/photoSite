@@ -93,6 +93,7 @@ class TitleBannerContainer extends Component {
   }
 
   render(){
+    //"https://farm5.staticflickr.com/4598/24471598817_d4786b4b21_c.jpg"
     return(
       <div>
         <div className="row landing-page-banners">
