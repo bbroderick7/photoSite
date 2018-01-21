@@ -1271,7 +1271,8 @@ overflow-x: hidden;
 }
 
 .box-gallery-img-mobile{
-  width: 100%;
+  width: 110%;
+  margin-left: 12px;
 }
 
 .box-image-container-mobile{
