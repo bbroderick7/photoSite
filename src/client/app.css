@@ -244,7 +244,7 @@ overflow-x: hidden;
 .headerDiv-mobile {
   z-index: 100000;
   height: 70px;
-  border: solid 2px white;
+  border-bottom: solid 1px white;
   width: 100%;
   position: fixed;
   background-color: black;
@@ -313,6 +313,12 @@ overflow-x: hidden;
   .contentDiv{
     padding-left: 0px;
     padding-right: 0px !important;
+  }
+
+  .contentDiv-secondary{
+    padding-left: 0px;
+    padding-right: 0px !important;
+    width: 100%;
   }
 }
 
@@ -1254,21 +1260,22 @@ overflow-x: hidden;
 }
 
 .icon-units{
-  height: 120px;
+  height: 100px;
   text-align: center;
 }
 
 #about-github-icon img{
-  width: 50%;
+  height: 100%;
 }
 
 #about-github-icon{
-  height: 65px
+  height: 100px;
+  padding-bottom: 10px;
 }
 
 #about-facebook-icon{
   margin-top: -20px;
-  height: 140px
+  height: 100px
 }
 
 #about-linkedin-icon img {

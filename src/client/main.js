@@ -53,11 +53,11 @@ class MyApp extends Component {
           <Route exact path="/projects" render={ () => <div>
               <Header/>
               <Projects/>
-            </div>}/>
+            </div> }/>
           <Route exact path="/stills" render={ () => <div>
               <Header/>
               <Stills/>
-            </div>}/>
+            </div> }/>
 
           { currentProjects }
 

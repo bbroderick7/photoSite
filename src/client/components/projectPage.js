@@ -1,10 +1,8 @@
 'use strict';
 import React, { Component }     from 'react';
 import { withRouter }           from 'react-router-dom';
-import { TitleBanner }          from './titleBanner';
 import { ProjectBody }          from './projectBody';
 import { NavBar }               from './navBar';
-import { SubheaderNav }         from './subheaderNav';
 /*************************************************************************/
 
 class ProjectPage extends Component {
@@ -12,6 +10,12 @@ class ProjectPage extends Component {
     super(props);
   }
   render() {
+    document.title = `Brendan Broderick | ${this.props.project.projectName}`;
+    let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    link.type = 'image/x-icon';
+    link.rel = 'shortcut icon';
+    link.href = '../favicon.ico';
+    document.getElementsByTagName('head')[0].appendChild(link);
     return(
       <div className="outerDiv contentDiv-secondary col-xs-12">
         <NavBar selector={"projects-navbar"}/>

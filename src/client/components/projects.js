@@ -18,6 +18,7 @@ class BannerSelection extends Component {
   }
 
   render(){
+    document.title = "Brendan Broderick | Projects"
     return(
       <div className="row">
         <TitleBanner id="concertify-head" name="concertify" nameAlt="concertify1" description={["Build Spotify Playlists from your favorite band's recent concert setlists"]} folder={'projects'}/>

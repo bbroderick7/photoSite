@@ -19,31 +19,32 @@ class About extends Component {
   }
 
   render() {
+    document.title = "Brendan Broderick | About"
     return(
       <div className="outerDiv contentDiv-secondary col-xs-12">
         <NavBar selector={"about-navbar"}/>
         <div className="row">
           <div className="col-md-5 about-info">
             <div className="row">
-              <h3>Name: Brendan Broderick</h3>
-              <h3>Hometown: Denver, CO</h3>
-              <h3>University: Vanderbilt</h3>
-              <h3>Majors: Computer Science & Economics</h3>
-              <h3>Interests: Skiing, Rockclimbing, Mountaineering, Photography, Product Mangement, Software Development, Anything Oscar Wilde</h3>
+              <h4><strong>Name: </strong> Brendan Broderick</h4>
+              <h4><strong>Hometown:</strong> Denver, CO</h4>
+              <h4><strong>University: </strong> Vanderbilt</h4>
+              <h4><strong>Majors: </strong> Computer Science & Economics</h4>
+              <h4><strong>Interests: </strong> Skiing, Rockclimbing, Mountaineering, Photography, Product Mangement, Software Development, Anything Oscar Wilde</h4>
             </div>
           </div>
           <div className="col-md-4 col-xs-12" id="personal-photo"></div>
-          <div className="col-md-3 col-xs-3" id="icon-list">
+          <div className="col-md-2 col-xs-12" id="icon-list">
             <a href="https://github.com/bbroderick7" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-github-icon">
-              <img src="http://computermentors.org/wp-content/uploads/2017/07/GitHub_Logo_White.png"/>
+              <img src="https://pbs.twimg.com/profile_images/616309728688238592/pBeeJQDQ.png"/>
             </div></a>
-            <a href="https://www.linkedin.com/in/brendan-broderick-5885a284/" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-linkedin-icon">
+          <a href="https://www.linkedin.com/in/brendan-broderick-5885a284/" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-linkedin-icon">
               <img src="https://seeklogo.com/images/L/linkedin-icon-logo-05B2880899-seeklogo.com.png"/>
             </div></a>
-            <a href="https://www.instagram.com/bbroderick95/" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-instagram-icon">
+          <a href="https://www.instagram.com/bbroderick95/" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-instagram-icon">
               <img src="https://instagram-brand.com/wp-content/uploads/2016/11/app-icon2.png"/>
             </div></a>
-            <a href="https://github.com/bbroderick7" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-facebook-icon">
+          <a href="https://github.com/bbroderick7" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-facebook-icon">
               <img src="https://www.seeklogo.net/wp-content/uploads/2016/09/facebook-icon-preview-1-400x400.png"/>
             </div></a>
           </div>

@@ -19,6 +19,7 @@ class BannerSelection extends Component {
   }
 
   render(){
+    document.title = "Brendan Broderick | Stills"
     return(
       <div className="row">
         <TitleBanner id="peru-head" name="peru" nameAlt="peru1" subheaders={["Cordillera Blanca", "Streets", "Markets"]} folder={'stills'}/>
