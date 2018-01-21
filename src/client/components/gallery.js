@@ -14,7 +14,7 @@ let DesktopDisplay = (props) => {
 
 let MobileDisplay = (props) => {
   let content = props.photoUrls.map((photo, index) => <div key={index} className="col-xs-12 col-md-6 col-lg-3 box-image-container-mobile">
-        <div className='photo-cover-cont'><h4>{props.photoTitles[index]}</h4></div>
+        <div className='photo-cover-cont-mobile'><h4>{props.photoTitles[index]}</h4></div>
         <img className="box-gallery-img-mobile" src={ photo } />
         <div className="col-xs-1 col-xs-offset-5 mobile-photo-breaker"></div>
       </div>
