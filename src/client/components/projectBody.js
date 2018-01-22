@@ -16,7 +16,7 @@ class ProjectContent extends Component {
 
   render(){
     return(
-      <div className="col-xs-12 col-lg-9 project-container">
+      <div className="col-xs-12 col-lg-10 project-container">
         <div className="col-xs-12 inner-proj-container">
           <div className='project-cover-cont'>
             <a href={this.props.github} target="_blank"><img className="banner-img-link"  src="http://computermentors.org/wp-content/uploads/2017/07/GitHub_Logo_White.png"/></a>
@@ -41,7 +41,7 @@ export class ProjectBody extends Component {
 
   render() {
     return(
-      <div className="row photo-container">
+      <div className="photo-container">
         <SubheaderNav selected={this.props.name} subheadings={["concertify", "facePay", "solitaire", "blackstar", "vutensils", "vmil"]}/>
         <ProjectContent
           name = {this.props.name}
