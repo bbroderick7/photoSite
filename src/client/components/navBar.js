@@ -28,19 +28,20 @@ class NavBarMobile extends Component {
   toggleNav() {
     if(this.state.open == false){
       document.getElementById("mobileNav").style.height = "170px";
-      this.setState({open: true})
+      this.setState({ open: true })
     }else{
       document.getElementById("mobileNav").style.height = "0px";
-      this.setState({open: false})
+      this.setState({ open: false })
     }
   }
 
   render(){
     let selectedname = this.props.selector;
-    let mytitle = this.state.open ? <h5 id="mobile-selection-header">{selectedname} <span className="downTriangle">&#9652;</span></h5> : <h5 id="mobile-selection-header">{selectedname} <span className="downTriangle">&#9662;</span></h5> ;
+    let mytitle = this.state.open ? <h5 id="mobile-selection-header">{ selectedname } <span className="downTriangle">&#9652;</span></h5>
+                                  : <h5 id="mobile-selection-header">{ selectedname } <span className="downTriangle">&#9662;</span></h5> ;
     return(
       <div className="col-xs-5">
-        <div onClick={this.toggleNav} className="my-mobile-navbar-container"> {mytitle} </div>
+        <div onClick={ this.toggleNav } className="my-mobile-navbar-container"> { mytitle } </div>
         <div id="mobileNav" className="my-mobile-navbar-overlay"><NavLinks/></div>
       </div>
     )
@@ -62,16 +63,16 @@ export class NavBar extends Component {
     }
   }
 
-  getSize(){ this.setState({screenWidth: screen.width}) }
+  getSize(){ this.setState({ screenWidth: screen.width }) }
 
   render(){
     let mobileSelector = this.props.selector.slice(0, this.props.selector.indexOf('-'));
-    let contextualSubheading = screen.width < 600 ? <NavBarMobile selector={mobileSelector}/> : <NavBarDesktopHeadings/>;
-    let nameHeading = screen.width < 600 ? <h3>brendan broderick.</h3> : <h1>brendan broderick.</h1>
+    let contextualSubheading = screen.width < 600 ? <NavBarMobile selector={ mobileSelector }/> : <NavBarDesktopHeadings/>;
+    let nameHeading = screen.width < 600 ? <h6></h6> : <h1> brendan broderick. </h1>
     return(
       <div>
         <div className="row typewriter-container">
-          <div className="col-lg-6 col-xs-12"> {nameHeading} </div>
+          <div className="col-lg-6 col-xs-12"> { nameHeading } </div>
         </div>
         { contextualSubheading }
       </div>
