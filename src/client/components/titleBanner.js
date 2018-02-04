@@ -7,11 +7,7 @@ export class TitleBanner extends Component {
     this.closeNav = this.closeNav.bind(this);
   }
 
-  openNav() {
-    if(screen.width > 800){
-      document.getElementById(this.props.nameAlt).style.height = "100%";
-    }
-  }
+  openNav() { if(screen.width > 800) document.getElementById(this.props.nameAlt).style.height = "100%" }
 
   closeNav() { document.getElementById(this.props.nameAlt).style.height = "0%" }
 
@@ -26,7 +22,6 @@ export class TitleBanner extends Component {
     }
     let name = this.props.name == 'portfolio' ? 'stills' : this.props.name
     let new_path = this.props.folder == undefined ? `${name}` : `${this.props.folder}/${name}`;
-    console.log(new_path)
     return(
       <a href={ new_path }>
         <div id={this.props.name} className="col-lg-4 col-xs-12 landing-divs" onMouseEnter={this.openNav} onMouseLeave={this.closeNav}>

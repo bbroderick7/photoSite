@@ -43,9 +43,7 @@ export class SubheaderNav extends Component {
   componentDidMount(){
     window.addEventListener("resize", this.getSize);
     let aa = document.getElementById(`${this.props.selected}pics`);
-    if (aa != null) {
-        aa.id = "selected-subheader";
-    }
+    if (aa != null) { aa.id = "selected-subheader" }
   }
 
   getSize(){ this.setState({ screenWidth: screen.width }) }

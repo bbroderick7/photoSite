@@ -27,7 +27,7 @@ class ProjectPage extends Component {
             properName = {this.props.project.projectProperName}
             description = {this.props.project.projectDescription}
             tech = {this.props.project.projectTechnology}
-            />
+          />
       </div>
     )
   }

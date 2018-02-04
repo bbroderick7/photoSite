@@ -19,9 +19,6 @@ app.engine('pug', require('pug').__express);
 app.set('views', __dirname);
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// Import routes
-require('./routes')(app);
-
 // SPA base page
 app.get('*', (req, res) => { res.render('base.pug', {}) });
 

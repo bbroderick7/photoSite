@@ -9,9 +9,7 @@ import { SubheaderNav }         from './subheaderNav';
 class Jackson extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      galleryPhotos: []
-    }
+    this.state = { galleryPhotos: [] }
   }
 
   componentDidMount(){

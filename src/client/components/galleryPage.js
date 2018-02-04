@@ -29,7 +29,7 @@ class GalleryPage extends Component {
     link.href = '../favicon.ico';
     document.getElementsByTagName('head')[0].appendChild(link);
 
-    if(this.props.galleryInfo.name == 'deloache'){ return <Deloache/> }
+    if(this.props.galleryInfo.name == 'deloache') return <Deloache/>
     return(
       <div className="outerDiv contentDiv col-xs-12">
         <NavBar selector={"stills-navbar"}/>

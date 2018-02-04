@@ -58,9 +58,7 @@ export class NavBar extends Component {
   componentDidMount(){
     window.addEventListener("resize", this.getSize);
     let aa = document.getElementById(this.props.selector);
-    if (aa != null) {
-        aa.children[0].id = "selected-subheader";
-    }
+    if (aa != null) { aa.children[0].id = "selected-subheader" }
   }
 
   getSize(){ this.setState({ screenWidth: screen.width }) }

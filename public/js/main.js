@@ -1685,9 +1685,7 @@ var Jackson = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Jackson.__proto__ || Object.getPrototypeOf(Jackson)).call(this, props));
 
-    _this.state = {
-      galleryPhotos: []
-    };
+    _this.state = { galleryPhotos: [] };
     return _this;
   }
 
@@ -1814,9 +1812,7 @@ var GalleryPage = function (_Component) {
       link.href = '../favicon.ico';
       document.getElementsByTagName('head')[0].appendChild(link);
 
-      if (this.props.galleryInfo.name == 'deloache') {
-        return _react2.default.createElement(_deloache.Deloache, null);
-      }
+      if (this.props.galleryInfo.name == 'deloache') return _react2.default.createElement(_deloache.Deloache, null);
       return _react2.default.createElement(
         'div',
         { className: 'outerDiv contentDiv col-xs-12' },
@@ -2854,9 +2850,7 @@ var TitleBanner = exports.TitleBanner = function (_Component) {
   _createClass(TitleBanner, [{
     key: "openNav",
     value: function openNav() {
-      if (screen.width > 800) {
-        document.getElementById(this.props.nameAlt).style.height = "100%";
-      }
+      if (screen.width > 800) document.getElementById(this.props.nameAlt).style.height = "100%";
     }
   }, {
     key: "closeNav",
@@ -2894,7 +2888,6 @@ var TitleBanner = exports.TitleBanner = function (_Component) {
       }
       var name = this.props.name == 'portfolio' ? 'stills' : this.props.name;
       var new_path = this.props.folder == undefined ? "" + name : this.props.folder + "/" + name;
-      console.log(new_path);
       return _react2.default.createElement(
         "a",
         { href: new_path },
