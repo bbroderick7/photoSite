@@ -26,27 +26,6 @@ table#gameTable tbody tr:hover {
     cursor: pointer;
 }
 
-.card-base {
-    position: relative;
-}
-
-.card-row img {
-    width: 25%;
-    padding: 0;
-    margin: 0 -2px 0 -2px;
-}
-
-.card-float img {
-    width: 25%;
-    position: absolute;
-    top: 37.5%;
-    left: 37.5%;
-}
-
-#errorMsg {
-    text-align: center;
-}
-
 .header {
     float: right;
 }
@@ -56,51 +35,13 @@ table#gameTable tbody tr:hover {
     margin: 10px;
 }
 
-.cardImage{
-  width: 100%;
-}
-
-.pile-Card-Class{
-  margin-top: -105%;
-  padding: 0px;
-  margin-left: 0px;
-  width: 100%;
-
-}
-
-.card-stack{
-  opacity: 0.01;
-}
-
-.card-stack-border{
-  border: dashed 2px black;
-}
-
-.draw-card{
-  position: absolute;
-}
-
-.card-pile-outer{
-  padding: 5px;
-}
-
-.login-nav{
-  display: inline-block;
-}
-
-.top-card-row{
-  padding-bottom: 40px;
-}
-
-
-
 
 body{
   background: black;
   font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
   position:relative;
-min-height: 100%;
-overflow-x: hidden;
+  min-height: 100%;
+  overflow-x: hidden;
 }
 
 /* DEMO-SPECIFIC STYLES */
