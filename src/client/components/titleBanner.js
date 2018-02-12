@@ -22,9 +22,22 @@ export class TitleBanner extends Component {
     }
     let name = this.props.name == 'portfolio' ? 'stills' : this.props.name
     let new_path = this.props.folder == undefined ? `${name}` : `${this.props.folder}/${name}`;
-    return(
-      <a href={ new_path }>
-        <div id={this.props.name} className="col-lg-4 col-xs-12 landing-divs" onMouseEnter={this.openNav} onMouseLeave={this.closeNav}>
+
+    let desktopVersion = <a href={ new_path }>
+      <div id={this.props.name} className="col-lg-4 col-xs-12 landing-divs" onMouseEnter={this.openNav} onMouseLeave={this.closeNav}>
+        <h2 className="vertical-heading">{this.props.name}</h2>
+          <div id={this.props.nameAlt} className="title-modal">
+            <div className="title-modal-content">
+              <h2 className="vertical-heading inner-head">{ this.props.name }</h2>
+              { subHeads }
+              <h4> { headerDescription } </h4>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      let mobileVersion = <a href={ new_path }>
+        <div id={this.props.name} className="col-lg-4 col-xs-12 landing-divs">
           <h2 className="vertical-heading">{this.props.name}</h2>
             <div id={this.props.nameAlt} className="title-modal">
               <div className="title-modal-content">
@@ -35,6 +48,9 @@ export class TitleBanner extends Component {
             </div>
           </div>
         </a>
+      let version = window.innerWidth > 1000 ? mobileVersion : desktopVersion;
+    return(
+      <div>{version}</div>
     )
   }
 }

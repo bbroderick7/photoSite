@@ -44,7 +44,7 @@ class MyApp extends Component {
         </div>}/>)
 
     console.log(document.documentElement.clientWidth)
-    let landingPage = document.documentElement.clientWidth < 813 ? <Landing/> : <LandingTwo/>
+    let landingPage = window.innerWidth < 1000 ? <Landing/> : <LandingTwo/>
 
     return(
       <BrowserRouter>
