@@ -24,12 +24,12 @@ class BannerSelection extends Component {
       <div className="row">
         <TitleBanner id="peru-head" name="peru" nameAlt="peru1" subheaders={["Cordillera Blanca", "Streets", "Markets"]} folder={'stills'}/>
         <TitleBanner id="bolivia-head" name="bolivia" nameAlt="bolivia1" subheaders={["Chicha", "Amazon", "Cochabamba"]} folder={'stills'}/>
+        <TitleBanner id="deloche-head" name="deloache" nameAlt="deloache1" subheaders={["Vanderbilt Deloache Award, 2015"]} folder={'stills'}/>
         <TitleBanner id="moab-head" name="moab" nameAlt="moab1" subheaders={["Dessert"]} folder={'stills'}/>
         <TitleBanner id="jackson-head" name="jackson" nameAlt="jackson1" subheaders={["Tetons"]} folder={'stills'}/>
         <TitleBanner id="colorado-head" name="colorado" nameAlt="colorado1" subheaders={["Maroon Bells", "RMNP"]} folder={'stills'}/>
         <TitleBanner id="nashville-head" name="nashville" nameAlt="nashville1" subheaders={["Midtown", "Broadway"]} folder={'stills'}/>
         <TitleBanner id="exp-head" name="experiment" nameAlt="exp1" subheaders={["nature & perspective"]} folder={'stills'}/>
-        <TitleBanner id="deloche-head" name="deloache" nameAlt="deloache1" subheaders={["Vanderbilt Deloache Award, 2015"]} folder={'stills'}/>
       </div>
     )
   }

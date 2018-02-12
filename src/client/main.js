@@ -43,10 +43,13 @@ class MyApp extends Component {
           <GalleryPage galleryInfo={this.galleries[gall]} galleryList={ this.galleryNames }/>
         </div>}/>)
 
+    console.log(document.documentElement.clientWidth)
+    let landingPage = document.documentElement.clientWidth < 813 ? <Landing/> : <LandingTwo/>
+
     return(
       <BrowserRouter>
         <div>
-          <Route exact path="/" render={ () => <Landing/> }/>
+          <Route exact path="/" render={ () => landingPage }/>
           <Route exact path="/two" render={ () => <LandingTwo/> }/>
           <Route exact path="/about" render={ () => <div>
               <Header/>
