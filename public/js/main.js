@@ -3353,10 +3353,10 @@ var TitleBanner = exports.TitleBanner = function (_Component) {
           ),
           _react2.default.createElement(
             "div",
-            { id: this.props.nameAlt, className: "title-modal" },
+            { id: this.props.nameAlt },
             _react2.default.createElement(
               "div",
-              { className: "title-modal-content" },
+              null,
               _react2.default.createElement(
                 "h2",
                 { className: "vertical-heading inner-head" },
