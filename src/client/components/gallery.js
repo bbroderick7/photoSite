@@ -101,8 +101,7 @@ export class Gallery extends Component {
   showGallery(){ ReactDOM.findDOMNode(this).style.visibility = "visible" }
 
   onKeyPressed(ev){
-    if(ev.code == 'ArrowLeft'){
-      this.getNextPhoto('left');
+    if(ev.code == 'ArrowLeft'){ this.getNextPhoto('left');
     }else if(ev.code == 'ArrowRight'){
       this.getNextPhoto('right');
     }else if (ev.code == 'Escape'){

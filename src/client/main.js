@@ -6,6 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import Header                   from './components/header';
 import Landing                  from './components/landing';
+import LandingTwo               from './components/landingTwo';
 import Projects                 from './components/projects';
 import ProjectPage              from './components/projectPage';
 import Stills                   from './components/stills';
@@ -46,6 +47,7 @@ class MyApp extends Component {
       <BrowserRouter>
         <div>
           <Route exact path="/" render={ () => <Landing/> }/>
+          <Route exact path="/two" render={ () => <LandingTwo/> }/>
           <Route exact path="/about" render={ () => <div>
               <Header/>
               <About/>

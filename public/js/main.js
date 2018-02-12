@@ -313,6 +313,10 @@ var _landing = __webpack_require__(237);
 
 var _landing2 = _interopRequireDefault(_landing);
 
+var _landingTwo = __webpack_require__(255);
+
+var _landingTwo2 = _interopRequireDefault(_landingTwo);
+
 var _projects = __webpack_require__(238);
 
 var _projects2 = _interopRequireDefault(_projects);
@@ -407,6 +411,9 @@ var MyApp = function (_Component) {
           null,
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', render: function render() {
               return _react2.default.createElement(_landing2.default, null);
+            } }),
+          _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/two', render: function render() {
+              return _react2.default.createElement(_landingTwo2.default, null);
             } }),
           _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/about', render: function render() {
               return _react2.default.createElement(
@@ -2263,7 +2270,7 @@ exports = module.exports = __webpack_require__(250)(undefined);
 
 
 // module
-exports.push([module.i, "\n@media only screen and (max-width: 600px)  {\n  .container-fluid {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n}\n\n.navbar-static-top {\n    margin-left: -14px;\n    margin-right: -24px;\n}\n\n.right-nav {\n    text-align: right;\n    padding-top: 10px;\n    padding-right: 20px;\n}\n\n.right-nav a {\n    display: block;\n}\n\ntable#gameTable tbody tr:hover {\n    background: #6495ed;\n    cursor: pointer;\n}\n\n.header {\n    float: right;\n}\n\n.header img {\n    border-radius: 5px;\n    margin: 10px;\n}\n\n\nbody{\n  background: black;\n  font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n  position:relative;\n  min-height: 100%;\n  overflow-x: hidden;\n}\n\n/* DEMO-SPECIFIC STYLES */\n.typewriter-container {\n}\n\n.typewriter h1 {\n  color: #fff;\n  font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n  overflow: hidden; /* Ensures the content is not revealed until the animation */\n  border-right: .15em solid orange; /* The typwriter cursor */\n  white-space: nowrap; /* Keeps the content on a single line */\n  margin: 0 auto; /* Gives that scrolling effect as the typing happens */\n  letter-spacing: .15em; /* Adjust as needed */\n  animation:\n    typing 2.7s steps(30, end),\n    blink-caret .5s step-end infinite;\n}\n\n/* The typing effect */\n@keyframes typing {\n  from { width: 0 }\n  to { width: 100% }\n}\n\n/* The typewriter cursor effect */\n@keyframes blink-caret {\n  from, to { border-color: transparent }\n  50% { border-color: white }\n}\n\n.landing-subheader{\n      transition: 0.3s;\n}\n\n.landing-subheader a{\n      color: inherit;\n      text-decoration: none;\n}\n\n.landing-subheader h3:hover{\n  color: white;\n  cursor: pointer;\n}\n\n.landing-divs{\n  height: 500px;\n}\n\n\n\n\n\n\n\n\n\n\n\n\n.fillerArea{\n  height: 400px;\n  background-image: url(\"https://farm5.staticflickr.com/4748/39735111191_1f23caad65_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n.overlay {\n    height: 100%;\n    width: 0;\n    position: fixed;\n    z-index: 1147483647;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.overlay-content {\n    position: relative;\n    top: 25%;\n    width: 100%;\n    text-align: center;\n    margin-top: 30px;\n}\n\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.spanNav {\n  font-size:30px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.outerDiv {\n\n}\n\n.headerDiv {\n  z-index: 1000;\n  height: 100%;\n  border-right: solid 2px white;\n  padding: 10px;\n  width: 50px;\n  position: fixed;\n  top: 0;\n  left:0;\n}\n\n.headerDiv-mobile {\n  z-index: 100000;\n  height: 50px;\n  border-bottom: solid 1px white;\n  width: 100%;\n  position: fixed;\n  background-color: black;\n  overflow: hidden;\n  margin-top: 0px;\n}\n\n.shadowDiv-mobile {\n  z-index: -5;\n  height: 30px;\n  width: 95%;\n}\n\n.vertical-text {\n  color: white;\n  width: 300px;\n  margin-top: 250px;\n\ttransform: rotate(-90deg);\n\ttransform-origin: left top 0;\n}\n\n.b-logo{\n  color: white;\n  padding-bottom: 100px;\n  padding-top: 50px;\n}\n\n.b-logo a{\n  text-decoration: none;\n  color: white;\n}\n\n.b-logo a:hover{\n  text-decoration: none;\n  color: white;\n}\n\n\n.b-logo-mobile{\n  color: white;\n  display: inline-block;\n  margin-top: 10px;\n}\n\n.b-logo-mobile a{\n  text-decoration: none;\n  color: white;\n}\n\n.b-logo-mobile a:hover{\n  text-decoration: none;\n  color: white;\n}\n\n.contentDiv{\n  padding-left: 64px;\n  padding-right: 0px !important;\n}\n\n.contentDiv-secondary{\n  padding-left: 50px;\n  padding-right: 0px !important;\n}\n\n@media screen and (max-width: 800px) {\n  .contentDiv{\n    padding-left: 0px;\n    padding-right: 0px !important;\n  }\n\n  .contentDiv-secondary{\n    padding-left: 0px;\n    padding-right: 0px !important;\n    width: 100%;\n  }\n}\n\n#portfolio {\n  background-image: url(\"https://farm5.staticflickr.com/4633/27556726429_12c9e11327_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#portfolio:hover{\n  cursor: pointer;\n}\n\n#portfolio h4{\n  display: none;\n}\n\n#portfolio:hover h4{\n  display: block;\n  text-decoration: none;\n  cursor: pointer;\n  color: white;\n}\n\n#projects {\n  background-image: url(\"https://farm5.staticflickr.com/4598/24471598817_d4786b4b21_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#projects:hover{\n  cursor: pointer;\n}\n\n#projects h4{\n  display: none;\n}\n\n#projects:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#about {\n  background-image: url(\"https://farm5.staticflickr.com/4739/27557171039_ea34b5339d_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#about:hover{\n  cursor: pointer;\n}\n\n#about h4{\n  display: none;\n}\n\n#about:hover h4{\n  display: block;\n  text-decoration: none;\n  cursor: pointer;\n  color: white;\n}\n\n.vertical-heading {\n  color: white;\n  width: 300px;\n  margin-top: 200px;\n\ttransform: rotate(-90deg);\n\ttransform-origin: left top 0;\n}\n\n.inner-head {\n  margin-left: 15px;\n}\n\n#selected-subheader{\n  color: white;\n}\n\n\n\n\n#colorado{\n  background-image: url(\"https://farm4.staticflickr.com/3783/32596289134_a8170a0599_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#colorado:hover{\n  cursor: pointer;\n}\n\n#colorado h4{\n  display: none;\n}\n\n#colorado:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#moab {\n  background-image: url(\"https://farm4.staticflickr.com/3682/33282346992_f5a617c0fa_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#moab:hover {\n  cursor: pointer;\n}\n\n#moab h4 {\n  display: none;\n}\n\n#moab:hover h4 {\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#bolivia {\n  background-image: url(\"https://farm4.staticflickr.com/3927/33346407706_6e14df7860_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#bolivia:hover{\n  cursor: pointer;\n}\n\n#bolivia h4{\n  display: none;\n}\n\n#bolivia:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#peru {\n  background-image: url(\"https://farm4.staticflickr.com/3891/33425599956_2cea2b9cf5_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#peru:hover {\n  cursor: pointer;\n}\n\n#peru h4 {\n  display: none;\n}\n\n#peru:hover h4 {\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#jackson {\n  background-image: url(\"https://farm5.staticflickr.com/4593/27564430749_1bb7a6ba6b_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#jackson:hover{\n  cursor: pointer;\n}\n\n#jackson h4{\n  display: none;\n}\n\n#jackson:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#experiment {\n  background-image: url(\"https://farm4.staticflickr.com/3776/33309988071_ee97912bd1_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#experiment:hover{\n  cursor: pointer;\n}\n\n#experiment h4{\n  display: none;\n}\n\n#experiment:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#nashville {\n  background-image: url(\"https://farm5.staticflickr.com/4633/27556726429_12c9e11327_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#nashville:hover{\n  cursor: pointer;\n}\n\n#nashville h4{\n  display: none;\n}\n\n#nashville:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#deloache {\n  background-image: url(\"https://farm5.staticflickr.com/4641/25503804958_23eeaf2d9d_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#deloache:hover{\n  cursor: pointer;\n}\n\n#deloache h4{\n  display: none;\n}\n\n#deloache:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n\n\n\n\n\n\n.title-modal {\n    position: absolute;\n    height: 0;\n    width: 100%;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.7);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.title-modal-content {\n    width: 100%;\n}\n\n.title-modal a {\n\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.title-modal a:hover, .title-modal a:focus {\n    color: #f1f1f1;\n}\n\n.title-modal .closebtn {\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .title-modal a {font-size: 20px}\n  .title-modal .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.spanNav {\n  font-size:30px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.spanNav-mobile {\n  font-size:40px;\n  cursor:pointer;\n  color: white;\n  margin-top: 20px;\n}\n\n\n\n\n#concertify{\n  background-image: url(\"https://farm5.staticflickr.com/4598/24471598817_d4786b4b21_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#concertify:hover{\n  cursor: pointer;\n}\n\n#concertify h4{\n  display: none;\n}\n\n#concertify:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#solitaire {\n  background-image: url(\"https://farm5.staticflickr.com/4646/24489394737_14f40a5186_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#solitaire:hover{\n  cursor: pointer;\n}\n\n#solitaire h4{\n  display: none;\n}\n\n#solitaire:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#blackstar {\n  background-image: url(\"https://farm5.staticflickr.com/4597/38655689454_4dc1a6b3ef_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#blackstar:hover{\n  cursor: pointer;\n}\n\n#blackstar h4{\n  display: none;\n}\n\n#blackstar:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#vUtensils {\n  background-image: url(\"https://farm5.staticflickr.com/4589/39353275271_b1747b3cb8_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#vUtensils:hover{\n  cursor: pointer;\n}\n\n#vUtensils h4{\n  display: none;\n}\n\n#vUtensils:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#facePay {\n  background-image: url(\"https://farm5.staticflickr.com/4639/39353381641_415788f103_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#facePay:hover{\n  cursor: pointer;\n}\n\n#facePay h4{\n  display: none;\n}\n\n#facePay:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#vmil {\n  background-image: url(\"https://farm5.staticflickr.com/4693/39325003812_a1f92042aa_h.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#vmil:hover{\n  cursor: pointer;\n}\n\n#vmil h4{\n  display: none;\n}\n\n#vmil:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n\n\n\n\n.photo-container{\n  width: 100%;\n}\n\n.subheader-nav{\n  height: 75%;\n  padding-left: 50px;\n}\n\n.gallery-container{\n  padding-top: 20px;\n  height: 520px;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n  padding-right: 0px;\n}\n\n.project-container{\n  padding-top: 20px;\n  height: 550px;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n\n@media only screen and (max-width: 600px)  {\n  .container-fluid {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n\n  .gallery-container{\n    padding-top: 20px;\n    height: 670px;\n    overflow-y: scroll;\n    overflow-x: hidden;\n    -webkit-overflow-scrolling: touch;\n    padding-right: 0px;\n    padding-left: 0px !important;\n  }\n\n  .project-container{\n    padding-top: 20px;\n    height: 680px;\n    overflow-y: scroll;\n    -webkit-overflow-scrolling: touch;\n    padding-left: 0px !important;\n    padding-right: 0px !important;\n    width: 104%;\n  }\n\n  .inner-proj-container{\n    padding: 0px !important;\n  }\n}\n\n.subheader-nav a{\n  color: inherit;\n  text-decoration: none;\n}\n\n.subheader-nav a:hover{\n  color: white;\n  text-decoration: none;\n}\n\n.deloache-gallery-img{\n  width: 100%;\n  height: auto;\n}\n\n.box-gallery-img{\n  object-fit: cover;\n  object-fit: contain;\n  padding: 0px;\n  overflow: hidden;\n}\n\n.box-image-container{\n  height: 200px;\n  overflow: hidden;\n  margin-bottom: 15px\n}\n\n.concertify-banner{\n\n}\n\n.banner-img{\n  width: 100%;\n  height: auto;\n  border-radius: 25px;\n}\n\n.banner-img-link{\n  width: 100%;\n  height: auto;\n  border: solid 2px black;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n.banner-img-link-2{\n  width: 100%;\n  height: auto;\n  border: solid 2px black;\n  top: 55%;\n  transform: translateY(-25%);\n}\n\n.project-information{\n  color: white;\n}\n\n.photo-cover-cont{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.photo-cover-cont h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.photo-cover-cont:hover{\n  opacity: 0.8;\n  cursor: pointer;\n}\n\n.photo-cover-cont:hover h4{\n  display: block;\n}\n\n.photo-cover-cont:hover img{\n  display: inline-block;\n  width: 20%;\n  transition: 0.2s;\n}\n\n.photo-cover-cont:hover img:hover{\n  opacity: .5;\n}\n\n.photo-cover-cont img{\n  display: none;\n  width: 20%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n\n\n.photo-cover-cont-mobile{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.photo-cover-cont-mobile h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.photo-cover-cont-mobile:hover{\n  opacity: 0.8;\n  cursor: pointer;\n}\n\n.photo-cover-cont-mobile:hover h4{\n  display: block;\n}\n\n.photo-cover-cont-mobile:hover img{\n  display: inline-block;\n  width: 100%;\n  transition: 0.2s;\n}\n\n.photo-cover-cont-mobile:hover img:hover{\n  opacity: .5;\n}\n\n.photo-cover-cont-mobile img{\n  display: none;\n  width: 100%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n\n\n\n.project-cover-cont{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 101%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.project-cover-cont h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.project-cover-cont:hover{\n  opacity: 0.8;\n}\n\n.project-cover-cont:hover h4{\n  display: block;\n}\n\n.project-cover-cont:hover img{\n  display: inline-block;\n  width: 20%;\n  transition: 0.2s;\n}\n\n.project-cover-cont:hover img:hover{\n  opacity: .5;\n  cursor: pointer;\n}\n\n.project-cover-cont img{\n  display: none;\n  width: 20%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n.photo-showcase-container{\n  position: fixed;\n  width: 100%;\n  height:100vh;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n\n\n\n.gallery-overlay {\n    height: 100%;\n    width: 100%;\n    opacity: 0;\n    position: fixed;\n    z-index: -10;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.gallery-overlay-content {\n    position: relative;\n    top: 10%;\n    width: 100%;\n    text-align: center;\n    margin-top: 30px;\n}\n\n.gallery-arrow-cont{\n  height: 100%;\n  width: 150px;\n  position: fixed;\n  align: center;\n  text-align: center;\n}\n\n.gallery-arrow{\n  font-size: 90px;\n  position: absolute;\n  color: white;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n#left-arrow{\n  position: absolute;\n  left: 0px;\n  top: 0px;\n\n}\n\n#left-arrow:hover{\n  opacity: 0.5;\n}\n\n#left-arrow:hover h1:hover{\n  opacity: 0.5;\n}\n\n#right-arrow{\n    right: 0;\n    top: 0px;\n    position: absolute;\n}\n\n.gallery-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.gallery-overlay a:hover, .gallery-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.gallery-overlay .gallery-closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .gallery-overlay a {font-size: 20px}\n  .gallery-overlay .gallery-closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n#personal-photo{\n  background-image: url(\"https://farm5.staticflickr.com/4684/39454969772_5d9f14e410_z.jpg\");\n  background-size: contain;\n  background-size: cover;\n  height: 400px;\n  border-radius: 95%;\n}\n\n#mobile-selection-header{\n  color: white;\n  border-bottom: solid 1px white;\n}\n\n.my-mobile-navbar-container{\n  text-align: center;\n  margin-left:-10px;\n  padding: 0px;\n}\n\n\n.my-mobile-navbar-overlay {\n    margin-top: 35px;\n    height: 0;\n    width: 100%;\n    position: absolute;\n    z-index: 1000;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n\n.my-mobile-navbar-overlay-content {\n    position: relative;\n    top: 1%;\n    width: 100%;\n    text-align: center;\n    margin-top: 5px;\n    border: solid 1px white;\n}\n\n.my-mobile-navbar-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.my-mobile-navbar-overlay a:hover, .my-mobile-navbar-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.my-mobile-navbar-overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .my-mobile-navbar-overlay a {font-size: 20px}\n  .my-mobile-navbar-overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.downTriangle {\n  font-size:20px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n\n\n\n.header-mobile-cont{\n  overflow: hidden;\n}\n\n\n#subheader-mobile-selection-header{\n  color: white;\n  border-bottom: solid 1px white;\n}\n\n.my-mobile-subheader-container{\n  text-align: center;\n}\n\n\n.my-mobile-subheader-overlay {\n    margin-top: 35px;\n    height: 0;\n    width: 100%;\n    position: absolute;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.my-mobile-subheader-overlay-content {\n    position: relative;\n    top: 1%;\n    width: 100%;\n    text-align: center;\n    margin-top: 5px;\n}\n\n.my-mobile-subheader-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.my-mobile-subheader-overlay a:hover, .my-mobile-subheader-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.my-mobile-subheader-overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .my-mobile-subheader-overlay a {font-size: 20px}\n  .my-mobile-subheader-overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.downTriangle {\n  font-size:20px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.box-gallery-img-mobile{\n  width: 110%;\n  margin-left: 15px;\n}\n\n.box-image-container-mobile{\n\n}\n\n.mobile-photo-breaker{\n  color: black;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\n#my-gallery-container{\n  visibility: hidden;\n}\n\n.gallery-overlay-content{\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n#galleryBlowup{\n\n}\n\n#blowup-title{\n  color: white\n}\n\n.icon-units{\n  height: 100px;\n  text-align: center;\n}\n\n#about-github-icon img{\n  height: 100%;\n}\n\n#about-github-icon{\n  height: 100px;\n  padding-bottom: 10px;\n}\n\n#about-facebook-icon{\n  margin-top: -20px;\n  height: 100px\n}\n\n#about-linkedin-icon img {\n  height: 80%;\n}\n\n#about-instagram-icon img {\n  height: 80%;\n}\n\n#about-facebook-icon img {\n  height: 100%;\n}\n\n#about-facebook-icon:hover{\n  transition: 0.5s;\n}\n\n#about-github-icon:hover{\n  transition: 0.5s;\n}\n\n#about-linkedin-icon:hover{\n  transition: 0.5s;\n}\n\n#about-instagram-icon:hover{\n  transition: 0.5s;\n}\n\n#about-github-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-facebook-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-linkedin-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-instagram-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n.about-info{\n  padding-top: 20px;\n  padding-left: 30px;\n  color: white;\n}\n", ""]);
+exports.push([module.i, "\n@media only screen and (max-width: 600px)  {\n  .container-fluid {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n}\n\n.navbar-static-top {\n    margin-left: -14px;\n    margin-right: -24px;\n}\n\n.right-nav {\n    text-align: right;\n    padding-top: 10px;\n    padding-right: 20px;\n}\n\n.right-nav a {\n    display: block;\n}\n\ntable#gameTable tbody tr:hover {\n    background: #6495ed;\n    cursor: pointer;\n}\n\n.header {\n    float: right;\n}\n\n.header img {\n    border-radius: 5px;\n    margin: 10px;\n}\n\n\nbody{\n  background: black;\n  font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n  position:relative;\n  min-height: 100%;\n  overflow-x: hidden;\n}\n\n/* DEMO-SPECIFIC STYLES */\n.typewriter-container {\n}\n\n.typewriter h1 {\n  color: #fff;\n  font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n  overflow: hidden; /* Ensures the content is not revealed until the animation */\n  border-right: .15em solid orange; /* The typwriter cursor */\n  white-space: nowrap; /* Keeps the content on a single line */\n  margin: 0 auto; /* Gives that scrolling effect as the typing happens */\n  letter-spacing: .15em; /* Adjust as needed */\n  animation:\n    typing 2.7s steps(30, end),\n    blink-caret .5s step-end infinite;\n}\n\n/* The typing effect */\n@keyframes typing {\n  from { width: 0 }\n  to { width: 100% }\n}\n\n/* The typewriter cursor effect */\n@keyframes blink-caret {\n  from, to { border-color: transparent }\n  50% { border-color: white }\n}\n\n.landing-subheader{\n      transition: 0.3s;\n}\n\n.landing-subheader a{\n      color: inherit;\n      text-decoration: none;\n}\n\n.landing-subheader h3:hover{\n  color: white;\n  cursor: pointer;\n}\n\n.landing-divs{\n  height: 500px;\n}\n\n.landing-divs2{\n  height: 100vh;\n}\n\n\n\n\n\n\n.screen-saver-overlay{\n  width: 100%;\n  height: 800px;\n  background-image: url(\"https://farm5.staticflickr.com/4667/27822467619_1fc55f2f17_c.jpg\");\n  position: fixed;\n  background-size: contain;\n  background-size: cover;\n  left: 0;\n  top: 0;\n}\n\n.hidden-title-banner{\n  opacity: 0;\n  transition: 0.5s;\n}\n\n.hidden-title-banner:hover{\n  opacity: 1;\n}\n\n.landing-page-banners{\n  margin-left: -30px;\n}\n\n.landingTwo-typwriter{\n  position: fixed;\n  top: 370px;\n  left: 50px;\n}\n\n\n\n\n.fillerArea{\n  height: 400px;\n  background-image: url(\"https://farm5.staticflickr.com/4748/39735111191_1f23caad65_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n.overlay {\n    height: 100%;\n    width: 0;\n    position: fixed;\n    z-index: 1147483647;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.overlay-content {\n    position: relative;\n    top: 25%;\n    width: 100%;\n    text-align: center;\n    margin-top: 30px;\n}\n\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.spanNav {\n  font-size:30px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.outerDiv {\n\n}\n\n.headerDiv {\n  z-index: 1000;\n  height: 100%;\n  border-right: solid 2px white;\n  padding: 10px;\n  width: 50px;\n  position: fixed;\n  top: 0;\n  left:0;\n}\n\n.headerDiv-mobile {\n  z-index: 100000;\n  height: 50px;\n  border-bottom: solid 1px white;\n  width: 100%;\n  position: fixed;\n  background-color: black;\n  overflow: hidden;\n  margin-top: 0px;\n}\n\n.shadowDiv-mobile {\n  z-index: -5;\n  height: 30px;\n  width: 95%;\n}\n\n.vertical-text {\n  color: white;\n  width: 300px;\n  margin-top: 250px;\n\ttransform: rotate(-90deg);\n\ttransform-origin: left top 0;\n}\n\n.b-logo{\n  color: white;\n  padding-bottom: 100px;\n  padding-top: 50px;\n}\n\n.b-logo a{\n  text-decoration: none;\n  color: white;\n}\n\n.b-logo a:hover{\n  text-decoration: none;\n  color: white;\n}\n\n\n.b-logo-mobile{\n  color: white;\n  display: inline-block;\n  margin-top: 10px;\n}\n\n.b-logo-mobile a{\n  text-decoration: none;\n  color: white;\n}\n\n.b-logo-mobile a:hover{\n  text-decoration: none;\n  color: white;\n}\n\n.contentDiv{\n  padding-left: 64px;\n  padding-right: 0px !important;\n}\n\n.contentDiv-secondary{\n  padding-left: 50px;\n  padding-right: 0px !important;\n}\n\n@media screen and (max-width: 800px) {\n  .contentDiv{\n    padding-left: 0px;\n    padding-right: 0px !important;\n  }\n\n  .contentDiv-secondary{\n    padding-left: 0px;\n    padding-right: 0px !important;\n    width: 100%;\n  }\n}\n\n#portfolio {\n  background-image: url(\"https://farm5.staticflickr.com/4633/27556726429_12c9e11327_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#portfolio:hover{\n  cursor: pointer;\n}\n\n#portfolio h4{\n  display: none;\n}\n\n#portfolio:hover h4{\n  display: block;\n  text-decoration: none;\n  cursor: pointer;\n  color: white;\n}\n\n#projects {\n  background-image: url(\"https://farm5.staticflickr.com/4598/24471598817_d4786b4b21_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#projects:hover{\n  cursor: pointer;\n}\n\n#projects h4{\n  display: none;\n}\n\n#projects:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#about {\n  background-image: url(\"https://farm5.staticflickr.com/4739/27557171039_ea34b5339d_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#about:hover{\n  cursor: pointer;\n}\n\n#about h4{\n  display: none;\n}\n\n#about:hover h4{\n  display: block;\n  text-decoration: none;\n  cursor: pointer;\n  color: white;\n}\n\n.vertical-heading {\n  color: white;\n  width: 300px;\n  margin-top: 200px;\n\ttransform: rotate(-90deg);\n\ttransform-origin: left top 0;\n}\n\n.inner-head {\n  margin-left: 15px;\n}\n\n#selected-subheader{\n  color: white;\n}\n\n\n\n\n#colorado{\n  background-image: url(\"https://farm4.staticflickr.com/3783/32596289134_a8170a0599_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#colorado:hover{\n  cursor: pointer;\n}\n\n#colorado h4{\n  display: none;\n}\n\n#colorado:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#moab {\n  background-image: url(\"https://farm4.staticflickr.com/3682/33282346992_f5a617c0fa_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#moab:hover {\n  cursor: pointer;\n}\n\n#moab h4 {\n  display: none;\n}\n\n#moab:hover h4 {\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#bolivia {\n  background-image: url(\"https://farm4.staticflickr.com/3927/33346407706_6e14df7860_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#bolivia:hover{\n  cursor: pointer;\n}\n\n#bolivia h4{\n  display: none;\n}\n\n#bolivia:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#peru {\n  background-image: url(\"https://farm4.staticflickr.com/3891/33425599956_2cea2b9cf5_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#peru:hover {\n  cursor: pointer;\n}\n\n#peru h4 {\n  display: none;\n}\n\n#peru:hover h4 {\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#jackson {\n  background-image: url(\"https://farm5.staticflickr.com/4593/27564430749_1bb7a6ba6b_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#jackson:hover{\n  cursor: pointer;\n}\n\n#jackson h4{\n  display: none;\n}\n\n#jackson:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#experiment {\n  background-image: url(\"https://farm4.staticflickr.com/3776/33309988071_ee97912bd1_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#experiment:hover{\n  cursor: pointer;\n}\n\n#experiment h4{\n  display: none;\n}\n\n#experiment:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#nashville {\n  background-image: url(\"https://farm5.staticflickr.com/4633/27556726429_12c9e11327_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#nashville:hover{\n  cursor: pointer;\n}\n\n#nashville h4{\n  display: none;\n}\n\n#nashville:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#deloache {\n  background-image: url(\"https://farm5.staticflickr.com/4641/25503804958_23eeaf2d9d_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#deloache:hover{\n  cursor: pointer;\n}\n\n#deloache h4{\n  display: none;\n}\n\n#deloache:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n\n\n\n\n\n\n.title-modal {\n    position: absolute;\n    height: 0;\n    width: 100%;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.7);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.title-modal-content {\n    width: 100%;\n}\n\n.title-modal a {\n\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.title-modal a:hover, .title-modal a:focus {\n    color: #f1f1f1;\n}\n\n.title-modal .closebtn {\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .title-modal a {font-size: 20px}\n  .title-modal .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.spanNav {\n  font-size:30px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.spanNav-mobile {\n  font-size:40px;\n  cursor:pointer;\n  color: white;\n  margin-top: 20px;\n}\n\n\n\n\n#concertify{\n  background-image: url(\"https://farm5.staticflickr.com/4598/24471598817_d4786b4b21_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#concertify:hover{\n  cursor: pointer;\n}\n\n#concertify h4{\n  display: none;\n}\n\n#concertify:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#solitaire {\n  background-image: url(\"https://farm5.staticflickr.com/4646/24489394737_14f40a5186_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#solitaire:hover{\n  cursor: pointer;\n}\n\n#solitaire h4{\n  display: none;\n}\n\n#solitaire:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#blackstar {\n  background-image: url(\"https://farm5.staticflickr.com/4597/38655689454_4dc1a6b3ef_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#blackstar:hover{\n  cursor: pointer;\n}\n\n#blackstar h4{\n  display: none;\n}\n\n#blackstar:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#vUtensils {\n  background-image: url(\"https://farm5.staticflickr.com/4589/39353275271_b1747b3cb8_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#vUtensils:hover{\n  cursor: pointer;\n}\n\n#vUtensils h4{\n  display: none;\n}\n\n#vUtensils:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#facePay {\n  background-image: url(\"https://farm5.staticflickr.com/4639/39353381641_415788f103_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#facePay:hover{\n  cursor: pointer;\n}\n\n#facePay h4{\n  display: none;\n}\n\n#facePay:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#vmil {\n  background-image: url(\"https://farm5.staticflickr.com/4693/39325003812_a1f92042aa_h.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#vmil:hover{\n  cursor: pointer;\n}\n\n#vmil h4{\n  display: none;\n}\n\n#vmil:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n\n\n\n\n.photo-container{\n  width: 100%;\n}\n\n.subheader-nav{\n  height: 75%;\n  padding-left: 50px;\n}\n\n.gallery-container{\n  padding-top: 20px;\n  height: 520px;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n  padding-right: 0px;\n}\n\n.project-container{\n  padding-top: 20px;\n  height: 550px;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n\n@media only screen and (max-width: 600px)  {\n  .container-fluid {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n\n  .gallery-container{\n    padding-top: 20px;\n    height: 670px;\n    overflow-y: scroll;\n    overflow-x: hidden;\n    -webkit-overflow-scrolling: touch;\n    padding-right: 0px;\n    padding-left: 0px !important;\n  }\n\n  .project-container{\n    padding-top: 20px;\n    height: 680px;\n    overflow-y: scroll;\n    -webkit-overflow-scrolling: touch;\n    padding-left: 0px !important;\n    padding-right: 0px !important;\n    width: 104%;\n  }\n\n  .inner-proj-container{\n    padding: 0px !important;\n  }\n}\n\n.subheader-nav a{\n  color: inherit;\n  text-decoration: none;\n}\n\n.subheader-nav a:hover{\n  color: white;\n  text-decoration: none;\n}\n\n.deloache-gallery-img{\n  width: 100%;\n  height: auto;\n}\n\n.box-gallery-img{\n  object-fit: cover;\n  object-fit: contain;\n  padding: 0px;\n  overflow: hidden;\n}\n\n.box-image-container{\n  height: 200px;\n  overflow: hidden;\n  margin-bottom: 15px\n}\n\n.concertify-banner{\n\n}\n\n.banner-img{\n  width: 100%;\n  height: auto;\n  border-radius: 25px;\n}\n\n.banner-img-link{\n  width: 100%;\n  height: auto;\n  border: solid 2px black;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n.banner-img-link-2{\n  width: 100%;\n  height: auto;\n  border: solid 2px black;\n  top: 55%;\n  transform: translateY(-25%);\n}\n\n.project-information{\n  color: white;\n}\n\n.photo-cover-cont{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.photo-cover-cont h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.photo-cover-cont:hover{\n  opacity: 0.8;\n  cursor: pointer;\n}\n\n.photo-cover-cont:hover h4{\n  display: block;\n}\n\n.photo-cover-cont:hover img{\n  display: inline-block;\n  width: 20%;\n  transition: 0.2s;\n}\n\n.photo-cover-cont:hover img:hover{\n  opacity: .5;\n}\n\n.photo-cover-cont img{\n  display: none;\n  width: 20%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n\n\n.photo-cover-cont-mobile{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.photo-cover-cont-mobile h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.photo-cover-cont-mobile:hover{\n  opacity: 0.8;\n  cursor: pointer;\n}\n\n.photo-cover-cont-mobile:hover h4{\n  display: block;\n}\n\n.photo-cover-cont-mobile:hover img{\n  display: inline-block;\n  width: 100%;\n  transition: 0.2s;\n}\n\n.photo-cover-cont-mobile:hover img:hover{\n  opacity: .5;\n}\n\n.photo-cover-cont-mobile img{\n  display: none;\n  width: 100%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n\n\n\n.project-cover-cont{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 101%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.project-cover-cont h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.project-cover-cont:hover{\n  opacity: 0.8;\n}\n\n.project-cover-cont:hover h4{\n  display: block;\n}\n\n.project-cover-cont:hover img{\n  display: inline-block;\n  width: 20%;\n  transition: 0.2s;\n}\n\n.project-cover-cont:hover img:hover{\n  opacity: .5;\n  cursor: pointer;\n}\n\n.project-cover-cont img{\n  display: none;\n  width: 20%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n.photo-showcase-container{\n  position: fixed;\n  width: 100%;\n  height:100vh;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n\n\n\n.gallery-overlay {\n    height: 100%;\n    width: 100%;\n    opacity: 0;\n    position: fixed;\n    z-index: -10;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.gallery-overlay-content {\n    position: relative;\n    top: 10%;\n    width: 100%;\n    text-align: center;\n    margin-top: 30px;\n}\n\n.gallery-arrow-cont{\n  height: 100%;\n  width: 150px;\n  position: fixed;\n  align: center;\n  text-align: center;\n}\n\n.gallery-arrow{\n  font-size: 90px;\n  position: absolute;\n  color: white;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n#left-arrow{\n  position: absolute;\n  left: 0px;\n  top: 0px;\n\n}\n\n#left-arrow:hover{\n  opacity: 0.5;\n}\n\n#left-arrow:hover h1:hover{\n  opacity: 0.5;\n}\n\n#right-arrow{\n    right: 0;\n    top: 0px;\n    position: absolute;\n}\n\n.gallery-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.gallery-overlay a:hover, .gallery-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.gallery-overlay .gallery-closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .gallery-overlay a {font-size: 20px}\n  .gallery-overlay .gallery-closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n#personal-photo{\n  background-image: url(\"https://farm5.staticflickr.com/4684/39454969772_5d9f14e410_z.jpg\");\n  background-size: contain;\n  background-size: cover;\n  height: 400px;\n  border-radius: 95%;\n}\n\n#mobile-selection-header{\n  color: white;\n  border-bottom: solid 1px white;\n}\n\n.my-mobile-navbar-container{\n  text-align: center;\n  margin-left:-10px;\n  padding: 0px;\n}\n\n\n.my-mobile-navbar-overlay {\n    margin-top: 35px;\n    height: 0;\n    width: 100%;\n    position: absolute;\n    z-index: 1000;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n\n.my-mobile-navbar-overlay-content {\n    position: relative;\n    top: 1%;\n    width: 100%;\n    text-align: center;\n    margin-top: 5px;\n    border: solid 1px white;\n}\n\n.my-mobile-navbar-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.my-mobile-navbar-overlay a:hover, .my-mobile-navbar-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.my-mobile-navbar-overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .my-mobile-navbar-overlay a {font-size: 20px}\n  .my-mobile-navbar-overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.downTriangle {\n  font-size:20px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n\n\n\n.header-mobile-cont{\n  overflow: hidden;\n}\n\n\n#subheader-mobile-selection-header{\n  color: white;\n  border-bottom: solid 1px white;\n}\n\n.my-mobile-subheader-container{\n  text-align: center;\n}\n\n\n.my-mobile-subheader-overlay {\n    margin-top: 35px;\n    height: 0;\n    width: 100%;\n    position: absolute;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.my-mobile-subheader-overlay-content {\n    position: relative;\n    top: 1%;\n    width: 100%;\n    text-align: center;\n    margin-top: 5px;\n}\n\n.my-mobile-subheader-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.my-mobile-subheader-overlay a:hover, .my-mobile-subheader-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.my-mobile-subheader-overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .my-mobile-subheader-overlay a {font-size: 20px}\n  .my-mobile-subheader-overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.downTriangle {\n  font-size:20px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.box-gallery-img-mobile{\n  width: 110%;\n  margin-left: 15px;\n}\n\n.box-image-container-mobile{\n\n}\n\n.mobile-photo-breaker{\n  color: black;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\n#my-gallery-container{\n  visibility: hidden;\n}\n\n.gallery-overlay-content{\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n#galleryBlowup{\n\n}\n\n#blowup-title{\n  color: white\n}\n\n.icon-units{\n  height: 100px;\n  text-align: center;\n}\n\n#about-github-icon img{\n  height: 100%;\n}\n\n#about-github-icon{\n  height: 100px;\n  padding-bottom: 10px;\n}\n\n#about-facebook-icon{\n  margin-top: -20px;\n  height: 100px\n}\n\n#about-linkedin-icon img {\n  height: 80%;\n}\n\n#about-instagram-icon img {\n  height: 80%;\n}\n\n#about-facebook-icon img {\n  height: 100%;\n}\n\n#about-facebook-icon:hover{\n  transition: 0.5s;\n}\n\n#about-github-icon:hover{\n  transition: 0.5s;\n}\n\n#about-linkedin-icon:hover{\n  transition: 0.5s;\n}\n\n#about-instagram-icon:hover{\n  transition: 0.5s;\n}\n\n#about-github-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-facebook-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-linkedin-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-instagram-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n.about-info{\n  padding-top: 20px;\n  padding-left: 30px;\n  color: white;\n}\n", ""]);
 
 // exports
 
@@ -2806,6 +2813,412 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+
+/***/ 255:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(4);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(18);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactRouterDom = __webpack_require__(13);
+
+var _header = __webpack_require__(114);
+
+var _header2 = _interopRequireDefault(_header);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/*************************************************************************/
+var TitleBanner = function (_Component) {
+  _inherits(TitleBanner, _Component);
+
+  function TitleBanner(props) {
+    _classCallCheck(this, TitleBanner);
+
+    var _this = _possibleConstructorReturn(this, (TitleBanner.__proto__ || Object.getPrototypeOf(TitleBanner)).call(this, props));
+
+    _this.openNav = _this.openNav.bind(_this);
+    _this.closeNav = _this.closeNav.bind(_this);
+    return _this;
+  }
+
+  _createClass(TitleBanner, [{
+    key: 'openNav',
+    value: function openNav() {
+      if (screen.width > 800) document.getElementById(this.props.nameAlt).style.height = "100%";
+    }
+  }, {
+    key: 'closeNav',
+    value: function closeNav() {
+      document.getElementById(this.props.nameAlt).style.height = "0%";
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      var subHeads = "";
+      if (this.props.subheaders != undefined) {
+        subHeads = this.props.subheaders.map(function (subhead) {
+          return _react2.default.createElement(
+            'a',
+            { href: _this2.props.id + '/' + subhead },
+            _react2.default.createElement(
+              'h4',
+              { className: 'col-xs-offset-1' },
+              subhead
+            )
+          );
+        });
+      }
+      var headerDescription = "";
+      if (this.props.description != undefined) {
+        headerDescription = this.props.description.map(function (des) {
+          return _react2.default.createElement(
+            'h4',
+            { className: 'col-xs-offset-1' },
+            des
+          );
+        });
+      }
+      var name = this.props.name == 'portfolio' ? 'stills' : this.props.name;
+      var new_path = this.props.folder == undefined ? '' + name : this.props.folder + '/' + name;
+      return _react2.default.createElement(
+        'div',
+        { className: 'hidden-title-banner' },
+        _react2.default.createElement(
+          'a',
+          { href: new_path },
+          _react2.default.createElement(
+            'div',
+            { id: this.props.name, className: 'col-lg-4 col-xs-12 landing-divs2' },
+            _react2.default.createElement(
+              'h2',
+              { className: 'vertical-heading' },
+              this.props.name
+            ),
+            _react2.default.createElement(
+              'div',
+              { id: this.props.nameAlt, className: 'title-modal' },
+              _react2.default.createElement(
+                'div',
+                { className: 'title-modal-content' },
+                _react2.default.createElement(
+                  'h2',
+                  { className: 'vertical-heading inner-head' },
+                  this.props.name
+                ),
+                subHeads,
+                _react2.default.createElement(
+                  'h4',
+                  null,
+                  ' ',
+                  headerDescription,
+                  ' '
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return TitleBanner;
+}(_react.Component);
+
+var HomeHeader = function (_Component2) {
+  _inherits(HomeHeader, _Component2);
+
+  function HomeHeader(props) {
+    _classCallCheck(this, HomeHeader);
+
+    return _possibleConstructorReturn(this, (HomeHeader.__proto__ || Object.getPrototypeOf(HomeHeader)).call(this, props));
+  }
+
+  _createClass(HomeHeader, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      // Get the components DOM node
+      var elem = _reactDom2.default.findDOMNode(this);
+      // Set the opacity of the element to 0
+      elem.style.opacity = 0;
+      setTimeout(function () {
+        window.requestAnimationFrame(function () {
+          elem.style.transition = "opacity 5000ms";
+          elem.style.opacity = 1;
+        });
+      }, 2600);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(_header2.default, null);
+    }
+  }]);
+
+  return HomeHeader;
+}(_react.Component);
+
+var NavBarSubheadings = function (_Component3) {
+  _inherits(NavBarSubheadings, _Component3);
+
+  function NavBarSubheadings(props) {
+    _classCallCheck(this, NavBarSubheadings);
+
+    return _possibleConstructorReturn(this, (NavBarSubheadings.__proto__ || Object.getPrototypeOf(NavBarSubheadings)).call(this, props));
+  }
+
+  _createClass(NavBarSubheadings, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      // Get the components DOM node
+      var elem = _reactDom2.default.findDOMNode(this);
+      // Set the opacity of the element to 0
+      elem.style.opacity = 0;
+      setTimeout(function () {
+        window.requestAnimationFrame(function () {
+          elem.style.transition = "opacity 5000ms";
+          elem.style.opacity = 1;
+        });
+      }, 2600);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'row' },
+        _react2.default.createElement(
+          'div',
+          { id: 'stills-navbar', className: 'col-sm-offset-1 col-lg-2 col-xs-3 landing-subheader' },
+          _react2.default.createElement(
+            'a',
+            { href: '/stills' },
+            _react2.default.createElement(
+              'h3',
+              null,
+              'Stills'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { id: 'projects-navbar', className: 'col-lg-2 col-xs-3 landing-subheader' },
+          _react2.default.createElement(
+            'a',
+            { href: '/projects' },
+            _react2.default.createElement(
+              'h3',
+              null,
+              'Projects'
+            )
+          )
+        ),
+        _react2.default.createElement(
+          'div',
+          { id: 'about-navbar', className: 'col-lg-2 col-xs-3 landing-subheader' },
+          _react2.default.createElement(
+            'a',
+            { href: '/about' },
+            _react2.default.createElement(
+              'h3',
+              null,
+              'About'
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return NavBarSubheadings;
+}(_react.Component);
+
+var NavBar = function NavBar() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'landingTwo-typwriter' },
+    _react2.default.createElement(
+      'div',
+      { className: 'row typewriter-container' },
+      _react2.default.createElement(
+        'div',
+        { className: 'typewriter col-lg-12 col-xs-12' },
+        ' ',
+        _react2.default.createElement(
+          'h1',
+          null,
+          'brendan broderick.'
+        ),
+        ' '
+      )
+    )
+  );
+};
+
+var LandingBanner = function (_Component4) {
+  _inherits(LandingBanner, _Component4);
+
+  function LandingBanner(props) {
+    _classCallCheck(this, LandingBanner);
+
+    return _possibleConstructorReturn(this, (LandingBanner.__proto__ || Object.getPrototypeOf(LandingBanner)).call(this, props));
+  }
+
+  _createClass(LandingBanner, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      // Get the components DOM node
+      var elem = _reactDom2.default.findDOMNode(this);
+      // Set the opacity of the element to 0
+      elem.style.opacity = 0;
+      setTimeout(function () {
+        window.requestAnimationFrame(function () {
+          elem.style.transition = "opacity 5000ms";
+          elem.style.opacity = 1;
+        });
+      }, 2600);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('div', { className: 'col-xs-12 fillerArea' });
+    }
+  }]);
+
+  return LandingBanner;
+}(_react.Component);
+
+var TitleBannerContainer = function (_Component5) {
+  _inherits(TitleBannerContainer, _Component5);
+
+  function TitleBannerContainer(props) {
+    _classCallCheck(this, TitleBannerContainer);
+
+    return _possibleConstructorReturn(this, (TitleBannerContainer.__proto__ || Object.getPrototypeOf(TitleBannerContainer)).call(this, props));
+  }
+
+  _createClass(TitleBannerContainer, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      // Get the components DOM node
+      var elem = _reactDom2.default.findDOMNode(this);
+      // Set the opacity of the element to 0
+      elem.style.opacity = 0;
+      setTimeout(function () {
+        window.requestAnimationFrame(function () {
+          elem.style.transition = "opacity 5000ms";
+          elem.style.opacity = 1;
+        });
+      }, 2600);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(
+          'div',
+          { className: 'row landing-page-banners' },
+          _react2.default.createElement(TitleBanner, { id: "stills", name: "portfolio", nameAlt: "portfolio1", subheaders: ["Peru", "Bolivia", "Moab", "Jackson", "Colorado", "Nashville", "Experiment"] }),
+          _react2.default.createElement(TitleBanner, { id: "projects", name: "projects", nameAlt: "projects1", subheaders: ["Concertify", "FacePay", "Solitaire", "Black Star Rentals", "VUtensils"] }),
+          _react2.default.createElement(TitleBanner, { id: "about", name: "about", nameAlt: "about1", description: ["Brendan Broderick", "Denver, Colorado", "Vanderbilt University", "Computer Science & Economics"] })
+        )
+      );
+    }
+  }]);
+
+  return TitleBannerContainer;
+}(_react.Component);
+
+var ScreenSaverOverlay = function (_Component6) {
+  _inherits(ScreenSaverOverlay, _Component6);
+
+  function ScreenSaverOverlay(props) {
+    _classCallCheck(this, ScreenSaverOverlay);
+
+    return _possibleConstructorReturn(this, (ScreenSaverOverlay.__proto__ || Object.getPrototypeOf(ScreenSaverOverlay)).call(this, props));
+  }
+
+  _createClass(ScreenSaverOverlay, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      // Get the components DOM node
+      var elem = _reactDom2.default.findDOMNode(this);
+      // Set the opacity of the element to 0
+      elem.style.opacity = 0;
+      setTimeout(function () {
+        window.requestAnimationFrame(function () {
+          elem.style.transition = "opacity 5000ms";
+          elem.style.opacity = 1;
+        });
+      }, 2600);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement('div', { className: 'screen-saver-overlay' });
+    }
+  }]);
+
+  return ScreenSaverOverlay;
+}(_react.Component);
+
+var LandingTwo = function (_Component7) {
+  _inherits(LandingTwo, _Component7);
+
+  function LandingTwo(props) {
+    _classCallCheck(this, LandingTwo);
+
+    return _possibleConstructorReturn(this, (LandingTwo.__proto__ || Object.getPrototypeOf(LandingTwo)).call(this, props));
+  }
+
+  _createClass(LandingTwo, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement(HomeHeader, null),
+        _react2.default.createElement(
+          'div',
+          { className: 'outerDiv contentDiv col-xs-12' },
+          _react2.default.createElement(NavBar, null),
+          _react2.default.createElement(ScreenSaverOverlay, null),
+          _react2.default.createElement(TitleBannerContainer, null)
+        )
+      );
+    }
+  }]);
+
+  return LandingTwo;
+}(_react.Component);
+
+exports.default = (0, _reactRouterDom.withRouter)(LandingTwo);
 
 /***/ }),
 
