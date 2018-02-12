@@ -38,17 +38,13 @@ export class TitleBanner extends Component {
 
       let mobileVersion = <a href={ new_path }>
         <div id={this.props.name} className="col-lg-4 col-xs-12 landing-divs">
-          <h2 className="vertical-heading">{this.props.name}</h2>
+          <h2 className="vertical-heading"></h2>
             <div id={this.props.nameAlt} >
-              <div>
-                <h2 className="vertical-heading inner-head">{ this.props.name }</h2>
-                { subHeads }
-                <h4> { headerDescription } </h4>
-              </div>
+              <div><h2 className="vertical-heading inner-head">{ this.props.name }</h2></div>
             </div>
           </div>
         </a>
-      let version = window.innerWidth > 1000 ? mobileVersion : desktopVersion;
+      let version = window.innerWidth < 1000 ? mobileVersion : desktopVersion;
     return(
       <div>{version}</div>
     )

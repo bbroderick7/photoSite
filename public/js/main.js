@@ -3346,11 +3346,7 @@ var TitleBanner = exports.TitleBanner = function (_Component) {
         _react2.default.createElement(
           "div",
           { id: this.props.name, className: "col-lg-4 col-xs-12 landing-divs" },
-          _react2.default.createElement(
-            "h2",
-            { className: "vertical-heading" },
-            this.props.name
-          ),
+          _react2.default.createElement("h2", { className: "vertical-heading" }),
           _react2.default.createElement(
             "div",
             { id: this.props.nameAlt },
@@ -3361,20 +3357,12 @@ var TitleBanner = exports.TitleBanner = function (_Component) {
                 "h2",
                 { className: "vertical-heading inner-head" },
                 this.props.name
-              ),
-              subHeads,
-              _react2.default.createElement(
-                "h4",
-                null,
-                " ",
-                headerDescription,
-                " "
               )
             )
           )
         )
       );
-      var version = window.innerWidth > 1000 ? mobileVersion : desktopVersion;
+      var version = window.innerWidth < 1000 ? mobileVersion : desktopVersion;
       return _react2.default.createElement(
         "div",
         null,
