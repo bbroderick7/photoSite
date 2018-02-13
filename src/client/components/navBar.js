@@ -40,7 +40,7 @@ class NavBarMobile extends Component {
     let mytitle = this.state.open ? <h5 id="mobile-selection-header">{ selectedname } <span className="downTriangle">&#9652;</span></h5>
                                   : <h5 id="mobile-selection-header">{ selectedname } <span className="downTriangle">&#9662;</span></h5> ;
     return(
-      <div className="col-xs-5">
+      <div className="">
         <div onClick={ this.toggleNav } className="my-mobile-navbar-container"> { mytitle } </div>
         <div id="mobileNav" className="my-mobile-navbar-overlay"><NavLinks/></div>
       </div>

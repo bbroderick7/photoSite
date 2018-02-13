@@ -23,7 +23,7 @@ class SubheaderMobileNav extends Component {
               : <h5 id="subheader-mobile-selection-header">{this.props.selected} <span className="downTriangle">&#9662;</span></h5> ;
     let displayHeadings = this.props.displayHeadings.map(subheading => <a href= {subheading} ><h4 id={`${subheading}pics`}>{subheading}</h4></a>)
     return(
-      <div className="col-xs-6">
+      <div >
         <div onClick={this.toggleNav} className="my-mobile-subheader-container"> {mytitle} </div>
         <div id="subheaderNav" className="my-mobile-subheader-overlay">
           <div className="my-mobile-subheader-overlay-content"> {displayHeadings} </div>

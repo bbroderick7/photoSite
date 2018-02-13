@@ -1097,13 +1097,14 @@ body{
 
 #mobile-selection-header{
   color: white;
-  border-bottom: solid 1px white;
+  border: solid 1px white;
+  width:100%;
 }
 
 .my-mobile-navbar-container{
   text-align: center;
-  margin-left:-10px;
   padding: 0px;
+  width: 100%;
 }
 
 
@@ -1179,10 +1180,12 @@ body{
 #subheader-mobile-selection-header{
   color: white;
   border-bottom: solid 1px white;
+  width: 100%;
 }
 
 .my-mobile-subheader-container{
   text-align: center;
+  width: 100%;
 }
 
 
