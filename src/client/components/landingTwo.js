@@ -29,7 +29,7 @@ class TitleBanner extends Component {
     return(
     <div className="hidden-title-banner">
       <a href={ new_path }>
-        <div id={this.props.name} className="col-lg-4 col-xs-12 landing-divs2" >
+        <div id={this.props.name} className="col-sm-4 col-xs-12 landing-divs2" >
           <h2 className="vertical-heading">{this.props.name}</h2>
             <div id={this.props.nameAlt} className="title-modal">
               <div className="title-modal-content">
@@ -145,13 +145,21 @@ class TitleBannerContainer extends Component {
 }
 
 class ScreenSaverOverlay extends Component{
-  constructor(props) { super(props) }
+  constructor(props) {
+    super(props);
+    this.handleLoad = this.handleLoad.bind(this)
+  }
 
   componentDidMount(){
     // Get the components DOM node
     let elem = ReactDOM.findDOMNode(this);
     // Set the opacity of the element to 0
     elem.style.opacity = 0;
+    window.addEventListener('load', this.handleLoad);
+  }
+
+  handleLoad(){
+    let elem = ReactDOM.findDOMNode(this);
     setTimeout(() => { window.requestAnimationFrame(() => {
         elem.style.transition = "opacity 2000ms";
         elem.style.opacity = 1;

@@ -2916,7 +2916,7 @@ var TitleBanner = function (_Component) {
           { href: new_path },
           _react2.default.createElement(
             'div',
-            { id: this.props.name, className: 'col-lg-4 col-xs-12 landing-divs2' },
+            { id: this.props.name, className: 'col-sm-4 col-xs-12 landing-divs2' },
             _react2.default.createElement(
               'h2',
               { className: 'vertical-heading' },
@@ -3164,7 +3164,10 @@ var ScreenSaverOverlay = function (_Component6) {
   function ScreenSaverOverlay(props) {
     _classCallCheck(this, ScreenSaverOverlay);
 
-    return _possibleConstructorReturn(this, (ScreenSaverOverlay.__proto__ || Object.getPrototypeOf(ScreenSaverOverlay)).call(this, props));
+    var _this7 = _possibleConstructorReturn(this, (ScreenSaverOverlay.__proto__ || Object.getPrototypeOf(ScreenSaverOverlay)).call(this, props));
+
+    _this7.handleLoad = _this7.handleLoad.bind(_this7);
+    return _this7;
   }
 
   _createClass(ScreenSaverOverlay, [{
@@ -3174,6 +3177,12 @@ var ScreenSaverOverlay = function (_Component6) {
       var elem = _reactDom2.default.findDOMNode(this);
       // Set the opacity of the element to 0
       elem.style.opacity = 0;
+      window.addEventListener('load', this.handleLoad);
+    }
+  }, {
+    key: 'handleLoad',
+    value: function handleLoad() {
+      var elem = _reactDom2.default.findDOMNode(this);
       setTimeout(function () {
         window.requestAnimationFrame(function () {
           elem.style.transition = "opacity 2000ms";
