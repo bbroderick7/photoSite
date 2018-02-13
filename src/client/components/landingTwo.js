@@ -126,9 +126,9 @@ class TitleBannerContainer extends Component {
 	  // Set the opacity of the element to 0
 	  elem.style.opacity = 0;
     setTimeout(() => { window.requestAnimationFrame(() => {
-  		  elem.style.transition = "opacity 2000ms";
+  		  elem.style.transition = "opacity 2800ms";
   		  elem.style.opacity = 1;
-  	  }) }, 3500)
+  	  }) }, 4000)
   }
 
   render(){

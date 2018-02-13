@@ -3133,10 +3133,10 @@ var TitleBannerContainer = function (_Component5) {
       elem.style.opacity = 0;
       setTimeout(function () {
         window.requestAnimationFrame(function () {
-          elem.style.transition = "opacity 2000ms";
+          elem.style.transition = "opacity 2800ms";
           elem.style.opacity = 1;
         });
-      }, 3500);
+      }, 4000);
     }
   }, {
     key: 'render',
