@@ -37,8 +37,8 @@ class NavBarMobile extends Component {
 
   render(){
     let selectedname = this.props.selector;
-    let mytitle = this.state.open ? <h5 id="mobile-selection-header">{ selectedname } <span className="downTriangle">&#9652;</span></h5>
-                                  : <h5 id="mobile-selection-header">{ selectedname } <span className="downTriangle">&#9662;</span></h5> ;
+    let mytitle = this.state.open ? <h3 id="mobile-selection-header">{ selectedname } <span className="downTriangle">&#9652;</span></h3>
+                                  : <h3 id="mobile-selection-header">{ selectedname } <span className="downTriangle">&#9662;</span></h3> ;
     return(
       <div className="">
         <div onClick={ this.toggleNav } className="my-mobile-navbar-container"> { mytitle } </div>

@@ -19,13 +19,13 @@ class SubheaderMobileNav extends Component {
 
   render(){
     let mytitle = this.state.open ?
-                <h5 id="subheader-mobile-selection-header">{this.props.selected} <span className="downTriangle">&#9652;</span></h5>
-              : <h5 id="subheader-mobile-selection-header">{this.props.selected} <span className="downTriangle">&#9662;</span></h5> ;
+                <h3 id="subheader-mobile-selection-header">{this.props.selected} <span className="downTriangle">&#9652;</span></h3>
+              : <h3 id="subheader-mobile-selection-header">{this.props.selected} <span className="downTriangle">&#9662;</span></h3> ;
     let displayHeadings = this.props.displayHeadings.map(subheading => <a href= {subheading} ><h4 id={`${subheading}pics`}>{subheading}</h4></a>)
     return(
       <div >
         <div onClick={this.toggleNav} className="my-mobile-subheader-container"> {mytitle} </div>
-        <div id="subheaderNav" className="my-mobile-subheader-overlay">
+        <div id="subheaderNav" className="my-mobile-subheader-overlay-2">
           <div className="my-mobile-subheader-overlay-content"> {displayHeadings} </div>
         </div>
       </div>
