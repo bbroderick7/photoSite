@@ -93,7 +93,7 @@ body{
 
 @media screen and (max-width: 900px) {
   .landing-divs{
-    border-bottom: solid 6px black;
+    border-bottom: solid 8px black;
   }
 }
 
@@ -1209,7 +1209,8 @@ body{
 
 #subheader-mobile-selection-header{
   color: white;
-  border: solid 1px white;
+  border-top: solid 1px white;
+  border-bottom: solid 1px white;
   width: 100%;
   margin-left: 15px;
   height:40px;
