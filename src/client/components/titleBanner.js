@@ -14,11 +14,11 @@ export class TitleBanner extends Component {
   render() {
     let subHeads = "";
     if(this.props.subheaders != undefined){
-      subHeads = this.props.subheaders.map(subhead => <a href={ `${this.props.id}/${subhead}` }><h4 className="col-xs-offset-1">{ subhead }</h4></a> );
+      subHeads = this.props.subheaders.map((subhead, index) => <a key={index} href={ `${this.props.id}/${subhead}` }><h4 className="col-xs-offset-1">{ subhead }</h4></a> );
     }
     let headerDescription = "";
     if(this.props.description != undefined){
-      headerDescription = this.props.description.map(des => <h4 className="col-xs-offset-1">{ des }</h4>);
+      headerDescription = this.props.description.map((des, index) => <h4 key={index} className="col-xs-offset-1">{ des }</h4>);
     }
     let name = this.props.name == 'portfolio' ? 'stills' : this.props.name
     let new_path = this.props.folder == undefined ? `${name}` : `${this.props.folder}/${name}`;

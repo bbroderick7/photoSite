@@ -36,13 +36,14 @@ let MobileHeader = (props) => <div>
 class Header extends Component {
   constructor(props) { super(props) }
 
-  openNav() { document.getElementById("myNav").style.width = "100%" }
+  openNav() {
+    document.getElementById("myNav").style.width = "100%";
+    document.getElementById('peru').style.opacity = 0; 
+  }
 
   closeNav() { document.getElementById("myNav").style.width = "0%" }
 
   render() {
-    console.log(window.location.href.length-1)
-    console.log(window.location.origin.length)
     if(screen.width > 800 || window.location.href.length-1 == window.location.origin.length){
       return <DesktopHeader openNav={ this.openNav } closeNav={ this.closeNav }/>
     } else {

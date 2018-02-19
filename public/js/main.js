@@ -163,6 +163,7 @@ var Header = function (_Component) {
     key: 'openNav',
     value: function openNav() {
       document.getElementById("myNav").style.width = "100%";
+      document.getElementById('peru').style.opacity = 0;
     }
   }, {
     key: 'closeNav',
@@ -172,8 +173,6 @@ var Header = function (_Component) {
   }, {
     key: 'render',
     value: function render() {
-      console.log(window.location.href.length - 1);
-      console.log(window.location.origin.length);
       if (screen.width > 800 || window.location.href.length - 1 == window.location.origin.length) {
         return _react2.default.createElement(DesktopHeader, { openNav: this.openNav, closeNav: this.closeNav });
       } else {
@@ -3289,10 +3288,10 @@ var TitleBanner = exports.TitleBanner = function (_Component) {
 
       var subHeads = "";
       if (this.props.subheaders != undefined) {
-        subHeads = this.props.subheaders.map(function (subhead) {
+        subHeads = this.props.subheaders.map(function (subhead, index) {
           return _react2.default.createElement(
             "a",
-            { href: _this2.props.id + "/" + subhead },
+            { key: index, href: _this2.props.id + "/" + subhead },
             _react2.default.createElement(
               "h4",
               { className: "col-xs-offset-1" },
@@ -3303,10 +3302,10 @@ var TitleBanner = exports.TitleBanner = function (_Component) {
       }
       var headerDescription = "";
       if (this.props.description != undefined) {
-        headerDescription = this.props.description.map(function (des) {
+        headerDescription = this.props.description.map(function (des, index) {
           return _react2.default.createElement(
             "h4",
-            { className: "col-xs-offset-1" },
+            { key: index, className: "col-xs-offset-1" },
             des
           );
         });
