@@ -24,13 +24,13 @@ let DesktopHeader = (props) => <div className="outerDiv headerDiv">
 
 let MobileHeader = (props) => <div>
       <div className="headerDiv-mobile" scrolling="no">
-        <SideBarExpand closeNav = { props.closeNav }/>
         <div className = "header-mobile-cont">
           <div className="b-logo-mobile col-xs-10"> <a href="/"> <h4>brendan broderick.</h4> </a> </div>
           <span className="col-xs-2" onClick={ props.openNav } className="spanNav-mobile ">&#9776;</span>
         </div>
       </div>
       <div className="shadowDiv-mobile"></div>
+      <SideBarExpand closeNav = { props.closeNav }/>
     </div>
 
 class Header extends Component {
