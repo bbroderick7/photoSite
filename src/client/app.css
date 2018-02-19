@@ -91,6 +91,12 @@ body{
   height: 500px;
 }
 
+@media screen and (max-width: 900px) {
+  .landing-divs{
+    border-bottom: solid 6px black;
+  }
+}
+
 .landing-divs2{
   height: 100vh;
 }
@@ -297,7 +303,6 @@ body{
 }
 
 #portfolio {
-  background-image: url("https://farm5.staticflickr.com/4633/27556726429_12c9e11327_c.jpg");
   background-image: url("https://farm5.staticflickr.com/4659/25357419447_c1117bb9f1_o.jpg");
   background-size: contain;
   background-size: cover;
@@ -358,6 +363,26 @@ body{
   text-decoration: none;
   cursor: pointer;
   color: white;
+}
+
+@media (max-width: 1000px) {
+  #portfolio {
+    background-image: url("https://farm1.staticflickr.com/676/33054739500_01d2114928_o.jpg");
+    background-size: contain;
+    background-size: cover;
+  }
+
+  #projects{
+    background-image: url("https://farm5.staticflickr.com/4662/40364450351_86722bbb83_o.jpg");
+    background-size: contain;
+    background-size: cover;
+  }
+
+  #about {
+    background-image: url("https://farm5.staticflickr.com/4720/40364584201_4ac19eb073_o.jpg");
+    background-size: contain;
+    background-size: cover;
+  }
 }
 
 .vertical-heading {
