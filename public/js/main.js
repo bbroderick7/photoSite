@@ -163,7 +163,7 @@ var Header = function (_Component) {
     key: 'openNav',
     value: function openNav() {
       document.getElementById("myNav").style.width = "100%";
-      document.getElementById('peru').style.opacity = 0;
+      document.getElementById("myNav").style.opacity = 1;
     }
   }, {
     key: 'closeNav',

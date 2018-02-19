@@ -38,7 +38,7 @@ class Header extends Component {
 
   openNav() {
     document.getElementById("myNav").style.width = "100%";
-    document.getElementById('peru').style.opacity = 0; 
+    document.getElementById("myNav").style.opacity = 1;
   }
 
   closeNav() { document.getElementById("myNav").style.width = "0%" }
