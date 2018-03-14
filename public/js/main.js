@@ -214,7 +214,6 @@ var MyApp = function (_Component) {
           } });
       });
 
-      console.log(document.documentElement.clientWidth);
       var landingPage = window.innerWidth < 1000 ? _react2.default.createElement(_landing2.default, null) : _react2.default.createElement(_landingTwo2.default, null);
 
       return _react2.default.createElement(
@@ -1822,7 +1821,7 @@ var About = function (_Component) {
                   null,
                   'Companies: '
                 ),
-                ' Ibotta, Vanderbilt University Medical Center, Choozle'
+                ' Accenuture Innovation Garage, Ibotta, Vanderbilt University Medical Center, Choozle'
               )
             )
           ),

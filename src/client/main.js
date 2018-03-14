@@ -43,7 +43,6 @@ class MyApp extends Component {
           <GalleryPage galleryInfo={this.galleries[gall]} galleryList={ this.galleryNames }/>
         </div>}/>)
 
-    console.log(document.documentElement.clientWidth)
     let landingPage = window.innerWidth < 1000 ? <Landing/> : <LandingTwo/>
 
     return(

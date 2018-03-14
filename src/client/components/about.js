@@ -33,7 +33,7 @@ class About extends Component {
               <h4><strong>Interests: </strong> Skiing, Rockclimbing, Mountaineering, Photography, Product Mangement, Software Development, Design, Human Computer Interaction, Anything Oscar Wilde</h4>
               <h4><strong>Languages: </strong> C/C++, Java, javascript/node, Go, Ruby/Rails, SQL, NoSQL, HTML/CSS</h4>
               <h4><strong>Frameworks & Libraries: </strong> React, Angular, Ember, Bootstrap, Material UI, JQuery, Express, Mongoose, Passport.js / Oauth</h4>
-              <h4><strong>Companies: </strong> Ibotta, Vanderbilt University Medical Center, Choozle</h4>
+              <h4><strong>Companies: </strong> Accenuture Innovation Garage, Ibotta, Vanderbilt University Medical Center, Choozle</h4>
           </div>
           </div>
           <div className="col-md-4 col-xs-12" id="personal-photo"></div>
