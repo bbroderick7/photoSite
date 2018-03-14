@@ -1261,6 +1261,10 @@ body{
     margin-top: 5px;
 }
 
+.my-mobile-subheader-overlay-content a {
+    color: #818181;
+}
+
 .my-mobile-subheader-overlay a {
     padding: 8px;
     text-decoration: none;
