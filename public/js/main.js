@@ -192,6 +192,10 @@ var MyApp = function (_Component) {
     value: function render() {
       var _this2 = this;
 
+      console.log(window.location.href);
+      if (window.location.href == "http://broderickphoto.com/" || window.location.href == "http://www.broderickphoto.com/" || window.location.href == "www.broderickphoto.com/" || window.location.href == "broderickphoto.com") {
+        window.location = "https://www.broderickphoto.com/";
+      }
       var currentProjects = this.projectNames.map(function (proj) {
         return _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/projects/' + proj, render: function render() {
             return _react2.default.createElement(

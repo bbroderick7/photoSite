@@ -31,6 +31,13 @@ class MyApp extends Component {
   }
 
   render(){
+    console.log(window.location.href);
+    if(window.location.href == "http://broderickphoto.com/"
+        || window.location.href == "http://www.broderickphoto.com/"
+        || window.location.href == "www.broderickphoto.com/"
+        ||  window.location.href == "broderickphoto.com"){
+      window.location = "https://www.broderickphoto.com/";
+    }
     let currentProjects = this.projectNames.map(proj =>
       <Route exact path={ `/projects/${proj}` } render={ () => <div>
         <Header/>
