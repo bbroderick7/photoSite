@@ -2,6 +2,8 @@ node_modules/*
 .idea/*
 public/js/main.*
 public/js/vendor.*
+public/js/main.js
+public/js/main.map
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
