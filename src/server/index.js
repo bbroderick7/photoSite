@@ -20,7 +20,12 @@ app.set('views', __dirname);
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // SPA base page
-app.get('*', (req, res) => { res.render('base.pug', {}) });
+app.get('*', (req, res) => {
+  if(req.protocol == 'http' && req.get('host').indexOf('broderickphoto.com') != -1){
+    console.log("YUP");
+    res.redirect('https://broderickphoto.com/');
+  }
+  res.render('base.pug', {}) });
 
 // Run the server itself
 let server = app.listen(port, () => { console.log('Assignment 3 app listening on ' + server.address().port) });
