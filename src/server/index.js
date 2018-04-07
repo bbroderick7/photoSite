@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('*', (req, res) => {
   console.log(req.get('host'));
   console.log(req.protocol);
-  if(req.protocol == 'http' && req.get('host').indexOf('broderickphoto.com') != -1){
+  if(req.protocol == 'http' && req.get('host') == ('broderickphoto.com')){
     res.redirect('https://broderickphoto.com/');
   }else{
       res.render('base.pug', {}) ;
