@@ -21,8 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // SPA base page
 app.get('*', (req, res) => {
-  console.log(req.get('host'));
-  console.log(req.protocol);
+  console.log(req);
   if(req.protocol == 'http' && req.get('host') == ('broderickphoto.com')){
     res.redirect('https://broderickphoto.com/');
   }else{
