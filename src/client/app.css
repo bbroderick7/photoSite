@@ -207,7 +207,9 @@ body{
 }
 
 .outerDiv {
-
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  margin:0px;
 }
 
 .headerDiv {
@@ -773,6 +775,9 @@ body{
 
 .photo-container{
   width: 100%;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+  margin:0px;
 }
 
 .subheader-nav{
@@ -1306,8 +1311,8 @@ body{
 }
 
 .box-gallery-img-mobile{
-  width: 110%;
-  margin-left: 15px;
+  width: 100%;
+
 }
 
 .box-image-container-mobile{
