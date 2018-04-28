@@ -1119,7 +1119,7 @@ body{
   background-size: cover;
   height: 400px;
   border-radius: 100%;
-  margin-left: 20px; 
+  margin-left: 20px;
 }
 
 #mobile-selection-header{
@@ -1408,4 +1408,9 @@ body{
   padding-top: 20px;
   padding-left: 30px;
   color: white;
+}
+
+.mobile-titleBanner-container{
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }

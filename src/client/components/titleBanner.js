@@ -36,7 +36,7 @@ export class TitleBanner extends Component {
         </div>
       </a>
 
-      let mobileVersion = <a href={ new_path }>
+      let mobileVersion = <a href={ new_path } className="mobile-titleBanner-container">
         <div id={this.props.name} className="col-lg-4 col-xs-12 landing-divs">
           <h2 className="vertical-heading"></h2>
             <div id={this.props.nameAlt} >
@@ -45,8 +45,7 @@ export class TitleBanner extends Component {
           </div>
         </a>
       let version = window.innerWidth < 1000 ? mobileVersion : desktopVersion;
-    return(
-      <div>{version}</div>
-    )
+
+    return( <div>{version}</div> )
   }
 }
