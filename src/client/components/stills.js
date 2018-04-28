@@ -21,7 +21,7 @@ class BannerSelection extends Component {
   render(){
     document.title = "Brendan Broderick | Stills"
     return(
-      <div className="row">
+      <div className="row mobile-titleBanner-container">
         <TitleBanner id="peru-head" name="peru" nameAlt="peru1" description={["Cordillera Blanca", "Streets", "Markets"]} folder={'stills'}/>
         <TitleBanner id="bolivia-head" name="bolivia" nameAlt="bolivia1" description={["Chicha", "Amazon", "Cochabamba"]} folder={'stills'}/>
         <TitleBanner id="deloche-head" name="deloache" nameAlt="deloache1" description={["Vanderbilt Deloache Award, 2015"]} folder={'stills'}/>

@@ -287,6 +287,8 @@ body{
 .contentDiv-secondary{
   padding-left: 50px;
   padding-right: 0px !important;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 
 @media screen and (max-width: 800px) {
@@ -1413,4 +1415,5 @@ body{
 .mobile-titleBanner-container{
   max-width: 100% !important;
   overflow-x: hidden !important;
+  margin:0px;
 }
