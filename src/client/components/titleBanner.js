@@ -7,14 +7,19 @@ export class TitleBanner extends Component {
     this.closeNav = this.closeNav.bind(this);
   }
 
-  openNav() { if(screen.width > 800) document.getElementById(this.props.nameAlt).style.height = "100%" }
+  openNav() {
+    if (screen.width > 800)
+      document.getElementById(this.props.nameAlt).style.height = "100%"
+  }
 
   closeNav() { document.getElementById(this.props.nameAlt).style.height = "0%" }
 
   render() {
     let subHeads = "";
     if(this.props.subheaders != undefined){
-      subHeads = this.props.subheaders.map((subhead, index) => <a key={index} href={ `${this.props.id}/${subhead}` }><h4 className="col-xs-offset-1">{ subhead }</h4></a> );
+      subHeads = this.props.subheaders.map((subhead, index) => <a key={index} href={ `${this.props.id}/${subhead}` }>
+          <h4 className="col-xs-offset-1">{ subhead }</h4>
+        </a> );
     }
     let headerDescription = "";
     if(this.props.description != undefined){

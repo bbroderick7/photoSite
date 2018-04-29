@@ -16,7 +16,11 @@ let SideBarExpand = (props) => <div id="myNav" className="overlay">
 let DesktopHeader = (props) => <div className="outerDiv headerDiv">
         <SideBarExpand closeNav = { props.closeNav }/>
         <div onClick={ props.openNav }>
-          <div className="b-logo"> <a href="/"> <h2>b</h2> </a> </div>
+          <div className="b-logo">
+            <a href="/">
+              <h2> b </h2>
+            </a>
+          </div>
           <span className="spanNav">&#9776;</span>
           <div className="vertical-text"> <h4>brendan broderick</h4> </div>
         </div>

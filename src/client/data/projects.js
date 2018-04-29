@@ -55,5 +55,5 @@ module.exports = {
       projectTechnology: "html/css, bootstrap, jquery, vanilla javascript"
     }
   },
-  projectNames: ["concertify", "facePay", "solitaire", "blackstar", "vutensils", "vmil"],
+  projectNames: ["blackstar", "vutensils", "vmil", "concertify", "facePay", "solitaire"],
 }

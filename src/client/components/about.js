@@ -36,8 +36,8 @@ class About extends Component {
               <h4><strong>Companies: </strong> Accenuture Innovation Garage, Ibotta, Vanderbilt University Medical Center, Choozle</h4>
           </div>
           </div>
-          <div className="col-md-4 col-xs-12" id="personal-photo"></div>
-          <div className="col-md-2 col-xs-12" id="icon-list">
+          <div className="col-md-4 col-xs-11" id="personal-photo"></div>
+          <div className="col-md-2 col-xs-11" id="icon-list">
             <a href="https://github.com/bbroderick7" target="_blank"><div className="col-md-12 col-xs-3 icon-units" id="about-github-icon">
               <img src="https://pbs.twimg.com/profile_images/616309728688238592/pBeeJQDQ.png"/>
             </div></a>
