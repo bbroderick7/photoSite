@@ -41,7 +41,6 @@ class NavBarMobile extends Component {
                                   : <h3 id="mobile-selection-header">{ selectedname } <span className="downTriangle">&#9662;</span></h3> ;
     return(
       <div className="">
-        <div onClick={ this.toggleNav } className="my-mobile-navbar-container"> { mytitle } </div>
         <div id="mobileNav" className="my-mobile-navbar-overlay"><NavLinks/></div>
       </div>
     )

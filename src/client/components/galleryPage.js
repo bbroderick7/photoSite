@@ -1,11 +1,10 @@
 'use strict';
 import React, { Component }     from 'react';
 import { withRouter }           from 'react-router-dom';
-
 import { NavBar }               from './navBar';
 import { SubheaderNav }         from './subheaderNav';
 import { Gallery }              from './gallery';
-import { Deloache }              from './deloache';
+import { Deloache }             from './deloache';
 /*************************************************************************/
 
 class GalleryPage extends Component {
@@ -22,7 +21,6 @@ class GalleryPage extends Component {
 
   render() {
     document.title = `Brendan Broderick | ${this.props.galleryInfo.name}`;
-
     let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
     link.type = 'image/x-icon';
     link.rel = 'shortcut icon';

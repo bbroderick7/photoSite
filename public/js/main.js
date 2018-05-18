@@ -4,6 +4,94 @@ webpackJsonp([0],{
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.BannerSelection = undefined;
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(3);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(18);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+var _reactRouterDom = __webpack_require__(10);
+
+var _titleBanner = __webpack_require__(33);
+
+var _navBar = __webpack_require__(20);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+/*************************************************************************/
+var BannerSelection = exports.BannerSelection = function (_Component) {
+  _inherits(BannerSelection, _Component);
+
+  function BannerSelection(props) {
+    _classCallCheck(this, BannerSelection);
+
+    return _possibleConstructorReturn(this, (BannerSelection.__proto__ || Object.getPrototypeOf(BannerSelection)).call(this, props));
+  }
+
+  _createClass(BannerSelection, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      var elem = _reactDom2.default.findDOMNode(this);
+      elem.style.opacity = 0;
+      window.requestAnimationFrame(function () {
+        elem.style.transition = "opacity 1000ms";
+        elem.style.opacity = 1;
+      });
+    }
+  }, {
+    key: 'getProjectBanners',
+    value: function getProjectBanners() {
+      var _this2 = this;
+
+      document.title = "Brendan Broderick | Projects";
+      return this.props.info.projectNames.map(function (name) {
+        return _react2.default.createElement(_titleBanner.TitleBanner, {
+          id: _this2.props.info.projects[name].id,
+          name: _this2.props.info.projects[name].name,
+          nameAlt: _this2.props.info.projects[name].nameAlt,
+          description: _this2.props.info.projects[name].description,
+          folder: _this2.props.info.projects[name].folder });
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'row' },
+        ' ',
+        this.getProjectBanners(),
+        ' '
+      );
+    }
+  }]);
+
+  return BannerSelection;
+}(_react.Component);
+
+/***/ }),
+
+/***/ 116:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
 /* WEBPACK VAR INJECTION */(function($) {
 
 Object.defineProperty(exports, "__esModule", {
@@ -13,15 +101,15 @@ exports.Deloache = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(12);
+var _reactRouterDom = __webpack_require__(10);
 
-var _titleBanner = __webpack_require__(27);
+var _titleBanner = __webpack_require__(33);
 
-var _navBar = __webpack_require__(22);
+var _navBar = __webpack_require__(20);
 
 var _subheaderNav = __webpack_require__(45);
 
@@ -100,7 +188,7 @@ var Deloache = exports.Deloache = function (_Component) {
 
 /***/ }),
 
-/***/ 116:
+/***/ 117:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -108,59 +196,59 @@ var Deloache = exports.Deloache = function (_Component) {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
-var _reactRouterDom = __webpack_require__(12);
+var _reactRouterDom = __webpack_require__(10);
 
 var _header = __webpack_require__(70);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _landing = __webpack_require__(237);
+var _landing = __webpack_require__(238);
 
 var _landing2 = _interopRequireDefault(_landing);
 
-var _landingTwo = __webpack_require__(238);
+var _landingTwo = __webpack_require__(239);
 
 var _landingTwo2 = _interopRequireDefault(_landingTwo);
 
-var _projects = __webpack_require__(239);
+var _projects = __webpack_require__(240);
 
 var _projects2 = _interopRequireDefault(_projects);
 
-var _projectPage = __webpack_require__(240);
+var _projectPage = __webpack_require__(242);
 
 var _projectPage2 = _interopRequireDefault(_projectPage);
 
-var _stills = __webpack_require__(242);
+var _stills = __webpack_require__(244);
 
 var _stills2 = _interopRequireDefault(_stills);
 
-var _about = __webpack_require__(243);
+var _about = __webpack_require__(246);
 
 var _about2 = _interopRequireDefault(_about);
 
-var _deloache = __webpack_require__(115);
+var _deloache = __webpack_require__(116);
 
 var _deloache2 = _interopRequireDefault(_deloache);
 
-var _jackson = __webpack_require__(244);
+var _jackson = __webpack_require__(247);
 
 var _jackson2 = _interopRequireDefault(_jackson);
 
-var _galleryPage = __webpack_require__(245);
+var _galleryPage = __webpack_require__(248);
 
 var _galleryPage2 = _interopRequireDefault(_galleryPage);
 
-var _gallery = __webpack_require__(247);
+var _gallery = __webpack_require__(250);
 
 var _gallery2 = _interopRequireDefault(_gallery);
 
-var _projects3 = __webpack_require__(248);
+var _projects3 = __webpack_require__(251);
 
 var _projects4 = _interopRequireDefault(_projects3);
 
@@ -172,7 +260,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-__webpack_require__(249);
+__webpack_require__(252);
 /*************************************************************************/
 
 var MyApp = function (_Component) {
@@ -192,7 +280,6 @@ var MyApp = function (_Component) {
     value: function render() {
       var _this2 = this;
 
-      console.log(window.location.href);
       if (window.location.href == "http://broderickphoto.com/" || window.location.href == "http://www.broderickphoto.com/" || window.location.href == "www.broderickphoto.com/" || window.location.href == "broderickphoto.com") {
         window.location = "https://www.broderickphoto.com/";
       }
@@ -270,7 +357,7 @@ var MyApp = function (_Component) {
 
 /***/ }),
 
-/***/ 22:
+/***/ 20:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -283,7 +370,7 @@ exports.NavBar = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -429,13 +516,6 @@ var NavBarMobile = function (_Component) {
         { className: "" },
         _react2.default.createElement(
           "div",
-          { onClick: this.toggleNav, className: "my-mobile-navbar-container" },
-          " ",
-          mytitle,
-          " "
-        ),
-        _react2.default.createElement(
-          "div",
           { id: "mobileNav", className: "my-mobile-navbar-overlay" },
           _react2.default.createElement(NavLinks, null)
         )
@@ -507,7 +587,7 @@ var NavBar = exports.NavBar = function (_Component2) {
 
 /***/ }),
 
-/***/ 237:
+/***/ 238:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -519,17 +599,17 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouterDom = __webpack_require__(12);
+var _reactRouterDom = __webpack_require__(10);
 
-var _titleBanner = __webpack_require__(27);
+var _titleBanner = __webpack_require__(33);
 
 var _header = __webpack_require__(70);
 
@@ -662,13 +742,11 @@ var NavBar = function NavBar() {
       _react2.default.createElement(
         'div',
         { className: 'typewriter col-lg-6 col-xs-12' },
-        ' ',
         _react2.default.createElement(
           'h1',
           null,
           'brendan broderick.'
-        ),
-        ' '
+        )
       )
     ),
     _react2.default.createElement(NavBarSubheadings, null)
@@ -720,9 +798,7 @@ var TitleBannerContainer = function (_Component4) {
   _createClass(TitleBannerContainer, [{
     key: 'componentDidMount',
     value: function componentDidMount() {
-      // Get the components DOM node
       var elem = _reactDom2.default.findDOMNode(this);
-      // Set the opacity of the element to 0
       elem.style.opacity = 0;
       setTimeout(function () {
         window.requestAnimationFrame(function () {
@@ -734,14 +810,14 @@ var TitleBannerContainer = function (_Component4) {
   }, {
     key: 'render',
     value: function render() {
-      //"https://farm5.staticflickr.com/4598/24471598817_d4786b4b21_c.jpg"
+      var stillsInfo = ["Peru", "Bolivia", "Moab", "Jackson", "Colorado", "Nashville", "Experiment"];
       return _react2.default.createElement(
         'div',
         null,
         _react2.default.createElement(
           'div',
           { className: 'row landing-page-banners' },
-          _react2.default.createElement(_titleBanner.TitleBanner, { id: "stills", name: "portfolio", nameAlt: "portfolio1", subheaders: ["Peru", "Bolivia", "Moab", "Jackson", "Colorado", "Nashville", "Experiment"] }),
+          _react2.default.createElement(_titleBanner.TitleBanner, { id: "stills", name: "portfolio", nameAlt: "portfolio1", subheaders: stillsInfo }),
           _react2.default.createElement(_titleBanner.TitleBanner, { id: "projects", name: "projects", nameAlt: "projects1", subheaders: ["Concertify", "FacePay", "Solitaire", "Black Star Rentals", "VUtensils"] }),
           _react2.default.createElement(_titleBanner.TitleBanner, { id: "about", name: "about", nameAlt: "about1", description: ["Brendan Broderick", "Denver, Colorado", "Vanderbilt University", "Computer Science & Economics"] })
         )
@@ -786,7 +862,7 @@ exports.default = (0, _reactRouterDom.withRouter)(Landing);
 
 /***/ }),
 
-/***/ 238:
+/***/ 239:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -798,15 +874,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouterDom = __webpack_require__(12);
+var _reactRouterDom = __webpack_require__(10);
 
 var _header = __webpack_require__(70);
 
@@ -1100,7 +1176,7 @@ var TitleBannerContainer = function (_Component5) {
       elem.style.opacity = 0;
       setTimeout(function () {
         window.requestAnimationFrame(function () {
-          elem.style.transition = "opacity 2800ms";
+          elem.style.transition = "opacity 1800ms";
           elem.style.opacity = 1;
         });
       }, 4000);
@@ -1167,41 +1243,26 @@ var ScreenSaverOverlay = function (_Component6) {
   return ScreenSaverOverlay;
 }(_react.Component);
 
-var LandingTwo = function (_Component7) {
-  _inherits(LandingTwo, _Component7);
-
-  function LandingTwo(props) {
-    _classCallCheck(this, LandingTwo);
-
-    return _possibleConstructorReturn(this, (LandingTwo.__proto__ || Object.getPrototypeOf(LandingTwo)).call(this, props));
-  }
-
-  _createClass(LandingTwo, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(HomeHeader, null),
-        _react2.default.createElement(
-          'div',
-          { className: 'outerDiv contentDiv col-xs-12' },
-          _react2.default.createElement(NavBar, null),
-          _react2.default.createElement(ScreenSaverOverlay, null),
-          _react2.default.createElement(TitleBannerContainer, null)
-        )
-      );
-    }
-  }]);
-
-  return LandingTwo;
-}(_react.Component);
+var LandingTwo = function LandingTwo() {
+  return _react2.default.createElement(
+    'div',
+    null,
+    _react2.default.createElement(HomeHeader, null),
+    _react2.default.createElement(
+      'div',
+      { className: 'outerDiv contentDiv col-xs-12' },
+      _react2.default.createElement(NavBar, null),
+      _react2.default.createElement(ScreenSaverOverlay, null),
+      _react2.default.createElement(TitleBannerContainer, null)
+    )
+  );
+};
 
 exports.default = (0, _reactRouterDom.withRouter)(LandingTwo);
 
 /***/ }),
 
-/***/ 239:
+/***/ 240:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1211,17 +1272,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(12);
+var _reactRouterDom = __webpack_require__(10);
 
-var _navBar = __webpack_require__(22);
+var _navBar = __webpack_require__(20);
 
-var _bannerSelection = __webpack_require__(258);
+var _bannerSelection = __webpack_require__(115);
 
-var _projectsDescription = __webpack_require__(256);
+var _projectsDescription = __webpack_require__(241);
 
 var _projectsDescription2 = _interopRequireDefault(_projectsDescription);
 
@@ -1241,7 +1302,70 @@ exports.default = (0, _reactRouterDom.withRouter)(Projects);
 
 /***/ }),
 
-/***/ 240:
+/***/ 241:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+  projects: {
+    blackstar: {
+      id: "blackStarRentals-head",
+      name: "blackstar",
+      nameAlt: "blackstar1",
+      description: ["Rent bigger and better beds and futons in the Nashville area"],
+      folder: 'projects'
+    },
+    vutensils: {
+      id: "vUtensils-head",
+      name: "vUtensils",
+      nameAlt: "vUtensils1",
+      description: ["Make college cooking easy"],
+      folder: 'projects'
+    },
+    vmil: {
+      id: "vmil-head",
+      name: "vmil",
+      nameAlt: "vmil1",
+      description: ["Improve patient experiences in clinical settings"],
+      folder: 'projects'
+    },
+    solitaire: {
+      id: "solitaire-head",
+      name: "solitaire",
+      nameAlt: "solitaire1",
+      description: ["Play klondike solitaire, create a user profile and save and compare game results"],
+      folder: 'projects'
+    },
+    concertify: {
+      id: "concertify-head",
+      name: "concertify",
+      nameAlt: "concertify1",
+      description: ["Build Spotify Playlists from your favorite band's recent concert setlists"],
+      folder: 'projects'
+    },
+    facePay: {
+      id: "facePay-head",
+      name: "facePay",
+      nameAlt: "facePay1",
+      description: ["Use facial recognition software to make purchases with facial identification"],
+      folder: 'projects'
+    },
+    accenture: {
+      id: "accenture-head",
+      name: "accenture",
+      nameAlt: "accenture1",
+      description: ["A co-op with Vanderbilt Innovation Garage and Accenture that explores Blockchain and the future of supplier risk management"],
+      folder: 'projects'
+    }
+  },
+  projectNames: ["blackstar", "vutensils", "vmil", "accenture", "solitaire", "concertify", "facePay"]
+};
+
+/***/ }),
+
+/***/ 242:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1253,15 +1377,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(12);
+var _reactRouterDom = __webpack_require__(10);
 
-var _projectBody = __webpack_require__(241);
+var _projectBody = __webpack_require__(243);
 
-var _navBar = __webpack_require__(22);
+var _navBar = __webpack_require__(20);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1315,7 +1439,7 @@ exports.default = (0, _reactRouterDom.withRouter)(ProjectPage);
 
 /***/ }),
 
-/***/ 241:
+/***/ 243:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1328,11 +1452,11 @@ exports.ProjectBody = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -1504,7 +1628,7 @@ var ProjectBody = exports.ProjectBody = function (_Component2) {
 
 /***/ }),
 
-/***/ 242:
+/***/ 244:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1514,104 +1638,113 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactRouterDom = __webpack_require__(10);
 
-var _reactDom2 = _interopRequireDefault(_reactDom);
+var _navBar = __webpack_require__(20);
 
-var _reactRouterDom = __webpack_require__(12);
+var _bannerSelection = __webpack_require__(115);
 
-var _titleBanner = __webpack_require__(27);
+var _stillsDescription = __webpack_require__(245);
 
-var _navBar = __webpack_require__(22);
+var _stillsDescription2 = _interopRequireDefault(_stillsDescription);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/*************************************************************************/
-
-var BannerSelection = function (_Component) {
-  _inherits(BannerSelection, _Component);
-
-  function BannerSelection(props) {
-    _classCallCheck(this, BannerSelection);
-
-    return _possibleConstructorReturn(this, (BannerSelection.__proto__ || Object.getPrototypeOf(BannerSelection)).call(this, props));
-  }
-
-  _createClass(BannerSelection, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var elem = _reactDom2.default.findDOMNode(this);
-      elem.style.opacity = 0;
-      setTimeout(function () {
-        window.requestAnimationFrame(function () {
-          elem.style.transition = "opacity 1000ms";
-          elem.style.opacity = 1;
-        });
-      }, 0);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      document.title = "Brendan Broderick | Stills";
-      return _react2.default.createElement(
-        'div',
-        { className: 'row mobile-titleBanner-container' },
-        _react2.default.createElement(_titleBanner.TitleBanner, { id: 'peru-head', name: 'peru', nameAlt: 'peru1', description: ["Cordillera Blanca", "Streets", "Markets"], folder: 'stills' }),
-        _react2.default.createElement(_titleBanner.TitleBanner, { id: 'bolivia-head', name: 'bolivia', nameAlt: 'bolivia1', description: ["Chicha", "Amazon", "Cochabamba"], folder: 'stills' }),
-        _react2.default.createElement(_titleBanner.TitleBanner, { id: 'deloche-head', name: 'deloache', nameAlt: 'deloache1', description: ["Vanderbilt Deloache Award, 2015"], folder: 'stills' }),
-        _react2.default.createElement(_titleBanner.TitleBanner, { id: 'moab-head', name: 'moab', nameAlt: 'moab1', description: ["Dessert"], folder: 'stills' }),
-        _react2.default.createElement(_titleBanner.TitleBanner, { id: 'jackson-head', name: 'jackson', nameAlt: 'jackson1', description: ["Tetons"], folder: 'stills' }),
-        _react2.default.createElement(_titleBanner.TitleBanner, { id: 'colorado-head', name: 'colorado', nameAlt: 'colorado1', description: ["Maroon Bells", "RMNP"], folder: 'stills' }),
-        _react2.default.createElement(_titleBanner.TitleBanner, { id: 'nashville-head', name: 'nashville', nameAlt: 'nashville1', description: ["Midtown", "Broadway"], folder: 'stills' }),
-        _react2.default.createElement(_titleBanner.TitleBanner, { id: 'exp-head', name: 'experiment', nameAlt: 'exp1', description: ["nature & perspective"], folder: 'stills' })
-      );
-    }
-  }]);
-
-  return BannerSelection;
-}(_react.Component);
-
-var Stills = function (_Component2) {
-  _inherits(Stills, _Component2);
-
-  function Stills(props) {
-    _classCallCheck(this, Stills);
-
-    return _possibleConstructorReturn(this, (Stills.__proto__ || Object.getPrototypeOf(Stills)).call(this, props));
-  }
-
-  _createClass(Stills, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'outerDiv contentDiv-secondary col-xs-12' },
-        _react2.default.createElement(_navBar.NavBar, { selector: "stills-navbar" }),
-        _react2.default.createElement(BannerSelection, null)
-      );
-    }
-  }]);
-
-  return Stills;
-}(_react.Component);
+var Stills = function Stills() {
+  return _react2.default.createElement(
+    'div',
+    { className: 'outerDiv contentDiv-secondary col-xs-12' },
+    _react2.default.createElement(_navBar.NavBar, { selector: "stills-navbar" }),
+    _react2.default.createElement(_bannerSelection.BannerSelection, { info: _stillsDescription2.default })
+  );
+};
 
 exports.default = (0, _reactRouterDom.withRouter)(Stills);
 
 /***/ }),
 
-/***/ 243:
+/***/ 245:
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+module.exports = {
+  projects: {
+    peru: {
+      id: "peru-head",
+      name: "peru",
+      nameAlt: "peru1",
+      description: ["Cordillera Blanca", "Streets", "Markets"],
+      folder: 'stills'
+    },
+    bolivia: {
+      id: "bolivia-head",
+      name: "bolivia",
+      nameAlt: "bolivia1",
+      description: ["Chicha", "Amazon", "Cochabamba"],
+      folder: 'stills'
+    },
+    deloache: {
+      id: "deloche-head",
+      name: "deloache",
+      nameAlt: "deloache1",
+      description: ["Vanderbilt Deloache Award, 2015"],
+      folder: 'stills'
+    },
+    moab: {
+      id: "moab-head",
+      name: "moab",
+      nameAlt: "moab1",
+      description: ["Dessert"],
+      folder: 'stills'
+    },
+    jackson: {
+      id: "jackson-head",
+      name: "jackson",
+      nameAlt: "jackson1",
+      description: ["Tetons"],
+      folder: 'stills'
+    },
+    colorado: {
+      id: "colorado-head",
+      name: "colorado",
+      nameAlt: "colorado1",
+      description: ["Maroon Bells", "RMNP"],
+      folder: 'stills'
+    },
+    nashville: {
+      id: "nashville-head",
+      name: "nashville",
+      nameAlt: "nashville1",
+      description: ["Midtown", "Broadway"],
+      folder: 'stills'
+    },
+    experiment: {
+      id: "exp-head",
+      name: "experiment",
+      nameAlt: "exp1",
+      description: ["nature & perspective"],
+      folder: 'stills'
+    },
+    columbia: {
+      id: "columbia-head",
+      name: "columbia",
+      nameAlt: "columbia1",
+      description: ["Medellin", "Cartagena"],
+      folder: 'stills'
+    }
+  },
+  projectNames: ["peru", "bolivia", "deloache", "columbia", "moab", "jackson", "colorado", "nashville", "experiment"]
+};
+
+/***/ }),
+
+/***/ 246:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1623,19 +1756,19 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactRouterDom = __webpack_require__(12);
+var _reactRouterDom = __webpack_require__(10);
 
-var _titleBanner = __webpack_require__(27);
+var _titleBanner = __webpack_require__(33);
 
-var _navBar = __webpack_require__(22);
+var _navBar = __webpack_require__(20);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1820,7 +1953,7 @@ exports.default = (0, _reactRouterDom.withRouter)(About);
 
 /***/ }),
 
-/***/ 244:
+/***/ 247:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1832,15 +1965,15 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(12);
+var _reactRouterDom = __webpack_require__(10);
 
-var _titleBanner = __webpack_require__(27);
+var _titleBanner = __webpack_require__(33);
 
-var _navBar = __webpack_require__(22);
+var _navBar = __webpack_require__(20);
 
 var _subheaderNav = __webpack_require__(45);
 
@@ -1919,7 +2052,7 @@ exports.default = (0, _reactRouterDom.withRouter)(Jackson);
 
 /***/ }),
 
-/***/ 245:
+/***/ 248:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1931,19 +2064,19 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(12);
+var _reactRouterDom = __webpack_require__(10);
 
-var _navBar = __webpack_require__(22);
+var _navBar = __webpack_require__(20);
 
 var _subheaderNav = __webpack_require__(45);
 
-var _gallery = __webpack_require__(246);
+var _gallery = __webpack_require__(249);
 
-var _deloache = __webpack_require__(115);
+var _deloache = __webpack_require__(116);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1982,7 +2115,6 @@ var GalleryPage = function (_Component) {
     key: 'render',
     value: function render() {
       document.title = 'Brendan Broderick | ' + this.props.galleryInfo.name;
-
       var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
       link.type = 'image/x-icon';
       link.rel = 'shortcut icon';
@@ -2012,7 +2144,7 @@ exports.default = (0, _reactRouterDom.withRouter)(GalleryPage);
 
 /***/ }),
 
-/***/ 246:
+/***/ 249:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2025,11 +2157,11 @@ exports.Gallery = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = __webpack_require__(17);
+var _reactDom = __webpack_require__(18);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
@@ -2286,7 +2418,7 @@ var Gallery = exports.Gallery = function (_Component) {
 
 /***/ }),
 
-/***/ 247:
+/***/ 250:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2332,7 +2464,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 248:
+/***/ 251:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2400,13 +2532,13 @@ module.exports = {
 
 /***/ }),
 
-/***/ 249:
+/***/ 252:
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(250);
+var content = __webpack_require__(253);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -2414,7 +2546,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(252)(content, options);
+var update = __webpack_require__(255)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -2432,22 +2564,22 @@ if(false) {
 
 /***/ }),
 
-/***/ 250:
+/***/ 253:
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(251)(undefined);
+exports = module.exports = __webpack_require__(254)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "\n@media only screen and (max-width: 600px)  {\n  .container-fluid {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n}\n\n.navbar-static-top {\n    margin-left: -14px;\n    margin-right: -24px;\n}\n\n.right-nav {\n    text-align: right;\n    padding-top: 10px;\n    padding-right: 20px;\n}\n\n.right-nav a {\n    display: block;\n}\n\ntable#gameTable tbody tr:hover {\n    background: #6495ed;\n    cursor: pointer;\n}\n\n.header {\n    float: right;\n}\n\n.header img {\n    border-radius: 5px;\n    margin: 10px;\n}\n\n\nbody{\n  background: black;\n  font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n  position:relative;\n  min-height: 100%;\n  overflow-x: hidden;\n}\n\n/* DEMO-SPECIFIC STYLES */\n.typewriter-container {\n}\n\n.typewriter h1 {\n  color: #fff;\n  font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n  overflow: hidden; /* Ensures the content is not revealed until the animation */\n  border-right: .15em solid orange; /* The typwriter cursor */\n  white-space: nowrap; /* Keeps the content on a single line */\n  margin: 0 auto; /* Gives that scrolling effect as the typing happens */\n  letter-spacing: .15em; /* Adjust as needed */\n  animation:\n    typing 2.7s steps(30, end),\n    blink-caret .5s step-end infinite;\n}\n\n/* The typing effect */\n@keyframes typing {\n  from { width: 0 }\n  to { width: 100% }\n}\n\n/* The typewriter cursor effect */\n@keyframes blink-caret {\n  from, to { border-color: transparent }\n  50% { border-color: white }\n}\n\n.landing-subheader{\n      transition: 0.3s;\n}\n\n.landing-subheader a{\n      color: inherit;\n      text-decoration: none;\n}\n\n.landing-subheader h3:hover{\n  color: white;\n  cursor: pointer;\n}\n\n.landing-divs{\n  height: 500px;\n}\n\n@media screen and (max-width: 900px) {\n  .landing-divs{\n    border-bottom: solid 8px black;\n  }\n}\n\n.landing-divs2{\n  height: 100vh;\n}\n\n\n\n\n\n\n.screen-saver-overlay{\n  width: 100%;\n  height: 800px;\n  /*background-image: url(\"https://farm4.staticflickr.com/3833/33054746380_f6383c7e32_o.jpg\");*/\n  background-image: url(\"https://farm4.staticflickr.com/3913/32623870043_7c538b4206_o.jpg\");\n  position: fixed;\n  background-size: contain;\n  background-size: cover;\n  left: 0;\n  top: 0;\n}\n\n.hidden-title-banner{\n  opacity: 0;\n  transition: 0.5s;\n}\n\n.hidden-title-banner:hover{\n  opacity: 1;\n}\n\n.landing-page-banners{\n  margin-left: -16px;\n}\n\n.landingTwo-typwriter{\n  position: fixed;\n  top: 370px;\n  left: 50px;\n}\n\n\n\n\n.fillerArea{\n  height: 400px;\n  background-image: url(\"https://farm5.staticflickr.com/4748/39735111191_1f23caad65_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n.overlay {\n    height: 100%;\n    width: 0;\n    position: fixed;\n    z-index: 114000;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.overlay-content {\n    position: relative;\n    top: 25%;\n    width: 100%;\n    text-align: center;\n    margin-top: 30px;\n    z-index: 1147483647;\n}\n\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.spanNav {\n  font-size:30px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.outerDiv {\n  max-width: 100% !important;\n  overflow-x: hidden !important;\n  margin:0px;\n}\n\n.headerDiv {\n  z-index: 1000;\n  height: 100%;\n  border-right: solid 2px white;\n  padding: 10px;\n  width: 50px;\n  position: fixed;\n  top: 0;\n  left:0;\n}\n\n.headerDiv-mobile {\n  z-index: 100000;\n  height: 50px;\n  border-bottom: solid 1px white;\n  width: 100%;\n  position: fixed;\n  background-color: black;\n  overflow: hidden;\n  margin-top: 0px;\n}\n\n.shadowDiv-mobile {\n  z-index: -5;\n  height: 30px;\n  width: 95%;\n}\n\n.vertical-text {\n  color: white;\n  width: 300px;\n  margin-top: 250px;\n\ttransform: rotate(-90deg);\n\ttransform-origin: left top 0;\n}\n\n.b-logo{\n  color: white;\n  padding-bottom: 100px;\n  padding-top: 50px;\n}\n\n.b-logo a{\n  text-decoration: none;\n  color: white;\n}\n\n.b-logo a:hover{\n  text-decoration: none;\n  color: white;\n}\n\n\n.b-logo-mobile{\n  color: white;\n  display: inline-block;\n  margin-top: 10px;\n}\n\n.b-logo-mobile a{\n  text-decoration: none;\n  color: white;\n}\n\n.b-logo-mobile a:hover{\n  text-decoration: none;\n  color: white;\n}\n\n.contentDiv{\n  padding-left: 64px;\n  padding-right: 0px !important;\n}\n\n.contentDiv-secondary{\n  padding-left: 50px;\n  padding-right: 0px !important;\n  max-width: 100% !important;\n  overflow-x: hidden !important;\n}\n\n@media screen and (max-width: 800px) {\n  .contentDiv{\n    padding-left: 0px;\n    padding-right: 0px !important;\n  }\n\n  .contentDiv-secondary{\n    padding-left: 0px;\n    padding-right: 0px !important;\n    width: 100%;\n  }\n}\n\n#portfolio {\n  background-image: url(\"https://farm5.staticflickr.com/4659/25357419447_c1117bb9f1_o.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#portfolio:hover{\n  cursor: pointer;\n}\n\n#portfolio h4{\n  display: none;\n}\n\n#portfolio:hover h4{\n  display: block;\n  text-decoration: none;\n  cursor: pointer;\n  color: white;\n}\n\n#projects {\n  background-image: url(\"https://farm5.staticflickr.com/4607/40194308162_dae02cb21e_o.png\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#projects:hover{\n  cursor: pointer;\n}\n\n#projects h4{\n  display: none;\n}\n\n#projects:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#about {\n  background-image: url(\"https://farm5.staticflickr.com/4739/27557171039_ea34b5339d_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#about:hover{\n  cursor: pointer;\n}\n\n#about h4{\n  display: none;\n}\n\n#about:hover h4{\n  display: block;\n  text-decoration: none;\n  cursor: pointer;\n  color: white;\n}\n\n@media (max-width: 1000px) {\n  #portfolio {\n    background-image: url(\"https://farm1.staticflickr.com/676/33054739500_01d2114928_o.jpg\");\n    background-size: contain;\n    background-size: cover;\n  }\n\n  #projects{\n    background-image: url(\"https://farm5.staticflickr.com/4662/40364450351_86722bbb83_o.jpg\");\n    background-size: contain;\n    background-size: cover;\n  }\n\n  #about {\n    background-image: url(\"https://farm5.staticflickr.com/4720/40364584201_4ac19eb073_o.jpg\");\n    background-size: contain;\n    background-size: cover;\n  }\n}\n\n.vertical-heading {\n  color: white;\n  width: 300px;\n  margin-top: 200px;\n\ttransform: rotate(-90deg);\n\ttransform-origin: left top 0;\n}\n\n.inner-head {\n  margin-left: 15px;\n}\n\n#selected-subheader{\n  color: white;\n}\n\n\n\n\n#colorado{\n  background-image: url(\"https://farm4.staticflickr.com/3783/32596289134_a8170a0599_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#colorado:hover{\n  cursor: pointer;\n}\n\n#colorado h4{\n  display: none;\n}\n\n#colorado:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#moab {\n  background-image: url(\"https://farm4.staticflickr.com/3682/33282346992_f5a617c0fa_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#moab:hover {\n  cursor: pointer;\n}\n\n#moab h4 {\n  display: none;\n}\n\n#moab:hover h4 {\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#bolivia {\n  background-image: url(\"https://farm4.staticflickr.com/3927/33346407706_6e14df7860_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#bolivia:hover{\n  cursor: pointer;\n}\n\n#bolivia h4{\n  display: none;\n}\n\n#bolivia:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#peru {\n  background-image: url(\"https://farm4.staticflickr.com/3891/33425599956_2cea2b9cf5_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#peru:hover {\n  cursor: pointer;\n}\n\n#peru h4 {\n  display: none;\n}\n\n#peru:hover h4 {\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#jackson {\n  background-image: url(\"https://farm5.staticflickr.com/4593/27564430749_1bb7a6ba6b_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#jackson:hover{\n  cursor: pointer;\n}\n\n#jackson h4{\n  display: none;\n}\n\n#jackson:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#experiment {\n  background-image: url(\"https://farm4.staticflickr.com/3776/33309988071_ee97912bd1_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#experiment:hover{\n  cursor: pointer;\n}\n\n#experiment h4{\n  display: none;\n}\n\n#experiment:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#nashville {\n  background-image: url(\"https://farm5.staticflickr.com/4633/27556726429_12c9e11327_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#nashville:hover{\n  cursor: pointer;\n}\n\n#nashville h4{\n  display: none;\n}\n\n#nashville:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#deloache {\n  background-image: url(\"https://farm5.staticflickr.com/4641/25503804958_23eeaf2d9d_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#deloache:hover{\n  cursor: pointer;\n}\n\n#deloache h4{\n  display: none;\n}\n\n#deloache:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n\n\n\n\n\n\n.title-modal {\n    position: absolute;\n    height: 0;\n    width: 100%;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.7);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.title-modal-content {\n    width: 100%;\n}\n\n.title-modal a {\n\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.title-modal a:hover, .title-modal a:focus {\n    color: #f1f1f1;\n}\n\n.title-modal .closebtn {\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .title-modal a {font-size: 20px}\n  .title-modal .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.spanNav {\n  font-size:30px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.spanNav-mobile {\n  font-size:40px;\n  cursor:pointer;\n  color: white;\n  margin-top: 20px;\n}\n\n\n\n\n#concertify{\n  background-image: url(\"https://farm5.staticflickr.com/4598/24471598817_d4786b4b21_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#concertify:hover{\n  cursor: pointer;\n}\n\n#concertify h4{\n  display: none;\n}\n\n#concertify:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#solitaire {\n  background-image: url(\"https://farm5.staticflickr.com/4646/24489394737_14f40a5186_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#solitaire:hover{\n  cursor: pointer;\n}\n\n#solitaire h4{\n  display: none;\n}\n\n#solitaire:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#blackstar {\n  background-image: url(\"https://farm5.staticflickr.com/4597/38655689454_4dc1a6b3ef_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#blackstar:hover{\n  cursor: pointer;\n}\n\n#blackstar h4{\n  display: none;\n}\n\n#blackstar:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#vUtensils {\n  background-image: url(\"https://farm5.staticflickr.com/4589/39353275271_b1747b3cb8_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#vUtensils:hover{\n  cursor: pointer;\n}\n\n#vUtensils h4{\n  display: none;\n}\n\n#vUtensils:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#facePay {\n  background-image: url(\"https://farm5.staticflickr.com/4639/39353381641_415788f103_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#facePay:hover{\n  cursor: pointer;\n}\n\n#facePay h4{\n  display: none;\n}\n\n#facePay:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#vmil {\n  background-image: url(\"https://farm5.staticflickr.com/4693/39325003812_a1f92042aa_h.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#vmil:hover{\n  cursor: pointer;\n}\n\n#vmil h4{\n  display: none;\n}\n\n#vmil:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n\n\n\n\n.photo-container{\n  width: 100%;\n  max-width: 100% !important;\n  overflow-x: hidden !important;\n  margin:0px;\n}\n\n.subheader-nav{\n  height: 75%;\n  padding-left: 50px;\n}\n\n.gallery-container{\n  padding-top: 20px;\n  height: 520px;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n  padding-right: 0px;\n}\n\n.project-container{\n  padding-top: 20px;\n  height: 550px;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n\n@media only screen and (max-width: 600px)  {\n  .container-fluid {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n\n  .gallery-container{\n    padding-top: 20px;\n    height: 670px;\n    overflow-y: scroll;\n    overflow-x: hidden;\n    -webkit-overflow-scrolling: touch;\n    padding-right: 0px;\n    padding-left: 0px !important;\n  }\n\n  .project-container{\n    padding-top: 20px;\n    height: 680px;\n    overflow-y: scroll;\n    -webkit-overflow-scrolling: touch;\n    padding-left: 0px !important;\n    padding-right: 0px !important;\n    width: 104%;\n  }\n\n  .inner-proj-container{\n    padding: 0px !important;\n  }\n}\n\n.subheader-nav a{\n  color: inherit;\n  text-decoration: none;\n}\n\n.subheader-nav a:hover{\n  color: white;\n  text-decoration: none;\n}\n\n.deloache-gallery-img{\n  width: 100%;\n  height: auto;\n}\n\n.box-gallery-img{\n  object-fit: cover;\n  object-fit: contain;\n  padding: 0px;\n  overflow: hidden;\n}\n\n.box-image-container{\n  height: 200px;\n  overflow: hidden;\n  margin-bottom: 15px\n}\n\n.concertify-banner{\n\n}\n\n.banner-img{\n  width: 100%;\n  height: auto;\n  border-radius: 25px;\n}\n\n.banner-img-link{\n  width: 100%;\n  height: auto;\n  border: solid 2px black;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n.banner-img-link-2{\n  width: 100%;\n  height: auto;\n  border: solid 2px black;\n  top: 55%;\n  transform: translateY(-25%);\n}\n\n.project-information{\n  color: white;\n}\n\n.photo-cover-cont{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.photo-cover-cont h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.photo-cover-cont:hover{\n  opacity: 0.8;\n  cursor: pointer;\n}\n\n.photo-cover-cont:hover h4{\n  display: block;\n}\n\n.photo-cover-cont:hover img{\n  display: inline-block;\n  width: 20%;\n  transition: 0.2s;\n}\n\n.photo-cover-cont:hover img:hover{\n  opacity: .5;\n}\n\n.photo-cover-cont img{\n  display: none;\n  width: 20%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n\n\n.photo-cover-cont-mobile{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.photo-cover-cont-mobile h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.photo-cover-cont-mobile:hover{\n  opacity: 0.8;\n  cursor: pointer;\n}\n\n.photo-cover-cont-mobile:hover h4{\n  display: block;\n}\n\n.photo-cover-cont-mobile:hover img{\n  display: inline-block;\n  width: 100%;\n  transition: 0.2s;\n}\n\n.photo-cover-cont-mobile:hover img:hover{\n  opacity: .5;\n}\n\n.photo-cover-cont-mobile img{\n  display: none;\n  width: 100%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n\n\n\n.project-cover-cont{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 101%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.project-cover-cont h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.project-cover-cont:hover{\n  opacity: 0.8;\n}\n\n.project-cover-cont:hover h4{\n  display: block;\n}\n\n.project-cover-cont:hover img{\n  display: inline-block;\n  width: 20%;\n  transition: 0.2s;\n}\n\n.project-cover-cont:hover img:hover{\n  opacity: .5;\n  cursor: pointer;\n}\n\n.project-cover-cont img{\n  display: none;\n  width: 20%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n.photo-showcase-container{\n  position: fixed;\n  width: 100%;\n  height:100vh;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n\n\n\n.gallery-overlay {\n    height: 100%;\n    width: 100%;\n    opacity: 0;\n    position: fixed;\n    z-index: -10;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.gallery-overlay-content {\n    position: relative;\n    top: 10%;\n    width: 100%;\n    text-align: center;\n    margin-top: 30px;\n}\n\n.gallery-arrow-cont{\n  height: 100%;\n  width: 150px;\n  position: fixed;\n  align: center;\n  text-align: center;\n}\n\n.gallery-arrow{\n  font-size: 90px;\n  position: absolute;\n  color: white;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n#left-arrow{\n  position: absolute;\n  left: 0px;\n  top: 0px;\n\n}\n\n#left-arrow:hover{\n  opacity: 0.5;\n}\n\n#left-arrow:hover h1:hover{\n  opacity: 0.5;\n}\n\n#right-arrow{\n    right: 0;\n    top: 0px;\n    position: absolute;\n}\n\n.gallery-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.gallery-overlay a:hover, .gallery-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.gallery-overlay .gallery-closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .gallery-overlay a {font-size: 20px}\n  .gallery-overlay .gallery-closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n#personal-photo{\n  background-image: url(\"https://farm1.staticflickr.com/894/27401478708_fa8e7f847e_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n  height: 400px;\n  border-radius: 100%;\n  margin-left: 17px;\n}\n\n#mobile-selection-header{\n  color: white;\n  border-top: solid 1px white;\n  border-bottom: solid 1px white;\n  width:100%;\n  padding-top: 5px;\n  height: 40px;\n  margin-top: 10px;\n  margin-bottom: 1px;\n}\n\n.my-mobile-navbar-container{\n  text-align: center;\n  padding: 0px;\n  width: 100%;\n}\n\n\n.my-mobile-navbar-overlay {\n    margin-top: 50px;\n    height: 0;\n    width: 100%;\n    position: absolute;\n    z-index: 1000;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n\n.my-mobile-navbar-overlay-content {\n    position: relative;\n    top: 1%;\n    width: 100%;\n    text-align: center;\n    margin-top: 5px;\n    border: solid 1px white;\n}\n\n.my-mobile-navbar-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.my-mobile-navbar-overlay a:hover, .my-mobile-navbar-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.my-mobile-navbar-overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .my-mobile-navbar-overlay a {font-size: 20px}\n  .my-mobile-navbar-overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.downTriangle {\n  font-size:20px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n\n\n\n.header-mobile-cont{\n  overflow: hidden;\n}\n\n\n#subheader-mobile-selection-header{\n  color: white;\n  border-top: solid 1px white;\n  border-bottom: solid 1px white;\n  width: 100%;\n  height:40px;\n  padding-top: 5px;\n  margin-top: 0;\n}\n\n.my-mobile-subheader-container{\n  text-align: center;\n  width: 100%;\n}\n\n\n.my-mobile-subheader-overlay {\n    margin-top: 55px;\n    height: 0;\n    width: 100%;\n    position: absolute;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.my-mobile-subheader-overlay-2 {\n    margin-top: 101px;\n    height: 0;\n    width: 100%;\n    position: absolute;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.my-mobile-subheader-overlay-content {\n    position: relative;\n    top: 1%;\n    width: 100%;\n    text-align: center;\n    margin-top: 5px;\n}\n\n.my-mobile-subheader-overlay-content a {\n    color: #818181;\n}\n\n.my-mobile-subheader-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.my-mobile-subheader-overlay a:hover, .my-mobile-subheader-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.my-mobile-subheader-overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .my-mobile-subheader-overlay a {font-size: 20px}\n  .my-mobile-subheader-overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.downTriangle {\n  font-size:20px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.box-gallery-img-mobile{\n  width: 100%;\n\n}\n\n.box-image-container-mobile{\n\n}\n\n.mobile-photo-breaker{\n  color: black;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\n#my-gallery-container{\n  visibility: hidden;\n}\n\n.gallery-overlay-content{\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n#galleryBlowup{\n\n}\n\n#blowup-title{\n  color: white\n}\n\n.icon-units{\n  height: 100px;\n  text-align: center;\n}\n\n#about-github-icon img{\n  height: 100%;\n}\n\n#about-github-icon{\n  height: 100px;\n  padding-bottom: 10px;\n}\n\n#about-facebook-icon{\n  margin-top: -20px;\n  height: 100px\n}\n\n#about-linkedin-icon img {\n  height: 80%;\n}\n\n#about-instagram-icon img {\n  height: 80%;\n}\n\n#about-facebook-icon img {\n  height: 100%;\n}\n\n#about-facebook-icon:hover{\n  transition: 0.5s;\n}\n\n#about-github-icon:hover{\n  transition: 0.5s;\n}\n\n#about-linkedin-icon:hover{\n  transition: 0.5s;\n}\n\n#about-instagram-icon:hover{\n  transition: 0.5s;\n}\n\n#about-github-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-facebook-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-linkedin-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-instagram-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n.about-info{\n  padding-top: 20px;\n  padding-left: 30px;\n  color: white;\n}\n\n.mobile-titleBanner-container{\n  max-width: 100% !important;\n  overflow-x: hidden !important;\n  margin:0px;\n}\n\n#icon-list{\n  text-align: center;\n}\n", ""]);
+exports.push([module.i, "\n@media only screen and (max-width: 600px)  {\n  .container-fluid {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n}\n\n.navbar-static-top {\n    margin-left: -14px;\n    margin-right: -24px;\n}\n\n.right-nav {\n    text-align: right;\n    padding-top: 10px;\n    padding-right: 20px;\n}\n\n.right-nav a {\n    display: block;\n}\n\ntable#gameTable tbody tr:hover {\n    background: #6495ed;\n    cursor: pointer;\n}\n\n.header {\n    float: right;\n}\n\n.header img {\n    border-radius: 5px;\n    margin: 10px;\n}\n\n\nbody{\n  background-image: url(\"http://allfreedesigns.com/wp-content/uploads/2015/06/black-patterns-16.jpg\");\n  font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n  position:relative;\n  min-height: 100%;\n  overflow-x: hidden;\n}\n\n@media (max-width: 900px)  {\n  body{\n    background-color: black !important;\n    background-image: none;\n  }\n}\n\n/* DEMO-SPECIFIC STYLES */\n.typewriter-container {\n}\n\n.typewriter h1 {\n  color: #fff;\n  font-family: \"Courier New\", Courier, \"Lucida Sans Typewriter\", \"Lucida Typewriter\", monospace;\n  overflow: hidden; /* Ensures the content is not revealed until the animation */\n  border-right: .15em solid orange; /* The typwriter cursor */\n  white-space: nowrap; /* Keeps the content on a single line */\n  margin: 0 auto; /* Gives that scrolling effect as the typing happens */\n  letter-spacing: .15em; /* Adjust as needed */\n  animation:\n    typing 2.7s steps(30, end),\n    blink-caret .5s step-end infinite;\n}\n\n/* The typing effect */\n@keyframes typing {\n  from { width: 0 }\n  to { width: 100% }\n}\n\n/* The typewriter cursor effect */\n@keyframes blink-caret {\n  from, to { border-color: transparent }\n  50% { border-color: white }\n}\n\n.landing-subheader{\n      transition: 0.3s;\n}\n\n.landing-subheader a{\n      color: inherit;\n      text-decoration: none;\n}\n\n.landing-subheader h3:hover{\n  color: white;\n  cursor: pointer;\n}\n\n.landing-divs{\n  height: 500px;\n}\n\n@media screen and (max-width: 900px) {\n  .landing-divs{\n    border-bottom: solid 8px black;\n  }\n}\n\n.landing-divs2{\n  height: 100vh;\n}\n\n\n\n\n\n\n.screen-saver-overlay{\n  width: 100%;\n  height: 800px;\n  /*background-image: url(\"https://farm4.staticflickr.com/3833/33054746380_f6383c7e32_o.jpg\");*/\n  background-image: url(\"https://farm4.staticflickr.com/3913/32623870043_7c538b4206_o.jpg\");\n  position: fixed;\n  background-size: contain;\n  background-size: cover;\n  left: 0;\n  top: 0;\n}\n\n.hidden-title-banner{\n  opacity: 0;\n  transition: 0.5s;\n}\n\n.hidden-title-banner:hover{\n  opacity: 1;\n}\n\n.landing-page-banners{\n  margin-left: -16px;\n}\n\n.landingTwo-typwriter{\n  position: fixed;\n  top: 370px;\n  left: 50px;\n}\n\n\n\n\n.fillerArea{\n  height: 400px;\n  background-image: url(\"https://farm5.staticflickr.com/4748/39735111191_1f23caad65_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n.overlay {\n    height: 100%;\n    width: 0;\n    position: fixed;\n    z-index: 114000;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.overlay-content {\n    position: relative;\n    top: 25%;\n    width: 100%;\n    text-align: center;\n    margin-top: 30px;\n    z-index: 1147483647;\n}\n\n.overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.overlay a:hover, .overlay a:focus {\n    color: #f1f1f1;\n}\n\n.overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .overlay a {font-size: 20px}\n  .overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.spanNav {\n  font-size:30px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.outerDiv {\n  max-width: 100% !important;\n  overflow-x: hidden !important;\n  margin:0px;\n}\n\n.headerDiv {\n  z-index: 1000;\n  height: 100%;\n  border-right: solid 2px white;\n  padding: 10px;\n  width: 50px;\n  position: fixed;\n  top: 0;\n  left:0;\n}\n\n.headerDiv-mobile {\n  z-index: 100000;\n  height: 50px;\n  border-bottom: solid 1px white;\n  width: 100%;\n  position: fixed;\n  background-color: black;\n  overflow: hidden;\n  margin-top: 0px;\n}\n\n.shadowDiv-mobile {\n  z-index: -5;\n  height: 30px;\n  width: 95%;\n}\n\n.vertical-text {\n  color: white;\n  width: 300px;\n  margin-top: 250px;\n\ttransform: rotate(-90deg);\n\ttransform-origin: left top 0;\n}\n\n.b-logo{\n  color: white;\n  padding-bottom: 100px;\n  padding-top: 50px;\n}\n\n.b-logo a{\n  text-decoration: none;\n  color: white;\n}\n\n.b-logo a:hover{\n  text-decoration: none;\n  color: white;\n}\n\n\n.b-logo-mobile{\n  color: white;\n  display: inline-block;\n  margin-top: 10px;\n}\n\n.b-logo-mobile a{\n  text-decoration: none;\n  color: white;\n}\n\n.b-logo-mobile a:hover{\n  text-decoration: none;\n  color: white;\n}\n\n.contentDiv{\n  padding-left: 64px;\n  padding-right: 0px !important;\n}\n\n.contentDiv-secondary{\n  padding-left: 50px;\n  padding-right: 0px !important;\n  max-width: 100% !important;\n  overflow-x: hidden !important;\n}\n\n@media screen and (max-width: 800px) {\n  .contentDiv{\n    padding-left: 0px;\n    padding-right: 0px !important;\n  }\n\n  .contentDiv-secondary{\n    padding-left: 0px;\n    padding-right: 0px !important;\n    width: 100%;\n  }\n}\n\n#portfolio {\n  background-image: url(\"https://farm5.staticflickr.com/4659/25357419447_c1117bb9f1_o.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#portfolio:hover{\n  cursor: pointer;\n}\n\n#portfolio h4{\n  display: none;\n}\n\n#portfolio:hover h4{\n  display: block;\n  text-decoration: none;\n  cursor: pointer;\n  color: white;\n}\n\n#projects {\n  background-image: url(\"https://farm5.staticflickr.com/4607/40194308162_dae02cb21e_o.png\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#projects:hover{\n  cursor: pointer;\n}\n\n#projects h4{\n  display: none;\n}\n\n#projects:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#about {\n  background-image: url(\"https://farm5.staticflickr.com/4739/27557171039_ea34b5339d_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#about:hover{\n  cursor: pointer;\n}\n\n#about h4{\n  display: none;\n}\n\n#about:hover h4{\n  display: block;\n  text-decoration: none;\n  cursor: pointer;\n  color: white;\n}\n\n@media (max-width: 1000px) {\n  #portfolio {\n    background-image: url(\"https://farm1.staticflickr.com/676/33054739500_01d2114928_o.jpg\");\n    background-size: contain;\n    background-size: cover;\n  }\n\n  #projects{\n    background-image: url(\"https://farm5.staticflickr.com/4662/40364450351_86722bbb83_o.jpg\");\n    background-size: contain;\n    background-size: cover;\n  }\n\n  #about {\n    background-image: url(\"https://farm5.staticflickr.com/4720/40364584201_4ac19eb073_o.jpg\");\n    background-size: contain;\n    background-size: cover;\n  }\n}\n\n.vertical-heading {\n  color: white;\n  width: 300px;\n  margin-top: 200px;\n\ttransform: rotate(-90deg);\n\ttransform-origin: left top 0;\n}\n\n.inner-head {\n  margin-left: 15px;\n}\n\n#selected-subheader{\n  color: white;\n}\n\n\n\n\n#colorado{\n  background-image: url(\"https://farm4.staticflickr.com/3783/32596289134_a8170a0599_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#colorado:hover{\n  cursor: pointer;\n}\n\n#colorado h4{\n  display: none;\n}\n\n#colorado:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#moab {\n  background-image: url(\"https://farm4.staticflickr.com/3682/33282346992_f5a617c0fa_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#moab:hover {\n  cursor: pointer;\n}\n\n#moab h4 {\n  display: none;\n}\n\n#moab:hover h4 {\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#bolivia {\n  background-image: url(\"https://farm4.staticflickr.com/3927/33346407706_6e14df7860_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#bolivia:hover{\n  cursor: pointer;\n}\n\n#bolivia h4{\n  display: none;\n}\n\n#bolivia:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#peru {\n  background-image: url(\"https://farm4.staticflickr.com/3891/33425599956_2cea2b9cf5_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#peru:hover {\n  cursor: pointer;\n}\n\n#peru h4 {\n  display: none;\n}\n\n#peru:hover h4 {\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#jackson {\n  background-image: url(\"https://farm5.staticflickr.com/4593/27564430749_1bb7a6ba6b_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#jackson:hover{\n  cursor: pointer;\n}\n\n#jackson h4{\n  display: none;\n}\n\n#jackson:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#experiment {\n  background-image: url(\"https://farm4.staticflickr.com/3776/33309988071_ee97912bd1_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#experiment:hover{\n  cursor: pointer;\n}\n\n#experiment h4{\n  display: none;\n}\n\n#experiment:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#nashville {\n  background-image: url(\"https://farm5.staticflickr.com/4633/27556726429_12c9e11327_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#nashville:hover{\n  cursor: pointer;\n}\n\n#nashville h4{\n  display: none;\n}\n\n#nashville:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#deloache {\n  background-image: url(\"https://farm5.staticflickr.com/4641/25503804958_23eeaf2d9d_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#deloache:hover{\n  cursor: pointer;\n}\n\n#deloache h4{\n  display: none;\n}\n\n#deloache:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#columbia {\n  background-image: url(\"https://farm1.staticflickr.com/826/39995050460_6bc4d5068d_k.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#columbia:hover{\n  cursor: pointer;\n}\n\n#columbia h4{\n  display: none;\n}\n\n#columbia:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n\n\n\n\n.title-modal {\n    position: absolute;\n    height: 0;\n    width: 100%;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.7);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.title-modal-content {\n    width: 100%;\n}\n\n.title-modal a {\n\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.title-modal a:hover, .title-modal a:focus {\n    color: #f1f1f1;\n}\n\n.title-modal .closebtn {\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .title-modal a {font-size: 20px}\n  .title-modal .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.spanNav {\n  font-size:30px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.spanNav-mobile {\n  font-size:40px;\n  cursor:pointer;\n  color: white;\n  margin-top: 20px;\n}\n\n\n\n\n#concertify{\n  background-image: url(\"https://farm5.staticflickr.com/4598/24471598817_d4786b4b21_c.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#concertify:hover{\n  cursor: pointer;\n}\n\n#concertify h4{\n  display: none;\n}\n\n#concertify:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#solitaire {\n  background-image: url(\"https://farm5.staticflickr.com/4646/24489394737_14f40a5186_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#solitaire:hover{\n  cursor: pointer;\n}\n\n#solitaire h4{\n  display: none;\n}\n\n#solitaire:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#blackstar {\n  background-image: url(\"https://farm5.staticflickr.com/4597/38655689454_4dc1a6b3ef_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#blackstar:hover{\n  cursor: pointer;\n}\n\n#blackstar h4{\n  display: none;\n}\n\n#blackstar:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#vUtensils {\n  background-image: url(\"https://farm5.staticflickr.com/4589/39353275271_b1747b3cb8_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#vUtensils:hover{\n  cursor: pointer;\n}\n\n#vUtensils h4{\n  display: none;\n}\n\n#vUtensils:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#facePay {\n  background-image: url(\"https://farm5.staticflickr.com/4639/39353381641_415788f103_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#facePay:hover{\n  cursor: pointer;\n}\n\n#facePay h4{\n  display: none;\n}\n\n#facePay:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#vmil {\n  background-image: url(\"https://farm5.staticflickr.com/4693/39325003812_a1f92042aa_h.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#vmil:hover{\n  cursor: pointer;\n}\n\n#vmil h4{\n  display: none;\n}\n\n#vmil:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n#accenture {\n  background-image: url(\"https://farm1.staticflickr.com/828/39994937410_26d490d340_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n}\n\n#accenture:hover{\n  cursor: pointer;\n}\n\n#accenture h4{\n  display: none;\n}\n\n#accenture:hover h4{\n  display: block;\n  text-decoration: none;\n  color: white;\n  cursor: pointer;\n}\n\n\n\n.photo-container{\n  width: 100%;\n  max-width: 100% !important;\n  overflow-x: hidden !important;\n  margin:0px;\n}\n\n.subheader-nav{\n  height: 75%;\n  padding-left: 50px;\n}\n\n.gallery-container{\n  padding-top: 20px;\n  height: 520px;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n  padding-right: 0px;\n}\n\n.project-container{\n  padding-top: 20px;\n  height: 550px;\n  overflow-y: scroll;\n  -webkit-overflow-scrolling: touch;\n}\n\n@media only screen and (max-width: 600px)  {\n  .container-fluid {\n    padding-right: 0px !important;\n    padding-left: 0px !important;\n  }\n\n  .gallery-container{\n    padding-top: 20px;\n    height: 670px;\n    overflow-y: scroll;\n    overflow-x: hidden;\n    -webkit-overflow-scrolling: touch;\n    padding-right: 0px;\n    padding-left: 0px !important;\n  }\n\n  .project-container{\n    padding-top: 20px;\n    height: 680px;\n    overflow-y: scroll;\n    -webkit-overflow-scrolling: touch;\n    padding-left: 0px !important;\n    padding-right: 0px !important;\n    width: 104%;\n  }\n\n  .inner-proj-container{\n    padding: 0px !important;\n  }\n}\n\n.subheader-nav a{\n  color: inherit;\n  text-decoration: none;\n}\n\n.subheader-nav a:hover{\n  color: white;\n  text-decoration: none;\n}\n\n.deloache-gallery-img{\n  width: 100%;\n  height: auto;\n}\n\n.box-gallery-img{\n  object-fit: cover;\n  object-fit: contain;\n  padding: 0px;\n  overflow: hidden;\n}\n\n.box-image-container{\n  height: 200px;\n  overflow: hidden;\n  margin-bottom: 15px\n}\n\n.concertify-banner{\n\n}\n\n.banner-img{\n  width: 100%;\n  height: auto;\n  border-radius: 25px;\n}\n\n.banner-img-link{\n  width: 100%;\n  height: auto;\n  border: solid 2px black;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n.banner-img-link-2{\n  width: 100%;\n  height: auto;\n  border: solid 2px black;\n  top: 55%;\n  transform: translateY(-25%);\n}\n\n.project-information{\n  color: white;\n}\n\n.photo-cover-cont{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.photo-cover-cont h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.photo-cover-cont:hover{\n  opacity: 0.8;\n  cursor: pointer;\n}\n\n.photo-cover-cont:hover h4{\n  display: block;\n}\n\n.photo-cover-cont:hover img{\n  display: inline-block;\n  width: 20%;\n  transition: 0.2s;\n}\n\n.photo-cover-cont:hover img:hover{\n  opacity: .5;\n}\n\n.photo-cover-cont img{\n  display: none;\n  width: 20%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n\n\n.photo-cover-cont-mobile{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.photo-cover-cont-mobile h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.photo-cover-cont-mobile:hover{\n  opacity: 0.8;\n  cursor: pointer;\n}\n\n.photo-cover-cont-mobile:hover h4{\n  display: block;\n}\n\n.photo-cover-cont-mobile:hover img{\n  display: inline-block;\n  width: 100%;\n  transition: 0.2s;\n}\n\n.photo-cover-cont-mobile:hover img:hover{\n  opacity: .5;\n}\n\n.photo-cover-cont-mobile img{\n  display: none;\n  width: 100%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n\n\n\n.project-cover-cont{\n  text-align: center;\n  position: absolute;\n  width: 100%;\n  height: 101%;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n.project-cover-cont h4{\n  display: none;\n  color: white;\n  margin-top: 100px;\n}\n\n.project-cover-cont:hover{\n  opacity: 0.8;\n}\n\n.project-cover-cont:hover h4{\n  display: block;\n}\n\n.project-cover-cont:hover img{\n  display: inline-block;\n  width: 20%;\n  transition: 0.2s;\n}\n\n.project-cover-cont:hover img:hover{\n  opacity: .5;\n  cursor: pointer;\n}\n\n.project-cover-cont img{\n  display: none;\n  width: 20%;\n  margin-top: 100px;\n  margin-left: 30px;\n}\n\n.photo-showcase-container{\n  position: fixed;\n  width: 100%;\n  height:100vh;\n  background: black;\n  opacity: 0;\n  transition: 0.4s;\n}\n\n\n\n\n.gallery-overlay {\n    height: 100%;\n    width: 100%;\n    opacity: 0;\n    position: fixed;\n    z-index: -10;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.gallery-overlay-content {\n    position: relative;\n    top: 10%;\n    width: 100%;\n    text-align: center;\n    margin-top: 30px;\n}\n\n.gallery-arrow-cont{\n  height: 100%;\n  width: 150px;\n  position: fixed;\n  align: center;\n  text-align: center;\n}\n\n.gallery-arrow{\n  font-size: 90px;\n  position: absolute;\n  color: white;\n  top: 50%;\n  transform: translateY(-50%);\n}\n\n#left-arrow{\n  position: absolute;\n  left: 0px;\n  top: 0px;\n\n}\n\n#left-arrow:hover{\n  opacity: 0.5;\n}\n\n#left-arrow:hover h1:hover{\n  opacity: 0.5;\n}\n\n#right-arrow{\n    right: 0;\n    top: 0px;\n    position: absolute;\n}\n\n.gallery-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.gallery-overlay a:hover, .gallery-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.gallery-overlay .gallery-closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .gallery-overlay a {font-size: 20px}\n  .gallery-overlay .gallery-closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n#personal-photo{\n  background-image: url(\"https://farm1.staticflickr.com/894/27401478708_fa8e7f847e_b.jpg\");\n  background-size: contain;\n  background-size: cover;\n  height: 400px;\n  border-radius: 100%;\n  margin-left: 17px;\n}\n\n#mobile-selection-header{\n  color: white;\n  border-top: solid 1px white;\n  border-bottom: solid 1px white;\n  width:100%;\n  padding-top: 5px;\n  height: 40px;\n  margin-top: 10px;\n  margin-bottom: 1px;\n}\n\n.my-mobile-navbar-container{\n  text-align: center;\n  padding: 0px;\n  width: 100%;\n}\n\n\n.my-mobile-navbar-overlay {\n    margin-top: 50px;\n    height: 0;\n    width: 100%;\n    position: absolute;\n    z-index: 1000;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n\n.my-mobile-navbar-overlay-content {\n    position: relative;\n    top: 1%;\n    width: 100%;\n    text-align: center;\n    margin-top: 5px;\n    border: solid 1px white;\n}\n\n.my-mobile-navbar-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.my-mobile-navbar-overlay a:hover, .my-mobile-navbar-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.my-mobile-navbar-overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .my-mobile-navbar-overlay a {font-size: 20px}\n  .my-mobile-navbar-overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.downTriangle {\n  font-size:20px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n\n\n\n.header-mobile-cont{\n  overflow: hidden;\n}\n\n\n#subheader-mobile-selection-header{\n  color: white;\n  border-top: solid 1px white;\n  border-bottom: solid 1px white;\n  width: 100%;\n  height:50px;\n  padding-top: 15px;\n  margin-top: 0;\n}\n\n.my-mobile-subheader-container{\n  text-align: center;\n  width: 100%;\n}\n\n\n.my-mobile-subheader-overlay {\n    margin-top: 55px;\n    height: 0;\n    width: 100%;\n    position: absolute;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.my-mobile-subheader-overlay-2 {\n    margin-top: 101px;\n    height: 0;\n    width: 100%;\n    position: absolute;\n    z-index: 1;\n    top: 0;\n    left: 0;\n    background-color: rgb(0,0,0);\n    background-color: rgba(0,0,0, 0.9);\n    overflow-x: hidden;\n    transition: 0.5s;\n}\n\n.my-mobile-subheader-overlay-content {\n    position: relative;\n    top: 1%;\n    width: 100%;\n    text-align: center;\n    margin-top: 5px;\n}\n\n.my-mobile-subheader-overlay-content a {\n    color: #818181;\n}\n\n.my-mobile-subheader-overlay a {\n    padding: 8px;\n    text-decoration: none;\n    font-size: 36px;\n    color: #818181;\n    display: block;\n    transition: 0.3s;\n}\n\n.my-mobile-subheader-overlay a:hover, .my-mobile-subheader-overlay a:focus {\n    color: #f1f1f1;\n}\n\n.my-mobile-subheader-overlay .closebtn {\n    position: absolute;\n    top: 20px;\n    right: 45px;\n    font-size: 60px;\n}\n\n@media screen and (max-height: 450px) {\n  .my-mobile-subheader-overlay a {font-size: 20px}\n  .my-mobile-subheader-overlay .closebtn {\n    font-size: 40px;\n    top: 15px;\n    right: 35px;\n  }\n}\n\n.downTriangle {\n  font-size:20px;\n  cursor:pointer;\n  color: white;\n  padding-top: 100px;\n  margin-bottom: 100px;\n}\n\n.box-gallery-img-mobile{\n  width: 100%;\n\n}\n\n.box-image-container-mobile{\n\n}\n\n.mobile-photo-breaker{\n  color: black;\n  margin-top: 0px;\n  margin-bottom: 10px;\n}\n\n#my-gallery-container{\n  visibility: hidden;\n}\n\n.gallery-overlay-content{\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n\n#galleryBlowup{\n\n}\n\n#blowup-title{\n  color: white\n}\n\n.icon-units{\n  height: 100px;\n  text-align: center;\n}\n\n#about-github-icon img{\n  height: 100%;\n}\n\n#about-github-icon{\n  height: 100px;\n  padding-bottom: 10px;\n}\n\n#about-facebook-icon{\n  margin-top: -20px;\n  height: 100px\n}\n\n#about-linkedin-icon img {\n  height: 80%;\n}\n\n#about-instagram-icon img {\n  height: 80%;\n}\n\n#about-facebook-icon img {\n  height: 100%;\n}\n\n#about-facebook-icon:hover{\n  transition: 0.5s;\n}\n\n#about-github-icon:hover{\n  transition: 0.5s;\n}\n\n#about-linkedin-icon:hover{\n  transition: 0.5s;\n}\n\n#about-instagram-icon:hover{\n  transition: 0.5s;\n}\n\n#about-github-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-facebook-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-linkedin-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n#about-instagram-icon:hover{\n  opacity: 0.5;\n  cursor: pointer;\n}\n\n.about-info{\n  padding-top: 20px;\n  padding-left: 30px;\n  color: white;\n}\n\n.mobile-titleBanner-container{\n  max-width: 100% !important;\n  overflow-x: hidden !important;\n  margin:0px;\n}\n\n#icon-list{\n  text-align: center;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
 
-/***/ 251:
+/***/ 254:
 /***/ (function(module, exports) {
 
 /*
@@ -2530,7 +2662,7 @@ function toComment(sourceMap) {
 
 /***/ }),
 
-/***/ 252:
+/***/ 255:
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -2576,7 +2708,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(253);
+var	fixUrls = __webpack_require__(256);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -2890,7 +3022,7 @@ function updateLink (link, options, obj) {
 
 /***/ }),
 
-/***/ 253:
+/***/ 256:
 /***/ (function(module, exports) {
 
 
@@ -2986,151 +3118,7 @@ module.exports = function (css) {
 
 /***/ }),
 
-/***/ 256:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-module.exports = {
-  projects: {
-    blackstar: {
-      id: "blackStarRentals-head",
-      name: "blackstar",
-      nameAlt: "blackstar1",
-      description: ["Rent bigger and better beds and futons in the Nashville area"],
-      folder: 'projects'
-    },
-    vutensils: {
-      id: "vUtensils-head",
-      name: "vUtensils",
-      nameAlt: "vUtensils1",
-      description: ["Make college cooking easy"],
-      folder: 'projects'
-    },
-    vmil: {
-      id: "vmil-head",
-      name: "vmil",
-      nameAlt: "vmil1",
-      description: ["Improve patient experiences in clinical settings"],
-      folder: 'projects'
-    },
-    solitaire: {
-      id: "solitaire-head",
-      name: "solitaire",
-      nameAlt: "solitaire1",
-      description: ["Play klondike solitaire, create a user profile and save and compare game results"],
-      folder: 'projects'
-    },
-    concertify: {
-      id: "concertify-head",
-      name: "concertify",
-      nameAlt: "concertify1",
-      description: ["Build Spotify Playlists from your favorite band's recent concert setlists"],
-      folder: 'projects'
-    },
-    facePay: {
-      id: "facePay-head",
-      name: "facePay",
-      nameAlt: "facePay1",
-      description: ["Use facial recognition software to make purchases with facial identification"],
-      folder: 'projects'
-    }
-  },
-  projectNames: ["blackstar", "vutensils", "vmil", "concertify", "facePay", "solitaire"]
-};
-
-/***/ }),
-
-/***/ 258:
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.BannerSelection = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(4);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactDom = __webpack_require__(17);
-
-var _reactDom2 = _interopRequireDefault(_reactDom);
-
-var _reactRouterDom = __webpack_require__(12);
-
-var _titleBanner = __webpack_require__(27);
-
-var _navBar = __webpack_require__(22);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-/*************************************************************************/
-var BannerSelection = exports.BannerSelection = function (_Component) {
-  _inherits(BannerSelection, _Component);
-
-  function BannerSelection(props) {
-    _classCallCheck(this, BannerSelection);
-
-    return _possibleConstructorReturn(this, (BannerSelection.__proto__ || Object.getPrototypeOf(BannerSelection)).call(this, props));
-  }
-
-  _createClass(BannerSelection, [{
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      var elem = _reactDom2.default.findDOMNode(this);
-      elem.style.opacity = 0;
-      window.requestAnimationFrame(function () {
-        elem.style.transition = "opacity 1000ms";
-        elem.style.opacity = 1;
-      });
-    }
-  }, {
-    key: 'getProjectBanners',
-    value: function getProjectBanners() {
-      var _this2 = this;
-
-      document.title = "Brendan Broderick | Projects";
-      return this.props.info.projectNames.map(function (name) {
-        return _react2.default.createElement(_titleBanner.TitleBanner, {
-          id: _this2.props.info.projects[name].id,
-          name: _this2.props.info.projects[name].name,
-          nameAlt: _this2.props.info.projects[name].nameAlt,
-          description: _this2.props.info.projects[name].description,
-          folder: _this2.props.info.projects[name].folder });
-      });
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        { className: 'row' },
-        ' ',
-        this.getProjectBanners(),
-        ' '
-      );
-    }
-  }]);
-
-  return BannerSelection;
-}(_react.Component);
-
-/***/ }),
-
-/***/ 27:
+/***/ 33:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3143,7 +3131,7 @@ exports.TitleBanner = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -3295,7 +3283,7 @@ exports.SubheaderNav = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
@@ -3467,11 +3455,11 @@ Object.defineProperty(exports, "__esModule", {
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _react = __webpack_require__(4);
+var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouterDom = __webpack_require__(12);
+var _reactRouterDom = __webpack_require__(10);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3638,5 +3626,5 @@ exports.default = (0, _reactRouterDom.withRouter)(Header);
 
 /***/ })
 
-},[116]);
+},[117]);
 //# sourceMappingURL=main.map

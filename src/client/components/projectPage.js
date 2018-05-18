@@ -6,9 +6,8 @@ import { NavBar }               from './navBar';
 /*************************************************************************/
 
 class ProjectPage extends Component {
-  constructor(props) {
-    super(props);
-  }
+  constructor(props) { super(props) }
+
   render() {
     document.title = `Brendan Broderick | ${this.props.project.projectName}`;
     let link = document.querySelector("link[rel*='icon']") || document.createElement('link');

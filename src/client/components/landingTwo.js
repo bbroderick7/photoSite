@@ -126,7 +126,7 @@ class TitleBannerContainer extends Component {
 	  // Set the opacity of the element to 0
 	  elem.style.opacity = 0;
     setTimeout(() => { window.requestAnimationFrame(() => {
-  		  elem.style.transition = "opacity 2800ms";
+  		  elem.style.transition = "opacity 1800ms";
   		  elem.style.opacity = 1;
   	  }) }, 4000)
   }
@@ -166,19 +166,10 @@ class ScreenSaverOverlay extends Component{
       }) }, 2000)
   }
 
-  render(){
-    return(
-      <div className="screen-saver-overlay"></div>
-    )
-  }
+  render(){ return(<div className="screen-saver-overlay"></div>) }
 }
 
-class LandingTwo extends Component {
-  constructor(props) { super(props) }
-
-  render() {
-    return(
-      <div>
+let LandingTwo = () => <div>
         <HomeHeader/>
         <div className="outerDiv contentDiv col-xs-12">
           <NavBar/>
@@ -186,8 +177,6 @@ class LandingTwo extends Component {
           <TitleBannerContainer/>
         </div>
       </div>
-    )
-  }
-}
+
 
 export default withRouter(LandingTwo);

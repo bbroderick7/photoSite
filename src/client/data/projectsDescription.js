@@ -42,6 +42,13 @@ module.exports = {
       description: ["Use facial recognition software to make purchases with facial identification"],
       folder: 'projects'
     },
+    accenture: {
+      id: "accenture-head",
+      name: "accenture",
+      nameAlt: "accenture1",
+      description: ["A co-op with Vanderbilt Innovation Garage and Accenture that explores Blockchain and the future of supplier risk management"],
+      folder: 'projects'
+    },
   },
-  projectNames: ["blackstar", "vutensils", "vmil", "concertify", "facePay", "solitaire"]
+  projectNames: ["blackstar", "vutensils", "vmil", "accenture", "solitaire", "concertify", "facePay"]
 }

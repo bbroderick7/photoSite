@@ -31,7 +31,6 @@ class MyApp extends Component {
   }
 
   render(){
-    console.log(window.location.href);
     if(window.location.href == "http://broderickphoto.com/"
         || window.location.href == "http://www.broderickphoto.com/"
         || window.location.href == "www.broderickphoto.com/"
