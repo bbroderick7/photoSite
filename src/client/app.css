@@ -138,7 +138,7 @@ body{
   margin-left: -16px;
 }
 
-.landingTwo-typwriter{
+.landingDesktop-typwriter{
   position: fixed;
   top: 370px;
   left: 50px;
@@ -356,7 +356,7 @@ body{
 }
 
 #about {
-  background-image: url("https://farm5.staticflickr.com/4739/27557171039_ea34b5339d_c.jpg");
+  background-image: url("https://farm1.staticflickr.com/828/42215959202_33bc4f9be2_h.jpg");
   background-size: contain;
   background-size: cover;
 }

@@ -6,7 +6,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import Header                   from './components/header';
 import Landing                  from './components/landing';
-import LandingTwo               from './components/landingTwo';
+import LandingDesktop           from './components/landingDesktop';
 import Projects                 from './components/projects';
 import ProjectPage              from './components/projectPage';
 import Stills                   from './components/stills';
@@ -49,13 +49,13 @@ class MyApp extends Component {
           <GalleryPage galleryInfo={this.galleries[gall]} galleryList={ this.galleryNames }/>
         </div>}/>)
 
-    let landingPage = window.innerWidth < 1000 ? <Landing/> : <LandingTwo/>
+    let landingPage = window.innerWidth < 1000 ? <Landing/> : <LandingDesktop/>
 
     return(
       <BrowserRouter>
         <div>
           <Route exact path="/" render={ () => landingPage }/>
-          <Route exact path="/two" render={ () => <LandingTwo/> }/>
+          <Route exact path="/two" render={ () => <LandingDesktop/> }/>
           <Route exact path="/about" render={ () => <div>
               <Header/>
               <About/>

@@ -93,7 +93,7 @@ class NavBarSubheadings extends Component {
   }
 }
 
-const NavBar = () => <div className="landingTwo-typwriter">
+const NavBar = () => <div className="landingDesktop-typwriter">
       <div className="row typewriter-container">
         <div className="typewriter col-lg-12 col-xs-12"> <h1>brendan broderick.</h1> </div>
       </div>
@@ -169,14 +169,25 @@ class ScreenSaverOverlay extends Component{
   render(){ return(<div className="screen-saver-overlay"></div>) }
 }
 
-let LandingTwo = () => <div>
+class LandingDesktop extends Component{
+  constructor(props) { super(props) }
+
+  render(){
+    let bodyContent= <div>
+                        <ScreenSaverOverlay/>
+                        <TitleBannerContainer/>
+                      </div>;
+    return(
+      <div>
         <HomeHeader/>
-        <div className="outerDiv contentDiv col-xs-12">
-          <NavBar/>
-          <ScreenSaverOverlay/>
-          <TitleBannerContainer/>
-        </div>
+          <div className="outerDiv contentDiv col-xs-12">
+            <NavBar/>
+            {bodyContent}
+          </div>
       </div>
+    )
+  }
+}
 
 
-export default withRouter(LandingTwo);
+export default withRouter(LandingDesktop);
