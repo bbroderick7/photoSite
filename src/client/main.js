@@ -55,7 +55,7 @@ class MyApp extends Component {
       <BrowserRouter>
         <div>
           <Route exact path="/" render={ () => landingPage }/>
-          <Route exact path="/two" render={ () => <LandingDesktop/> }/>
+          <Route exact path="/two" render={ () => <Landing/> }/>
           <Route exact path="/about" render={ () => <div>
               <Header/>
               <About/>

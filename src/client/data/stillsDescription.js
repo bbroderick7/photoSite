@@ -7,6 +7,41 @@ module.exports = {
       description: ["Cordillera Blanca", "Streets", "Markets"],
       folder: 'stills'
     },
+    ladakh: {
+      id: "ladakh-head",
+      name: "ladakh",
+      nameAlt: "ladakh1",
+      description: ["leh", "stok"],
+      folder: 'stills'
+    },
+    mysore: {
+      id: "mysore-head",
+      name: "mysore",
+      nameAlt: "mysore1",
+      description: ["market", "bus stand"],
+      folder: 'stills'
+    },
+    china: {
+      id: "china-head",
+      name: "china",
+      nameAlt: "china1",
+      description: ["shanghai", "hongcun", "yangshou"],
+      folder: 'stills'
+    },
+    nyc: {
+      id: "nyc-head",
+      name: "nyc",
+      nameAlt: "nyc1",
+      description: ["manhattan"],
+      folder: 'stills'
+    },
+    japan: {
+      id: "japan-head",
+      name: "japan",
+      nameAlt: "japan1",
+      description: ["takyo", "nagano"],
+      folder: 'stills'
+    },
     bolivia: {
       id: "bolivia-head",
       name: "bolivia",
@@ -64,5 +99,5 @@ module.exports = {
       folder: 'stills'
     },
   },
-  projectNames: ["peru", "bolivia", "deloache", "columbia", "moab", "jackson", "colorado", "nashville", "experiment"]
+  projectNames: ["peru", "ladakh", "china", "nyc", "mysore", "japan", "bolivia", "deloache", "columbia", "moab", "jackson", "colorado", "nashville", "experiment"]
 }

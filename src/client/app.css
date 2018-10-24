@@ -499,6 +499,112 @@ body{
   cursor: pointer;
 }
 
+#ladakh {
+  background-image: url("https://farm2.staticflickr.com/1909/30341514447_09e7073b86_k.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#ladakh:hover {
+  cursor: pointer;
+}
+
+#ladakh h4 {
+  display: none;
+}
+
+#ladakh:hover h4 {
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#china {
+  background-image: url("https://farm2.staticflickr.com/1957/45280127581_aff5318eff_k.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#china:hover {
+  cursor: pointer;
+}
+
+#china h4 {
+  display: none;
+}
+
+#china:hover h4 {
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#nyc {
+  background-image: url("https://farm2.staticflickr.com/1965/44557990424_aa01435a13_c.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#nyc:hover {
+  cursor: pointer;
+}
+
+#nyc h4 {
+  display: none;
+}
+
+#nyc:hover h4 {
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#mysore {
+  background-image: url("https://farm2.staticflickr.com/1933/45280236041_79d0425a80_b.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#mysore:hover {
+  cursor: pointer;
+}
+
+#mysore h4 {
+  display: none;
+}
+
+#mysore:hover h4 {
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+#japan {
+  background-image: url("https://farm2.staticflickr.com/1926/31405709178_ec2da97f79_b.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#japan:hover {
+  cursor: pointer;
+}
+
+#japan h4 {
+  display: none;
+}
+
+#japan:hover h4 {
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+
 #jackson {
   background-image: url("https://farm5.staticflickr.com/4593/27564430749_1bb7a6ba6b_k.jpg");
   background-size: contain;
@@ -1086,8 +1192,8 @@ body{
     z-index: -10;
     top: 0;
     left: 0;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0, 0.9);
+    background-color: rgb(255,255,255);
+    background-color: rgba(255,255,255, 1);
     overflow-x: hidden;
     transition: 0.5s;
 }
@@ -1111,7 +1217,7 @@ body{
 .gallery-arrow{
   font-size: 90px;
   position: absolute;
-  color: white;
+  color: black;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -1382,7 +1488,7 @@ body{
 }
 
 #galleryBlowup{
-
+  background: white;
 }
 
 #blowup-title{

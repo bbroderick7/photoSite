@@ -113,7 +113,7 @@ export class Gallery extends Component {
     let photoUrl = ev.target.nodeName == 'H4' ? ev.target.parentNode.nextSibling.src : ev.target.nextSibling.src;
     let imgElement = document.getElementById("galleryBlowup");
     this.setState({ currentUrl: photoUrl });
-    imgElement.style.border= "solid 15px white";
+    imgElement.style.width= "65%";
     document.getElementById("blowup-title").innerHTML = ev.target.nodeName == 'H4' ? ev.target.innerHTML : ev.target.children[0].innerHTML;
     document.getElementById("my-gallery-modal").style.opacity = "1";
     document.getElementById("my-gallery-modal").style.zIndex = "100000";

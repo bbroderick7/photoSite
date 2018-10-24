@@ -19,7 +19,7 @@ export class BannerSelection extends Component {
 
   getProjectBanners(){
     document.title = "Brendan Broderick | Projects";
-    return this.props.info.projectNames.map(name => <TitleBanner
+    return this.props.info.projectNames.map( name => <TitleBanner
                   id=          {this.props.info.projects[name].id}
                   name=        {this.props.info.projects[name].name}
                   nameAlt=     {this.props.info.projects[name].nameAlt}
