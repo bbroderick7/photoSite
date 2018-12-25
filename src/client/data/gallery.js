@@ -32,6 +32,10 @@ module.exports = {
       name: "japan",
       url: createURL('72157699125313352')
     },
+    paris: {
+      name: "paris",
+      url: createURL('72157701525682862')
+    },
     columbia: {
       name: "columbia",
       url: createURL('72157694009140162')
@@ -61,5 +65,5 @@ module.exports = {
       url: createURL('72157691641364595')
     },
   },
-  galleryNames: ["peru", "bolivia", "ladakh", "nyc", "china", "mysore", "japan", "moab", "columbia", "jackson", "colorado", "nashville", "experiment", "deloache"]
+  galleryNames: ["peru", "bolivia", "ladakh", "nyc", "china", "mysore", "japan", "paris", "moab", "columbia", "jackson", "colorado", "nashville", "experiment", "deloache"]
 }

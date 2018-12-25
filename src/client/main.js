@@ -38,13 +38,13 @@ class MyApp extends Component {
       window.location = "https://www.broderickphoto.com/";
     }
     let currentProjects = this.projectNames.map(proj =>
-      <Route exact path={ `/projects/${proj}` } render={ () => <div>
+      <Route key= {proj} exact path={ `/projects/${proj}` } render={ () => <div>
         <Header/>
         <ProjectPage project={ this.projects[proj] }/>
       </div> }/>)
 
     let currentGalleries = this.galleryNames.map(gall =>
-      <Route path={ `/stills/${gall}` } render={ () => <div>
+      <Route key= {gall} path={ `/stills/${gall}` } render={ () => <div>
           <Header/>
           <GalleryPage galleryInfo={this.galleries[gall]} galleryList={ this.galleryNames }/>
         </div>}/>)

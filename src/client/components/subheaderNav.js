@@ -49,7 +49,7 @@ export class SubheaderNav extends Component {
   getSize(){ this.setState({ screenWidth: screen.width }) }
 
   render(){
-    let subheaders = this.props.subheadings.map(subheading => <a href= {subheading} ><h3 id={`${subheading}pics`}>{subheading}</h3></a>);
+    let subheaders = this.props.subheadings.map(subheading => <a key={subheading} href= {subheading} ><h3 id={`${subheading}pics`}>{subheading}</h3></a>);
     if(screen.width < 600){
       return(<SubheaderMobileNav displayHeadings={this.props.subheadings} selected={this.props.selected}/>)
     }else{

@@ -5,7 +5,9 @@ import ReactDOM                 from 'react-dom';
 
 let DesktopDisplay = (props) => {
   let content = props.photoUrls.map((photo, index) => <div key= { index } className="col-xs-12 col-md-6 col-lg-3 box-image-container">
-        <div onClick= { props.enlargePhoto } className='photo-cover-cont'><h4> { props.photoTitles[index] } </h4></div>
+        <div onClick= { props.enlargePhoto } className='photo-cover-cont'>
+          <h4> { props.photoTitles[index] } </h4>
+        </div>
         <img className="box-gallery-img" src= { photo } />
       </div>
   )
@@ -22,19 +24,22 @@ let MobileDisplay = (props) => {
   return( <div> { content } </div> )
 }
 
-let ImageBlowup = (props) => <div onClick={ props.closeGalleryNav } id="my-gallery-modal" className="gallery-overlay">
+
+let ImageBlowup = (props) =>
+        <div onClick={ props.closeGalleryNav } id="my-gallery-modal" className="gallery-overlay">
+          <div onClick={ props.clickNextPhoto } className= "gallery-arrow-cont" id="left-arrow">
+            <h1 className="gallery-arrow">&#9001;</h1>
+        </div>
           <div className="gallery-overlay-content">
             <img src={ props.currentUrl } id="galleryBlowup"/>
             <h2 id="blowup-title">{ props.currentTitle }</h2>
-          </div>
-          <div onClick={ props.clickNextPhoto } className= "gallery-arrow-cont" id="left-arrow">
-            	<h1 className="gallery-arrow">&#9001;</h1>
           </div>
           <div onClick={ props.clickNextPhoto } className= "gallery-arrow-cont" id="right-arrow">
             	<h1 className="gallery-arrow">&#9002;</h1>
           </div>
           <a href="javascript:void(0)" className="gallery-closebtn" onClick={ props.closeGalleryNav }>&times;</a>
         </div>
+
 
 
 export class Gallery extends Component {
@@ -67,7 +72,7 @@ export class Gallery extends Component {
 
   componentWillReceiveProps(nextProps){
     let photoArray = nextProps.photoArray;
-    let photoUrls = photoArray.map(photo => { return `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg` })
+    let photoUrls = photoArray.map(photo => { return `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_h.jpg` })
     let photoTitles = photoArray.map(photo => { return photo.title })
     this.setState({
       photoUrls: photoUrls,
@@ -92,6 +97,7 @@ export class Gallery extends Component {
       new_selected_index = selected_index == this.state.photoUrls.length - 1 ? 0  : selected_index + 1;
       new_photo_url = this.state.photoUrls[new_selected_index];
     }
+    let imgrrr= this.state.photoTitles[new_selected_index];
     this.setState({
       currentTitle: this.state.photoTitles[new_selected_index],
       currentUrl: new_photo_url
@@ -128,7 +134,7 @@ export class Gallery extends Component {
   }
 
   render(){
-    let photoUrls = this.props.photoArray.map(photo => { return `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}.jpg` });
+    let photoUrls = this.props.photoArray.map(photo => { return `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_h.jpg` });
     let photoTitles = this.props.photoArray.map(photo => photo.title);
     let gallery = (screen.width > 700) ? <DesktopDisplay photoUrls    = { this.state.photoUrls }
                                                          photoTitles  = { photoTitles }

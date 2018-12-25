@@ -604,6 +604,27 @@ body{
   cursor: pointer;
 }
 
+#paris {
+  background-image: url("https://farm5.staticflickr.com/4859/31442480667_eba5a00307_b.jpg");
+  background-size: contain;
+  background-size: cover;
+}
+
+#paris:hover {
+  cursor: pointer;
+}
+
+#paris h4 {
+  display: none;
+}
+
+#paris:hover h4 {
+  display: block;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
 
 #jackson {
   background-image: url("https://farm5.staticflickr.com/4593/27564430749_1bb7a6ba6b_k.jpg");
@@ -934,11 +955,12 @@ body{
 .subheader-nav{
   height: 75%;
   padding-left: 50px;
+  overflow-y: scroll;
 }
 
 .gallery-container{
   padding-top: 20px;
-  height: 520px;
+  height: 80vh;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   padding-right: 0px;
@@ -998,6 +1020,8 @@ body{
 }
 
 .box-gallery-img{
+
+  max-height: 100%;
   object-fit: cover;
   object-fit: contain;
   padding: 0px;
@@ -1007,7 +1031,8 @@ body{
 .box-image-container{
   height: 200px;
   overflow: hidden;
-  margin-bottom: 15px
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .concertify-banner{
@@ -1489,6 +1514,10 @@ body{
 
 #galleryBlowup{
   background: white;
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+  height: auto;
 }
 
 #blowup-title{

@@ -21,6 +21,13 @@ module.exports = {
       description: ["market", "bus stand"],
       folder: 'stills'
     },
+    paris: {
+      id: "paris-head",
+      name: "paris",
+      nameAlt: "paris1",
+      description: ["eiffel", "seine"],
+      folder: 'stills'
+    },
     china: {
       id: "china-head",
       name: "china",
@@ -99,5 +106,5 @@ module.exports = {
       folder: 'stills'
     },
   },
-  projectNames: ["peru", "ladakh", "china", "nyc", "mysore", "japan", "bolivia", "deloache", "columbia", "moab", "jackson", "colorado", "nashville", "experiment"]
+  projectNames: ["peru", "ladakh", "china", "nyc", "paris","mysore", "japan", "bolivia", "deloache", "columbia", "moab", "jackson", "colorado", "nashville", "experiment"]
 }
