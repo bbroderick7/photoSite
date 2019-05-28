@@ -2371,7 +2371,8 @@ var Gallery = exports.Gallery = function (_Component) {
     value: function componentWillReceiveProps(nextProps) {
       var photoArray = nextProps.photoArray;
       var photoUrls = photoArray.map(function (photo) {
-        return 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_h.jpg';
+        console.log('https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_h.jpg');
+        return 'https://farm' + photo.farm + '.staticflickr.com/' + photo.server + '/' + photo.id + '_' + photo.secret + '_c.jpg';
       });
       var photoTitles = photoArray.map(function (photo) {
         return photo.title;

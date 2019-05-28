@@ -1,6 +1,4 @@
-let createURL = (photoSetID) => {
-  return `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=${photoSetID}&user_id=148642232%40N07&size=k&format=json&nojsoncallback=1`
-}
+let createURL = photoSetID => `https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=6e168c7fc17bad6a54c643098d569c17&photoset_id=${photoSetID}&user_id=148642232%40N07&size=k&format=json&nojsoncallback=1`;
 
 module.exports = {
   galleries: {

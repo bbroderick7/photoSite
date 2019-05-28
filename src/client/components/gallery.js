@@ -72,7 +72,9 @@ export class Gallery extends Component {
 
   componentWillReceiveProps(nextProps){
     let photoArray = nextProps.photoArray;
-    let photoUrls = photoArray.map(photo => { return `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_h.jpg` })
+    let photoUrls = photoArray.map(photo => {
+      console.log(`https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_h.jpg`)
+      return `https://farm${photo.farm}.staticflickr.com/${photo.server}/${photo.id}_${photo.secret}_c.jpg` })
     let photoTitles = photoArray.map(photo => { return photo.title })
     this.setState({
       photoUrls: photoUrls,
